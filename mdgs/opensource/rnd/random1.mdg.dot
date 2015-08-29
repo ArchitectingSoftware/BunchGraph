@@ -1,0 +1,119 @@
+/* ------------------------------------------------------------ */
+/* created with bunch v3 */
+/* Objective Function value = 0.0*/
+/* ------------------------------------------------------------ */
+
+digraph G {
+size= "10,10";
+rotate = 90;
+subgraph cluster0 {
+label = "(SS-L3):M35";
+color = black;
+style = bold;
+
+"M25"[label="M25",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M29"[label="M29",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M13"[label="M13",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M38"[label="M38",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M40"[label="M40",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M58"[label="M58",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M28"[label="M28",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M41"[label="M41",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M2"[label="M2",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M50"[label="M50",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M26"[label="M26",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M35"[label="M35",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M18"[label="M18",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M53"[label="M53",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M19"[label="M19",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M34"[label="M34",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M51"[label="M51",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M10"[label="M10",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M1"[label="M1",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M11"[label="M11",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M56"[label="M56",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M16"[label="M16",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M44"[label="M44",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M36"[label="M36",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M21"[label="M21",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M39"[label="M39",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M61"[label="M61",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M30"[label="M30",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M46"[label="M46",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M43"[label="M43",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M33"[label="M33",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster1 {
+label = "(SS-L3):M49";
+color = black;
+style = bold;
+
+"M57"[label="M57",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M14"[label="M14",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M8"[label="M8",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M49"[label="M49",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster2 {
+label = "(SS-L3):M20";
+color = black;
+style = bold;
+
+"M24"[label="M24",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M20"[label="M20",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster3 {
+label = "(SS-L3):M54";
+color = black;
+style = bold;
+
+"M54"[label="M54",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M5"[label="M5",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M6"[label="M6",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M48"[label="M48",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster4 {
+label = "(SS-L3):M52";
+color = black;
+style = bold;
+
+"M62"[label="M62",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M52"[label="M52",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+"M29" -> "M25" [color=blue,font=6];
+"M58" -> "M28" [color=blue,font=6];
+"M56" -> "M16" [color=blue,font=6];
+"M54" -> "M48" [color=blue,font=6];
+"M53" -> "M18" [color=blue,font=6];
+"M20" -> "M24" [color=blue,font=6];
+"M50" -> "M26" [color=blue,font=6];
+"M6" -> "M54" [color=blue,font=6];
+"M5" -> "M54" [color=blue,font=6];
+"M2" -> "M28" [color=blue,font=6];
+"M2" -> "M41" [color=blue,font=6];
+"M1" -> "M10" [color=blue,font=6];
+"M19" -> "M34" [color=blue,font=6];
+"M49" -> "M8" [color=blue,font=6];
+"M48" -> "M6" [color=blue,font=6];
+"M14" -> "M57" [color=blue,font=6];
+"M13" -> "M40" [color=blue,font=6];
+"M13" -> "M25" [color=blue,font=6];
+"M13" -> "M35" [color=blue,font=6];
+"M11" -> "M1" [color=blue,font=6];
+"M11" -> "M21" [color=blue,font=6];
+"M41" -> "M50" [color=blue,font=6];
+"M39" -> "M21" [color=blue,font=6];
+"M38" -> "M13" [color=blue,font=6];
+"M36" -> "M1" [color=blue,font=6];
+"M36" -> "M44" [color=blue,font=6];
+"M35" -> "M58" [color=blue,font=6];
+"M35" -> "M53" [color=blue,font=6];
+"M34" -> "M51" [color=blue,font=6];
+"M34" -> "M35" [color=blue,font=6];
+"M33" -> "M35" [color=blue,font=6];
+"M33" -> "M43" [color=blue,font=6];
+"M33" -> "M30" [color=blue,font=6];
+"M30" -> "M61" [color=blue,font=6];
+"M30" -> "M1" [color=blue,font=6];
+"M30" -> "M46" [color=blue,font=6];
+"M62" -> "M52" [color=blue,font=6];
+}

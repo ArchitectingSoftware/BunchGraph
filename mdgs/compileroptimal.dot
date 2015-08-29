@@ -1,0 +1,78 @@
+/* ------------------------------------------------------------ */
+/* created with bunch v3 */
+/* Objective Function value = 1.0*/
+/* ------------------------------------------------------------ */
+
+digraph G {
+size= "10,10";
+rotate = 90;
+subgraph cluster0 {
+label = "(SS-L0):parser";
+color = black;
+style = bold;
+
+"scanner"[label="scanner",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"parser"[label="parser",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster1 {
+label = "(SS-L0):declarations";
+color = black;
+style = bold;
+
+"addrStack"[label="addrStack",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"main"[label="main",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"declarations"[label="declarations",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"codeGenerator"[label="codeGenerator",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster2 {
+label = "(SS-L0):scopeController";
+color = black;
+style = bold;
+
+"dictionary"[label="dictionary",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"scopeController"[label="scopeController",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"dictIdxStack"[label="dictIdxStack",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"dictStack"[label="dictStack",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster3 {
+label = "(SS-L0):typeChecker";
+color = black;
+style = bold;
+
+"typeStack"[label="typeStack",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"typeChecker"[label="typeChecker",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"argCntStack"[label="argCntStack",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+"parser" -> "scopeController" [color=blue,font=6];
+"parser" -> "scanner" [color=blue,font=6];
+"parser" -> "codeGenerator" [color=blue,font=6];
+"parser" -> "typeChecker" [color=blue,font=6];
+"parser" -> "declarations" [color=blue,font=6];
+"codeGenerator" -> "scopeController" [color=blue,font=6];
+"codeGenerator" -> "dictIdxStack" [color=blue,font=6];
+"codeGenerator" -> "addrStack" [color=blue,font=6];
+"codeGenerator" -> "declarations" [color=blue,font=6];
+"codeGenerator" -> "dictionary" [color=blue,font=6];
+"dictStack" -> "declarations" [color=blue,font=6];
+"dictIdxStack" -> "declarations" [color=blue,font=6];
+"dictIdxStack" -> "dictStack" [color=blue,font=6];
+"scanner" -> "declarations" [color=blue,font=6];
+"main" -> "codeGenerator" [color=blue,font=6];
+"main" -> "declarations" [color=blue,font=6];
+"main" -> "parser" [color=blue,font=6];
+"typeChecker" -> "typeStack" [color=blue,font=6];
+"typeChecker" -> "dictIdxStack" [color=blue,font=6];
+"typeChecker" -> "argCntStack" [color=blue,font=6];
+"typeChecker" -> "declarations" [color=blue,font=6];
+"typeChecker" -> "dictStack" [color=blue,font=6];
+"typeChecker" -> "dictionary" [color=blue,font=6];
+"scopeController" -> "dictIdxStack" [color=blue,font=6];
+"scopeController" -> "declarations" [color=blue,font=6];
+"scopeController" -> "dictStack" [color=blue,font=6];
+"scopeController" -> "dictionary" [color=blue,font=6];
+"typeStack" -> "declarations" [color=blue,font=6];
+"addrStack" -> "declarations" [color=blue,font=6];
+"dictionary" -> "declarations" [color=blue,font=6];
+"dictionary" -> "dictStack" [color=blue,font=6];
+"argCntStack" -> "declarations" [color=blue,font=6];
+}

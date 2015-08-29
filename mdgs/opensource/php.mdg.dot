@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------ */
+/* created with bunch v3 */
+/* Objective Function value = 1.0*/
+/* ------------------------------------------------------------ */
+
+digraph G {
+size= "10,10";
+rotate = 90;
+C0[shape=ellipse,color=lightblue,fontcolor=black,style=filled,label="(SS-L1):main:\n(27 Modules)"];
+C1[shape=ellipse,color=lightblue,fontcolor=black,style=filled,label="(SS-L1):SAPI:\n(24 Modules)"];
+C2[shape=ellipse,color=lightblue,fontcolor=black,style=filled,label="(SS-L1):zend:\n(7 Modules)"];
+C3[shape=ellipse,color=lightblue,fontcolor=black,style=filled,label="(SS-L1):zend_operators:\n(4 Modules)"];
+C3->C1[style=bold,color=lightgray,weight=0,font=6];
+C1->C3[style=bold,color=lightgray,weight=0,font=6];
+C2->C1[style=bold,color=lightgray,weight=0,font=6];
+C1->C2[style=bold,color=lightgray,weight=0,font=6];
+C2->C0[style=bold,color=lightgray,weight=0,font=6];
+C0->C3[style=bold,color=lightgray,weight=0,font=6];
+C1->C0[style=bold,color=green,weight=4,font=6];
+C0->C2[style=bold,color=cyan,weight=1,font=6];
+C0->C1[style=bold,color=red,weight=16,font=6];
+}

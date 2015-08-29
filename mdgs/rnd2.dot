@@ -1,0 +1,102 @@
+/* ------------------------------------------------------------ */
+/* created with bunch v3 */
+/* Objective Function value = 1.0*/
+/* ------------------------------------------------------------ */
+
+digraph G {
+size= "10,10";
+rotate = 90;
+subgraph cluster0 {
+label = "(SS-L0):M4";
+color = black;
+style = bold;
+
+"M6"[label="M6",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M8"[label="M8",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M9"[label="M9",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M10"[label="M10",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M12"[label="M12",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M4"[label="M4",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M2"[label="M2",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster1 {
+label = "(SS-L0):M11";
+color = black;
+style = bold;
+
+"M5"[label="M5",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M11"[label="M11",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M3"[label="M3",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M1"[label="M1",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster2 {
+label = "(SS-L0):M7";
+color = black;
+style = bold;
+
+"M7"[label="M7",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"M13"[label="M13",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+"M2" -> "M6" [color=blue,font=6];
+"M2" -> "M5" [color=blue,font=6];
+"M2" -> "M4" [color=blue,font=6];
+"M2" -> "M3" [color=blue,font=6];
+"M2" -> "M12" [color=blue,font=6];
+"M2" -> "M11" [color=blue,font=6];
+"M2" -> "M9" [color=blue,font=6];
+"M1" -> "M4" [color=blue,font=6];
+"M1" -> "M12" [color=blue,font=6];
+"M1" -> "M11" [color=blue,font=6];
+"M1" -> "M9" [color=blue,font=6];
+"M1" -> "M7" [color=blue,font=6];
+"M13" -> "M12" [color=blue,font=6];
+"M13" -> "M3" [color=blue,font=6];
+"M13" -> "M11" [color=blue,font=6];
+"M13" -> "M9" [color=blue,font=6];
+"M13" -> "M7" [color=blue,font=6];
+"M12" -> "M6" [color=blue,font=6];
+"M12" -> "M9" [color=blue,font=6];
+"M12" -> "M7" [color=blue,font=6];
+"M11" -> "M5" [color=blue,font=6];
+"M11" -> "M12" [color=blue,font=6];
+"M11" -> "M2" [color=blue,font=6];
+"M11" -> "M1" [color=blue,font=6];
+"M11" -> "M10" [color=blue,font=6];
+"M10" -> "M4" [color=blue,font=6];
+"M10" -> "M12" [color=blue,font=6];
+"M10" -> "M2" [color=blue,font=6];
+"M10" -> "M8" [color=blue,font=6];
+"M10" -> "M7" [color=blue,font=6];
+"M9" -> "M6" [color=blue,font=6];
+"M9" -> "M3" [color=blue,font=6];
+"M9" -> "M10" [color=blue,font=6];
+"M8" -> "M6" [color=blue,font=6];
+"M8" -> "M5" [color=blue,font=6];
+"M8" -> "M12" [color=blue,font=6];
+"M8" -> "M11" [color=blue,font=6];
+"M8" -> "M1" [color=blue,font=6];
+"M8" -> "M9" [color=blue,font=6];
+"M7" -> "M13" [color=blue,font=6];
+"M7" -> "M3" [color=blue,font=6];
+"M7" -> "M2" [color=blue,font=6];
+"M7" -> "M11" [color=blue,font=6];
+"M6" -> "M4" [color=blue,font=6];
+"M6" -> "M2" [color=blue,font=6];
+"M6" -> "M11" [color=blue,font=6];
+"M6" -> "M1" [color=blue,font=6];
+"M5" -> "M6" [color=blue,font=6];
+"M5" -> "M4" [color=blue,font=6];
+"M5" -> "M11" [color=blue,font=6];
+"M5" -> "M1" [color=blue,font=6];
+"M4" -> "M6" [color=blue,font=6];
+"M4" -> "M13" [color=blue,font=6];
+"M4" -> "M12" [color=blue,font=6];
+"M4" -> "M2" [color=blue,font=6];
+"M4" -> "M10" [color=blue,font=6];
+"M4" -> "M9" [color=blue,font=6];
+"M4" -> "M8" [color=blue,font=6];
+"M4" -> "M7" [color=blue,font=6];
+"M3" -> "M5" [color=blue,font=6];
+"M3" -> "M11" [color=blue,font=6];
+"M3" -> "M1" [color=blue,font=6];
+}

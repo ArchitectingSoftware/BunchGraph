@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------ */
+/* created with bunch v3 */
+/* Objective Function value = 1.0*/
+/* ------------------------------------------------------------ */
+
+digraph G {
+size= "10,10";
+rotate = 90;
+subgraph cluster_libraries {
+label = "libraries";
+color = black;
+style = bold;
+
+"declarations"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+}
+subgraph cluster_omnipresent_suppliers {
+label = "omnipresent suppliers";
+color = black;
+style = bold;
+
+"parser"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+}
+subgraph cluster_omnipresent_clients {
+label = "omnipresent clients";
+color = black;
+style = bold;
+
+"scanner"[label="scanner",shape=box,color=lightblue,fontcolor=black,style=filled];
+"typeChecker"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"typeStack"[label="typeStack",shape=box,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster_omnipresent_centrals {
+label = "omnipresent clients/suppliers";
+color = black;
+style = bold;
+
+"argCntStack"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+}
+
+"scanner" -> "declarations" [color=blue,font=6];
+"typeStack" -> "declarations" [color=blue,font=6];
+
+subgraph cluster0 {
+label = "(SS-L0):codeGenerator";
+color = black;
+style = bold;
+
+"addrStack"[label="addrStack",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"main"[label="main",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"codeGenerator"[label="codeGenerator",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster1 {
+label = "(SS-L0):scopeController";
+color = black;
+style = bold;
+
+"dictionary"[label="dictionary",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"scopeController"[label="scopeController",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"dictIdxStack"[label="dictIdxStack",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"dictStack"[label="dictStack",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+"codeGenerator" -> "scopeController" [color=blue,font=6];
+"codeGenerator" -> "dictIdxStack" [color=blue,font=6];
+"codeGenerator" -> "addrStack" [color=blue,font=6];
+"codeGenerator" -> "dictionary" [color=blue,font=6];
+"dictIdxStack" -> "dictStack" [color=blue,font=6];
+"main" -> "codeGenerator" [color=blue,font=6];
+"scopeController" -> "dictIdxStack" [color=blue,font=6];
+"scopeController" -> "dictStack" [color=blue,font=6];
+"scopeController" -> "dictionary" [color=blue,font=6];
+"dictionary" -> "dictStack" [color=blue,font=6];
+}

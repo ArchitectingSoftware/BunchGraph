@@ -1,0 +1,8 @@
+SS(partime.h.ss) = partime.c, maketime.c, partime.h
+SS(rcsfnms.c.ss) = rcskeep.c, rcsrev.c, rcsmerge.c, rcsfnms.c, ci.c, rcssyn.c
+SS(rcsbase.h.ss) = co.c, rcs.c, rcsgen.c, rcsbase.h, rcstime.c, rcsedit.c, rcsclean.c
+SS(rcsmap.c.ss) = version.c, rcsmap.c, ident.c
+SS(rcslex.c.ss) = rlog.c, rcslex.c, rcsutil.c
+SS(conf.h.ss) = maketime.h, rcsdiff.c, conf.h
+SS(rcsfcmp.c.ss) = rcskeys.c, rcsfcmp.c
+SS(merger.c.ss) = merger.c, merge.c

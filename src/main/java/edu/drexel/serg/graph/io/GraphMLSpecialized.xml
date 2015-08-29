@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<!--
+    Document   : GraphMLSpecialized.xml
+    Created on : November 6, 2008, 4:10 PM
+    Author     : bsmitc
+    Description:
+        Purpose of the document follows.
+-->
+
+<Graph  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+   xmlns='http://xml.netbeans.org/schema/GraphMLSpecialized'
+   xsi:schemaLocation='http://xml.netbeans.org/schema/GraphMLSpecialized GraphMLSpecialized.xsd'>
+        <Node id="" name="" desc="" nodeColor="" nodeSize="" nodeClass="" nodeIcon="" x="" y="" nodeStatistic=""></Node>
+        <Node id="" name="" desc="" nodeColor="" nodeSize="" nodeClass="" nodeIcon="" x="" y="" nodeStatistic=""></Node>
+        <Node id="" name="" desc="" nodeColor="" nodeSize="" nodeClass="" nodeIcon="" x="" y="" nodeStatistic=""></Node>
+        <Edge fromID="" toID="" edgeLabel="" flow="0"></Edge>
+        <Edge fromID="" toID="" edgeLabel="" flow="0"></Edge>
+        <Edge fromID="" toID="" edgeLabel="" flow="0"></Edge>
+</Graph>

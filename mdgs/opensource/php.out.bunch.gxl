@@ -1,0 +1,1466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- GXL CLUSTER FILE GENERATED FROM BUNCH
+     Generation TimeStamp = Thu Feb 13 11:51:55 EST 2003
+ -->
+
+
+<!-- GXL DTD FILE IS INCLUDED INLINE
+     Check for updates to the DTD at: http://www.gupro.de/GXL/
+ -->
+<!DOCTYPE gxl [
+<!-- Attribute values -->
+<!ENTITY % val "
+           locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup
+           ">
+<!-- gxl -->
+<!ELEMENT gxl (graph*) >
+<!ATTLIST gxl
+	xmlns:xlink CDATA #FIXED "http://www.w3.org/1999/xlink"
+>
+<!-- type -->
+<!ELEMENT type EMPTY>
+<!ATTLIST type
+	xlink:type (simple) #FIXED "simple"
+	xlink:href CDATA #REQUIRED
+>
+<!-- graph -->
+<!ELEMENT graph (type? , attr* , ( node | edge | rel )* ) >
+<!ATTLIST graph
+	id ID #REQUIRED
+	role NMTOKEN #IMPLIED
+	edgeids (true | false) "false"
+	hypergraph (true | false) "false"
+	edgemode (directed | undirected | defaultdirected | defaultundirected) "directed"
+>
+<!-- node -->
+<!ELEMENT node (type? , attr*, graph* ) >
+<!ATTLIST node
+	id ID #REQUIRED
+>
+<!-- edge -->
+<!ELEMENT edge (type?, attr*, graph* ) >
+<!ATTLIST edge
+	id ID #IMPLIED
+	from IDREF #REQUIRED
+	to IDREF #REQUIRED
+	fromorder CDATA #IMPLIED
+	toorder CDATA #IMPLIED
+	isdirected (true | false) #IMPLIED
+>
+<!-- rel -->
+<!ELEMENT rel (type? , attr*, graph*, relend* ) >
+<!ATTLIST rel
+	id ID #IMPLIED
+	isdirected (true | false) #IMPLIED
+>
+<!-- relend -->
+<!ELEMENT relend (attr*) >
+<!ATTLIST relend
+	target IDREF #REQUIRED
+	role NMTOKEN #IMPLIED
+	direction (in | out | none) #IMPLIED
+	startorder CDATA #IMPLIED
+	endorder CDATA #IMPLIED
+>
+<!-- attr -->
+<!ELEMENT attr (type?, attr*,
+          (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup))>
+<!ATTLIST attr
+	id ID #IMPLIED
+	name NMTOKEN #REQUIRED
+	kind NMTOKEN #IMPLIED
+>
+<!-- locator -->
+<!ELEMENT locator EMPTY>
+<!ATTLIST locator
+	xlink:type (simple) #FIXED "simple"
+	xlink:href CDATA #REQUIRED
+>
+<!-- atomic values -->
+<!ELEMENT bool (#PCDATA)>
+<!ELEMENT int (#PCDATA)>
+<!ELEMENT float (#PCDATA)>
+<!ELEMENT string (#PCDATA)>
+<!-- enumeration value -->
+<!ELEMENT enum (#PCDATA)>
+<!-- composite values -->
+<!ELEMENT seq (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)* >
+<!ELEMENT set (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)*>
+<!ELEMENT bag (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)*>
+<!ELEMENT tup (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)*>
+]>
+
+<!-- END OF INCLUDED INLINE DTD FOR GXL
+     Check for updates to the DTD at: http://www.gupro.de/GXL/
+
+     NOW THE XML FILE BEGINS...
+ -->
+
+
+<gxl xmlns:xlink="http://www.w3.org/1999/xlink">
+   <graph id="generatedGXL">
+      <node id="N-SS-L1-main">
+         <attr name="cluster">
+            <string>BunchCluster</string>
+         </attr>
+         <graph id="SS-SS-L1-main">
+            <node id="internal_functions">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="zend_constants">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="zend_list">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="syslog">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="zend_compile">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="php_main">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="locale">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="main">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="base64">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="time">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="setjmp">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="fsock">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="credits">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="dl">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="zend_extensions">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="zend_highlight">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="zend_ini">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="php_ini">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="info">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="zend_llist">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="php_ticks">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+         </graph>
+      </node>
+      <node id="N-SS-L1-fopen_wrappers">
+         <attr name="cluster">
+            <string>BunchCluster</string>
+         </attr>
+         <graph id="SS-SS-L1-fopen_wrappers">
+            <node id="ctype">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="fopen_wrappers">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="tsrm_virtual_cwd">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="strlcpy">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="stat">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="stdio">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="pageinfo">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="safe_mode">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="unistd">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="pwd">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+         </graph>
+      </node>
+      <node id="N-SS-L1-string">
+         <attr name="cluster">
+            <string>BunchCluster</string>
+         </attr>
+         <graph id="SS-SS-L1-string">
+            <node id="netdb">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="network">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="socket">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="in">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="strlcat">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="php_string">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="string">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+         </graph>
+      </node>
+      <node id="N-SS-L1-zend_operators">
+         <attr name="cluster">
+            <string>BunchCluster</string>
+         </attr>
+         <graph id="SS-SS-L1-zend_operators">
+            <node id="mathcalls">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="zend_operators">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="errno">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="mergesort">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+         </graph>
+      </node>
+      <node id="N-SS-L1-SAPI">
+         <attr name="cluster">
+            <string>BunchCluster</string>
+         </attr>
+         <graph id="SS-SS-L1-SAPI">
+            <node id="zend">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="SAPI">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="zend_hash">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="logos">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="php_output">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="php_logos">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+         </graph>
+      </node>
+      <node id="N-SS-L1-php_variables">
+         <attr name="cluster">
+            <string>BunchCluster</string>
+         </attr>
+         <graph id="SS-SS-L1-php_variables">
+            <node id="zend_alloc">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="php_globals">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="rfc1867">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="type">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="stdlib">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="php_open_temporary_file">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="zend_variables">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="zend_execute">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="php_content_types">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="zend_globals_macros">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="php">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="url">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="zend_API">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="php_variables">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+         </graph>
+      </node>
+      <edge id="idstrlcpySAPI" from="strlcpy" to="SAPI">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstrlcpyfopen_wrappers" from="strlcpy" to="fopen_wrappers">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idmergesortstring" from="mergesort" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmergesorterrno" from="mergesort" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmergesortstdlib" from="mergesort" to="stdlib">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idmainfsock" from="main" to="fsock">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idmainzend_ini" from="main" to="zend_ini">
+         <attr name="edgeWeight">
+            <int>8</int>
+         </attr>
+      </edge>
+      <edge id="idmainphp_output" from="main" to="php_output">
+         <attr name="edgeWeight">
+            <int>11</int>
+         </attr>
+      </edge>
+      <edge id="idmainzend_globals_macros" from="main" to="zend_globals_macros">
+         <attr name="edgeWeight">
+            <int>27</int>
+         </attr>
+      </edge>
+      <edge id="idmainphp_content_types" from="main" to="php_content_types">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmainstdio" from="main" to="stdio">
+         <attr name="edgeWeight">
+            <int>13</int>
+         </attr>
+      </edge>
+      <edge id="idmainphp_ini" from="main" to="php_ini">
+         <attr name="edgeWeight">
+            <int>5</int>
+         </attr>
+      </edge>
+      <edge id="idmainunistd" from="main" to="unistd">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idmainzend_list" from="main" to="zend_list">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idmainzend_constants" from="main" to="zend_constants">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmainzend_alloc" from="main" to="zend_alloc">
+         <attr name="edgeWeight">
+            <int>26</int>
+         </attr>
+      </edge>
+      <edge id="idmainstring" from="main" to="string">
+         <attr name="edgeWeight">
+            <int>22</int>
+         </attr>
+      </edge>
+      <edge id="idmaincredits" from="main" to="credits">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmainsetjmp" from="main" to="setjmp">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idmainbase64" from="main" to="base64">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idmainzend_operators" from="main" to="zend_operators">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmainzend" from="main" to="zend">
+         <attr name="edgeWeight">
+            <int>10</int>
+         </attr>
+      </edge>
+      <edge id="idmainzend_execute" from="main" to="zend_execute">
+         <attr name="edgeWeight">
+            <int>6</int>
+         </attr>
+      </edge>
+      <edge id="idmainlocale" from="main" to="locale">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmainphp_variables" from="main" to="php_variables">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idmainzend_hash" from="main" to="zend_hash">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idmainzend_extensions" from="main" to="zend_extensions">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmainsyslog" from="main" to="syslog">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmainSAPI" from="main" to="SAPI">
+         <attr name="edgeWeight">
+            <int>20</int>
+         </attr>
+      </edge>
+      <edge id="idmaininternal_functions" from="main" to="internal_functions">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idmainzend_variables" from="main" to="zend_variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmainzend_API" from="main" to="zend_API">
+         <attr name="edgeWeight">
+            <int>7</int>
+         </attr>
+      </edge>
+      <edge id="idmainphp_logos" from="main" to="php_logos">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idmainphp_globals" from="main" to="php_globals">
+         <attr name="edgeWeight">
+            <int>20</int>
+         </attr>
+      </edge>
+      <edge id="idmaintime" from="main" to="time">
+         <attr name="edgeWeight">
+            <int>8</int>
+         </attr>
+      </edge>
+      <edge id="idmainstdlib" from="main" to="stdlib">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idmainfopen_wrappers" from="main" to="fopen_wrappers">
+         <attr name="edgeWeight">
+            <int>5</int>
+         </attr>
+      </edge>
+      <edge id="idmainphp_main" from="main" to="php_main">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmainphp_ticks" from="main" to="php_ticks">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idmainzend_compile" from="main" to="zend_compile">
+         <attr name="edgeWeight">
+            <int>9</int>
+         </attr>
+      </edge>
+      <edge id="idmaintsrm_virtual_cwd" from="main" to="tsrm_virtual_cwd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idzend_globals_macrosmain" from="zend_globals_macros" to="main">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idzend_globals_macrosphp_content_types" from="zend_globals_macros" to="php_content_types">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idzend_globals_macrosstdlib" from="zend_globals_macros" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idzend_globals_macrosSAPI" from="zend_globals_macros" to="SAPI">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idzend_globals_macroszend_execute" from="zend_globals_macros" to="zend_execute">
+         <attr name="edgeWeight">
+            <int>76</int>
+         </attr>
+      </edge>
+      <edge id="idphp_content_typeszend_variables" from="php_content_types" to="zend_variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_content_typesstring" from="php_content_types" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_content_typeszend_alloc" from="php_content_types" to="zend_alloc">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idphp_content_typesSAPI" from="php_content_types" to="SAPI">
+         <attr name="edgeWeight">
+            <int>6</int>
+         </attr>
+      </edge>
+      <edge id="idphp_content_typeszend_globals_macros" from="php_content_types" to="zend_globals_macros">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idphp_content_typeszend_hash" from="php_content_types" to="zend_hash">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inistring" from="php_ini" to="string">
+         <attr name="edgeWeight">
+            <int>7</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inizend_globals_macros" from="php_ini" to="zend_globals_macros">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_iniphp_output" from="php_ini" to="php_output">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inimain" from="php_ini" to="main">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inizend_extensions" from="php_ini" to="zend_extensions">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inizend" from="php_ini" to="zend">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inizend_operators" from="php_ini" to="zend_operators">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inizend_alloc" from="php_ini" to="zend_alloc">
+         <attr name="edgeWeight">
+            <int>11</int>
+         </attr>
+      </edge>
+      <edge id="idphp_iniphp_globals" from="php_ini" to="php_globals">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inizend_ini" from="php_ini" to="zend_ini">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inizend_llist" from="php_ini" to="zend_llist">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inifopen_wrappers" from="php_ini" to="fopen_wrappers">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inidl" from="php_ini" to="dl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_iniinfo" from="php_ini" to="info">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inizend_highlight" from="php_ini" to="zend_highlight">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inizend_hash" from="php_ini" to="zend_hash">
+         <attr name="edgeWeight">
+            <int>9</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inistdio" from="php_ini" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inistdlib" from="php_ini" to="stdlib">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idphp_inizend_variables" from="php_ini" to="zend_variables">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idsafe_modeunistd" from="safe_mode" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsafe_modezend_hash" from="safe_mode" to="zend_hash">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsafe_modezend_alloc" from="safe_mode" to="zend_alloc">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsafe_modefopen_wrappers" from="safe_mode" to="fopen_wrappers">
+         <attr name="edgeWeight">
+            <int>7</int>
+         </attr>
+      </edge>
+      <edge id="idsafe_modestat" from="safe_mode" to="stat">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idsafe_modeSAPI" from="safe_mode" to="SAPI">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idsafe_modezend" from="safe_mode" to="zend">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idsafe_modestring" from="safe_mode" to="string">
+         <attr name="edgeWeight">
+            <int>5</int>
+         </attr>
+      </edge>
+      <edge id="idsafe_modepageinfo" from="safe_mode" to="pageinfo">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idsafe_modepwd" from="safe_mode" to="pwd">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idrfc1867php_globals" from="rfc1867" to="php_globals">
+         <attr name="edgeWeight">
+            <int>10</int>
+         </attr>
+      </edge>
+      <edge id="idrfc1867stdio" from="rfc1867" to="stdio">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idrfc1867unistd" from="rfc1867" to="unistd">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idrfc1867zend_hash" from="rfc1867" to="zend_hash">
+         <attr name="edgeWeight">
+            <int>7</int>
+         </attr>
+      </edge>
+      <edge id="idrfc1867zend_API" from="rfc1867" to="zend_API">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idrfc1867zend_alloc" from="rfc1867" to="zend_alloc">
+         <attr name="edgeWeight">
+            <int>9</int>
+         </attr>
+      </edge>
+      <edge id="idrfc1867php_variables" from="rfc1867" to="php_variables">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idrfc1867SAPI" from="rfc1867" to="SAPI">
+         <attr name="edgeWeight">
+            <int>6</int>
+         </attr>
+      </edge>
+      <edge id="idrfc1867zend" from="rfc1867" to="zend">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idrfc1867string" from="rfc1867" to="string">
+         <attr name="edgeWeight">
+            <int>35</int>
+         </attr>
+      </edge>
+      <edge id="idrfc1867type" from="rfc1867" to="type">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idrfc1867stdlib" from="rfc1867" to="stdlib">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idrfc1867zend_globals_macros" from="rfc1867" to="zend_globals_macros">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idrfc1867php_open_temporary_file" from="rfc1867" to="php_open_temporary_file">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idnetworkin" from="network" to="in">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idnetworkunistd" from="network" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnetworksocket" from="network" to="socket">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idnetworkstring" from="network" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnetworkzend_alloc" from="network" to="zend_alloc">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idnetworknetdb" from="network" to="netdb">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idnetworkzend" from="network" to="zend">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idzend_operatorserrno" from="zend_operators" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idzend_operatorsstdlib" from="zend_operators" to="stdlib">
+         <attr name="edgeWeight">
+            <int>40</int>
+         </attr>
+      </edge>
+      <edge id="idzend_operatorsmathcalls" from="zend_operators" to="mathcalls">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idzend_executezend_variables" from="zend_execute" to="zend_variables">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idzend_executezend_alloc" from="zend_execute" to="zend_alloc">
+         <attr name="edgeWeight">
+            <int>39</int>
+         </attr>
+      </edge>
+      <edge id="idzend_executezend_globals_macros" from="zend_execute" to="zend_globals_macros">
+         <attr name="edgeWeight">
+            <int>139</int>
+         </attr>
+      </edge>
+      <edge id="idzend_executezend" from="zend_execute" to="zend">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idzend_executezend_hash" from="zend_execute" to="zend_hash">
+         <attr name="edgeWeight">
+            <int>20</int>
+         </attr>
+      </edge>
+      <edge id="idphp_variablesphp_globals" from="php_variables" to="php_globals">
+         <attr name="edgeWeight">
+            <int>5</int>
+         </attr>
+      </edge>
+      <edge id="idphp_variablesurl" from="php_variables" to="url">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idphp_variableszend_hash" from="php_variables" to="zend_hash">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idphp_variablesphp" from="php_variables" to="php">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idphp_variableszend_API" from="php_variables" to="zend_API">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idphp_variableszend_alloc" from="php_variables" to="zend_alloc">
+         <attr name="edgeWeight">
+            <int>14</int>
+         </attr>
+      </edge>
+      <edge id="idphp_variablesmain" from="php_variables" to="main">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_variablesSAPI" from="php_variables" to="SAPI">
+         <attr name="edgeWeight">
+            <int>6</int>
+         </attr>
+      </edge>
+      <edge id="idphp_variablesstring" from="php_variables" to="string">
+         <attr name="edgeWeight">
+            <int>21</int>
+         </attr>
+      </edge>
+      <edge id="idphp_variableszend" from="php_variables" to="zend">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_variablesrfc1867" from="php_variables" to="rfc1867">
+         <attr name="edgeWeight">
+            <int>6</int>
+         </attr>
+      </edge>
+      <edge id="idphp_variableszend_globals_macros" from="php_variables" to="zend_globals_macros">
+         <attr name="edgeWeight">
+            <int>6</int>
+         </attr>
+      </edge>
+      <edge id="idphp_variablesphp_string" from="php_variables" to="php_string">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idphp_variableszend_variables" from="php_variables" to="zend_variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_open_temporary_filerfc1867" from="php_open_temporary_file" to="rfc1867">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_open_temporary_filestring" from="php_open_temporary_file" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_open_temporary_filezend_alloc" from="php_open_temporary_file" to="zend_alloc">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idphp_open_temporary_filestdlib" from="php_open_temporary_file" to="stdlib">
+         <attr name="edgeWeight">
+            <int>5</int>
+         </attr>
+      </edge>
+      <edge id="idphp_open_temporary_filestdio" from="php_open_temporary_file" to="stdio">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idphp_open_temporary_filephp_globals" from="php_open_temporary_file" to="php_globals">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIstring" from="SAPI" to="string">
+         <attr name="edgeWeight">
+            <int>23</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIzend_globals_macros" from="SAPI" to="zend_globals_macros">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIphp_output" from="SAPI" to="php_output">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIrfc1867" from="SAPI" to="rfc1867">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIctype" from="SAPI" to="ctype">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idSAPImain" from="SAPI" to="main">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIzend" from="SAPI" to="zend">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIphp_content_types" from="SAPI" to="php_content_types">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIphp_variables" from="SAPI" to="php_variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIzend_alloc" from="SAPI" to="zend_alloc">
+         <attr name="edgeWeight">
+            <int>29</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIstrlcat" from="SAPI" to="strlcat">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIzend_llist" from="SAPI" to="zend_llist">
+         <attr name="edgeWeight">
+            <int>5</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIsafe_mode" from="SAPI" to="safe_mode">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIfopen_wrappers" from="SAPI" to="fopen_wrappers">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIphp_logos" from="SAPI" to="php_logos">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIinternal_functions" from="SAPI" to="internal_functions">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIstat" from="SAPI" to="stat">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIzend_hash" from="SAPI" to="zend_hash">
+         <attr name="edgeWeight">
+            <int>5</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIstdio" from="SAPI" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSAPIstdlib" from="SAPI" to="stdlib">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idinternal_functionsmain" from="internal_functions" to="main">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idphp_logosstring" from="php_logos" to="string">
+         <attr name="edgeWeight">
+            <int>6</int>
+         </attr>
+      </edge>
+      <edge id="idphp_logosstdlib" from="php_logos" to="stdlib">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idphp_logosphp_output" from="php_logos" to="php_output">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_logosSAPI" from="php_logos" to="SAPI">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idphp_logoslogos" from="php_logos" to="logos">
+         <attr name="edgeWeight">
+            <int>6</int>
+         </attr>
+      </edge>
+      <edge id="idphp_logoszend_hash" from="php_logos" to="zend_hash">
+         <attr name="edgeWeight">
+            <int>5</int>
+         </attr>
+      </edge>
+      <edge id="idphp_globalsmain" from="php_globals" to="main">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idphp_globalsrfc1867" from="php_globals" to="rfc1867">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idphp_globalsphp_variables" from="php_globals" to="php_variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_globalszend_alloc" from="php_globals" to="zend_alloc">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_globalszend_globals_macros" from="php_globals" to="zend_globals_macros">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idphp_globalsphp_ini" from="php_globals" to="php_ini">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idphp_stringstring" from="php_string" to="string">
+         <attr name="edgeWeight">
+            <int>6</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrappersstring" from="fopen_wrappers" to="string">
+         <attr name="edgeWeight">
+            <int>25</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrappersphp_ini" from="fopen_wrappers" to="php_ini">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrappersctype" from="fopen_wrappers" to="ctype">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrappersmain" from="fopen_wrappers" to="main">
+         <attr name="edgeWeight">
+            <int>5</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrapperspwd" from="fopen_wrappers" to="pwd">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrapperszend" from="fopen_wrappers" to="zend">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrapperszend_alloc" from="fopen_wrappers" to="zend_alloc">
+         <attr name="edgeWeight">
+            <int>11</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrapperserrno" from="fopen_wrappers" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrappersphp_globals" from="fopen_wrappers" to="php_globals">
+         <attr name="edgeWeight">
+            <int>15</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrappersstrlcpy" from="fopen_wrappers" to="strlcpy">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrapperssafe_mode" from="fopen_wrappers" to="safe_mode">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrapperstsrm_virtual_cwd" from="fopen_wrappers" to="tsrm_virtual_cwd">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrappersstat" from="fopen_wrappers" to="stat">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrappersunistd" from="fopen_wrappers" to="unistd">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrapperszend_hash" from="fopen_wrappers" to="zend_hash">
+         <attr name="edgeWeight">
+            <int>5</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrappersstdio" from="fopen_wrappers" to="stdio">
+         <attr name="edgeWeight">
+            <int>8</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrappersSAPI" from="fopen_wrappers" to="SAPI">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idfopen_wrappersstdlib" from="fopen_wrappers" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstatsafe_mode" from="stat" to="safe_mode">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idstatSAPI" from="stat" to="SAPI">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idstatstdio" from="stat" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstatfopen_wrappers" from="stat" to="fopen_wrappers">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idphp_ticksstring" from="php_ticks" to="string">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idphp_tickszend_llist" from="php_ticks" to="zend_llist">
+         <attr name="edgeWeight">
+            <int>5</int>
+         </attr>
+      </edge>
+      <edge id="idphp_ticksphp_globals" from="php_ticks" to="php_globals">
+         <attr name="edgeWeight">
+            <int>5</int>
+         </attr>
+      </edge>
+      <edge id="idstrlcatstring" from="strlcat" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstrlcatSAPI" from="strlcat" to="SAPI">
+         <attr name="edgeWeight">
+            <int>5</int>
+         </attr>
+      </edge>
+   </graph>
+</gxl>

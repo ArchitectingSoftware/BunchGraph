@@ -1,0 +1,136 @@
+/* ------------------------------------------------------------ */
+/* created with bunch v3 */
+/* Objective Function value = 1.0*/
+/* ------------------------------------------------------------ */
+
+digraph G {
+size= "10,10";
+rotate = 90;
+subgraph cluster0 {
+label = "(SS-L1):telnetd";
+color = black;
+style = bold;
+
+"stdlib"[label="stdlib",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"unistd"[label="unistd",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"setproctitle"[label="setproctitle",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"string"[label="string",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"fcntl"[label="fcntl",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"term"[label="term",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"telnetd"[label="telnetd",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"errno"[label="errno",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"netdb"[label="netdb",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"ctype"[label="ctype",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"syslog"[label="syslog",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"stdio"[label="stdio",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"state"[label="state",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster1 {
+label = "(SS-L1):sys_term";
+color = black;
+style = bold;
+
+"signal"[label="signal",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"utmp"[label="utmp",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"pty"[label="pty",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"termios"[label="termios",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"sys_term"[label="sys_term",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"stat"[label="stat",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"ioctl"[label="ioctl",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"termstat"[label="termstat",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster2 {
+label = "(SS-L1):utility";
+color = black;
+style = bold;
+
+"ext"[label="ext",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"getopt"[label="getopt",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"utsname"[label="utsname",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"select"[label="select",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"utility"[label="utility",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"socket"[label="socket",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"telnet"[label="telnet",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+"sys_term" -> "telnetd" [color=blue,font=6];
+"sys_term" -> "syslog" [color=blue,font=6];
+"sys_term" -> "stdio" [color=blue,font=6];
+"sys_term" -> "ext" [color=blue,font=6];
+"sys_term" -> "unistd" [color=blue,font=6];
+"sys_term" -> "ioctl" [color=blue,font=6];
+"sys_term" -> "stat" [color=blue,font=6];
+"sys_term" -> "string" [color=blue,font=6];
+"sys_term" -> "signal" [color=blue,font=6];
+"sys_term" -> "pty" [color=blue,font=6];
+"sys_term" -> "stdlib" [color=blue,font=6];
+"sys_term" -> "termios" [color=blue,font=6];
+"sys_term" -> "utility" [color=blue,font=6];
+"sys_term" -> "socket" [color=blue,font=6];
+"sys_term" -> "termstat" [color=blue,font=6];
+"sys_term" -> "utmp" [color=blue,font=6];
+"telnetd" -> "string" [color=blue,font=6];
+"telnetd" -> "sys_term" [color=blue,font=6];
+"telnetd" -> "netdb" [color=blue,font=6];
+"telnetd" -> "state" [color=blue,font=6];
+"telnetd" -> "syslog" [color=blue,font=6];
+"telnetd" -> "getopt" [color=blue,font=6];
+"telnetd" -> "ext" [color=blue,font=6];
+"telnetd" -> "ioctl" [color=blue,font=6];
+"telnetd" -> "setproctitle" [color=blue,font=6];
+"telnetd" -> "errno" [color=blue,font=6];
+"telnetd" -> "socket" [color=blue,font=6];
+"telnetd" -> "utility" [color=blue,font=6];
+"telnetd" -> "select" [color=blue,font=6];
+"telnetd" -> "term" [color=blue,font=6];
+"telnetd" -> "fcntl" [color=blue,font=6];
+"telnetd" -> "signal" [color=blue,font=6];
+"telnetd" -> "unistd" [color=blue,font=6];
+"telnetd" -> "stdio" [color=blue,font=6];
+"telnetd" -> "stdlib" [color=blue,font=6];
+"state" -> "ctype" [color=blue,font=6];
+"state" -> "telnetd" [color=blue,font=6];
+"state" -> "syslog" [color=blue,font=6];
+"state" -> "stdio" [color=blue,font=6];
+"state" -> "ext" [color=blue,font=6];
+"state" -> "sys_term" [color=blue,font=6];
+"state" -> "string" [color=blue,font=6];
+"state" -> "stdlib" [color=blue,font=6];
+"state" -> "utility" [color=blue,font=6];
+"state" -> "termstat" [color=blue,font=6];
+"ext" -> "unistd" [color=blue,font=6];
+"ext" -> "sys_term" [color=blue,font=6];
+"ext" -> "string" [color=blue,font=6];
+"ext" -> "utility" [color=blue,font=6];
+"ext" -> "stdlib" [color=blue,font=6];
+"ext" -> "state" [color=blue,font=6];
+"ext" -> "getopt" [color=blue,font=6];
+"ext" -> "telnetd" [color=blue,font=6];
+"setproctitle" -> "unistd" [color=blue,font=6];
+"setproctitle" -> "string" [color=blue,font=6];
+"setproctitle" -> "stdlib" [color=blue,font=6];
+"setproctitle" -> "stdio" [color=blue,font=6];
+"setproctitle" -> "telnetd" [color=blue,font=6];
+"termstat" -> "sys_term" [color=blue,font=6];
+"termstat" -> "ioctl" [color=blue,font=6];
+"termstat" -> "utility" [color=blue,font=6];
+"termstat" -> "ext" [color=blue,font=6];
+"termstat" -> "state" [color=blue,font=6];
+"utility" -> "utsname" [color=blue,font=6];
+"utility" -> "ctype" [color=blue,font=6];
+"utility" -> "state" [color=blue,font=6];
+"utility" -> "telnetd" [color=blue,font=6];
+"utility" -> "syslog" [color=blue,font=6];
+"utility" -> "stdio" [color=blue,font=6];
+"utility" -> "ext" [color=blue,font=6];
+"utility" -> "errno" [color=blue,font=6];
+"utility" -> "sys_term" [color=blue,font=6];
+"utility" -> "unistd" [color=blue,font=6];
+"utility" -> "telnet" [color=blue,font=6];
+"utility" -> "string" [color=blue,font=6];
+"utility" -> "stdlib" [color=blue,font=6];
+"utility" -> "select" [color=blue,font=6];
+"utility" -> "socket" [color=blue,font=6];
+"unistd" -> "string" [color=blue,font=6];
+"unistd" -> "stdlib" [color=blue,font=6];
+"unistd" -> "setproctitle" [color=blue,font=6];
+}

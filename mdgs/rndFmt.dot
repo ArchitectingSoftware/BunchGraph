@@ -1,0 +1,105 @@
+digraph G {
+	graph [size="10,10", rotate=90];
+	node [label="\N"];
+	graph [lp="359,0"];
+	graph [bb="0,0,718,560"];
+	subgraph cluster0 {
+		graph [label="(SS-L0):M4"];
+		graph [color=black];
+		graph [style=bold];
+		graph [lp=""];
+		graph [bb="254,8,464,552"];
+		M6 [label=M6, shape=ellipse, color=lightblue, fontcolor=black, style=filled, pos="323,486", width="0.75", height="0.50"];
+		M8 [label=M8, shape=ellipse, color=lightblue, fontcolor=black, style=filled, pos="289,34", width="0.75", height="0.50"];
+		M9 [label=M9, shape=ellipse, color=lightblue, fontcolor=black, style=filled, pos="421,178", width="0.75", height="0.50"];
+		M10 [label=M10, shape=ellipse, color=lightblue, fontcolor=black, style=filled, pos="329,106", width="0.75", height="0.50"];
+		M12 [label=M12, shape=ellipse, color=lightblue, fontcolor=black, style=filled, pos="369,250", width="0.75", height="0.50"];
+		M4 [label=M4, shape=ellipse, color=lightblue, fontcolor=black, style=filled, pos="323,394", width="0.75", height="0.50"];
+		M2 [label=M2, shape=ellipse, color=lightblue, fontcolor=black, style=filled, pos="369,322", width="0.75", height="0.50"];
+		M2 -> M6 [color=blue, font=6, pos="s,348,478 356,474 361,470 365,465 368,460 390,421 385,367 378,339"];
+		M2 -> M4 [color=blue, font=6, pos="s,338,379 344,371 351,361 358,349 363,340"];
+		M2 -> M12 [color=blue, font=6, pos="e,369,268 369,304 369,296 369,287 369,278"];
+		M2 -> M9 [color=blue, font=6, pos="e,420,196 382,306 390,296 400,282 405,268 414,247 418,223 419,204"];
+		M12 -> M6 [color=blue, font=6, pos="s,349,480 357,476 363,472 367,468 373,460 405,414 398,394 405,340 408,320 412,314 405,296 401,284 393,273 385,265"];
+		M12 -> M9 [color=blue, font=6, pos="e,409,195 381,234 387,224 396,212 403,202"];
+		M10 -> M4 [color=blue, font=6, pos="s,329,376 329,367 329,359 331,352 330,340 329,256 322,235 328,152 329,140 328,132 329,124"];
+		M10 -> M12 [color=blue, font=6, pos="s,364,232 362,224 354,195 341,149 334,124"];
+		M10 -> M2 [color=blue, font=6, pos="s,355,306 349,299 343,290 337,279 333,268 318,218 323,154 326,124"];
+		M10 -> M8 [color=blue, font=6, pos="e,299,51 320,89 315,81 309,70 304,60"];
+		M9 -> M6 [color=blue, font=6, pos="s,350,485 359,483 376,477 383,475 393,460 443,388 426,354 434,268 436,252 436,247 434,232 433,220 430,206 427,196"];
+		M9 -> M10 [color=blue, font=6, pos="e,347,120 403,164 389,153 370,137 354,125"];
+		M8 -> M6 [color=blue, font=6, pos="s,302,475 295,470 292,467 290,464 287,460 255,406 263,384 263,322 263,322 263,322 263,178 263,131 276,79 284,52"];
+		M8 -> M12 [color=blue, font=6, pos="s,370,232 371,223 373,183 376,111 365,88 352,59 340,52 314,41"];
+		M8 -> M9 [color=blue, font=6, pos="s,416,160 414,153 407,133 397,106 380,88 357,59 345,51 315,40"];
+		M6 -> M4 [color=blue, font=6, pos="e,318,412 318,468 316,455 316,436 317,421"];
+		M6 -> M2 [color=blue, font=6, pos="e,367,340 340,472 344,468 348,465 350,460 369,426 368,379 367,349"];
+		M4 -> M6 [color=blue, font=6, pos="s,328,468 329,460 330,445 330,425 328,412"];
+		M4 -> M12 [color=blue, font=6, pos="e,354,265 322,376 322,355 323,322 333,296 337,287 342,279 348,272"];
+		M4 -> M2 [color=blue, font=6, pos="e,354,337 328,376 334,367 341,355 348,345"];
+		M4 -> M10 [color=blue, font=6, pos="e,312,120 311,378 310,365 313,357 312,340 311,256 304,235 310,152 311,142 310,135 310,128"];
+		M4 -> M9 [color=blue, font=6, pos="e,424,196 347,385 366,376 392,361 405,340 431,298 430,240 425,205"];
+		M4 -> M8 [color=blue, font=6, pos="e,288,52 308,379 293,345 283,277 283,250 283,250 283,250 283,178 283,137 285,90 287,61"];
+	}
+	subgraph cluster1 {
+		graph [label="(SS-L0):M11"];
+		graph [color=black];
+		graph [style=bold];
+		graph [lp=""];
+		graph [bb="104,152,214,460"];
+		M5 [label=M5, shape=ellipse, color=lightblue, fontcolor=black, style=filled, pos="139,322", width="0.75", height="0.50"];
+		M11 [label=M11, shape=ellipse, color=lightblue, fontcolor=black, style=filled, pos="159,250", width="0.75", height="0.50"];
+		M3 [label=M3, shape=ellipse, color=lightblue, fontcolor=black, style=filled, pos="179,394", width="0.75", height="0.50"];
+		M1 [label=M1, shape=ellipse, color=lightblue, fontcolor=black, style=filled, pos="179,178", width="0.75", height="0.50"];
+		M1 -> M11 [color=blue, font=6, pos="s,169,233 172,225 176,215 178,204 180,196"];
+		M11 -> M5 [color=blue, font=6, pos="s,149,305 152,297 156,287 158,276 160,268"];
+		M11 -> M1 [color=blue, font=6, pos="e,169,195 158,232 159,224 162,213 165,204"];
+		M5 -> M11 [color=blue, font=6, pos="e,149,267 138,304 139,296 142,285 145,276"];
+		M5 -> M1 [color=blue, font=6, pos="e,155,186 131,305 123,286 115,256 123,232 130,212 136,201 147,192"];
+		M3 -> M5 [color=blue, font=6, pos="e,149,339 170,377 165,369 159,358 154,348"];
+		M3 -> M11 [color=blue, font=6, pos="e,167,268 180,376 181,356 181,323 175,296 174,289 172,283 170,277"];
+		M3 -> M1 [color=blue, font=6, pos="e,186,196 184,376 195,334 192,317 195,268 196,252 198,247 195,232 194,223 191,213 189,205"];
+	}
+	subgraph cluster2 {
+		graph [label="(SS-L0):M7"];
+		graph [color=black];
+		graph [style=bold];
+		graph [lp=""];
+		graph [bb="504,296,574,460"];
+		M7 [label=M7, shape=ellipse, color=lightblue, fontcolor=black, style=filled, pos="539,394", width="0.75", height="0.50"];
+		M13 [label=M13, shape=ellipse, color=lightblue, fontcolor=black, style=filled, pos="539,322", width="0.75", height="0.50"];
+		M13 -> M7 [color=blue, font=6, pos="s,545,376 546,367 546,358 546,348 545,340"];
+		M7 -> M13 [color=blue, font=6, pos="e,533,340 533,376 532,368 532,359 532,350"];
+	}
+	M2 -> M5 [color=blue, font=6, pos="s,166,322 175,322 231,322 287,322 342,322"];
+	M2 -> M3 [color=blue, font=6, pos="s,203,385 212,382 250,367 312,344 345,331"];
+	M2 -> M11 [color=blue, font=6, pos="e,184,257 346,312 309,299 235,274 193,260"];
+	M1 -> M4 [color=blue, font=6, pos="s,309,378 303,371 295,362 286,350 278,340 235,277 251,234 200,190"];
+	M1 -> M12 [color=blue, font=6, pos="s,345,241 335,237 297,223 236,200 203,187"];
+	M1 -> M9 [color=blue, font=6, pos="e,394,178 206,178 265,178 325,178 383,178"];
+	M1 -> M7 [color=blue, font=6, pos="s,566,392 575,389 600,377 611,368 624,340 631,322 634,312 624,296 529,153 417,237 250,196 230,190 225,185 206,181"];
+	M13 -> M12 [color=blue, font=6, pos="e,392,260 516,312 487,300 434,278 400,264"];
+	M13 -> M3 [color=blue, font=6, pos="s,204,387 212,385 224,382 238,378 250,376 360,354 391,370 498,340 505,338 511,335 517,333"];
+	M13 -> M11 [color=blue, font=6, pos="e,185,255 517,312 503,306 485,300 468,296 374,272 347,283 250,268 231,265 210,260 194,257"];
+	M13 -> M9 [color=blue, font=6, pos="e,447,182 544,304 548,285 551,253 536,232 518,204 483,191 456,184"];
+	M12 -> M7 [color=blue, font=6, pos="s,561,384 569,380 584,370 600,357 608,340 616,322 620,311 608,296 569,247 532,281 470,268 439,261 432,256 400,252 399,252 398,25\
+2 396,251"];
+	M11 -> M12 [color=blue, font=6, pos="e,342,250 186,250 235,250 283,250 332,250"];
+	M11 -> M2 [color=blue, font=6, pos="s,344,315 334,312 291,298 219,273 182,260"];
+	M11 -> M10 [color=blue, font=6, pos="e,302,109 149,233 138,212 125,175 143,152 162,129 243,116 292,110"];
+	M10 -> M7 [color=blue, font=6, pos="s,566,393 575,392 589,387 591,384 602,376 620,362 630,361 639,340 646,321 647,313 639,296 595,203 546,204 457,152 416,126 403,11\
+9 356,108"];
+	M9 -> M3 [color=blue, font=6, pos="s,206,391 215,387 217,386 219,385 222,384 227,382 229,381 233,380 246,375 250,375 262,372 270,370 272,369 279,368 293,364 395,35\
+0 405,340 444,301 431,274 428,220 428,209 431,202 430,195"];
+	M8 -> M5 [color=blue, font=6, pos="s,122,308 119,300 117,290 118,281 116,268 105,187 87,145 143,88 184,46 207,50 262,36"];
+	M8 -> M11 [color=blue, font=6, pos="s,139,238 133,230 116,207 117,183 131,152 165,81 197,70 264,41"];
+	M8 -> M1 [color=blue, font=6, pos="s,191,162 197,155 219,125 257,76 276,50"];
+	M7 -> M3 [color=blue, font=6, pos="s,191,410 197,417 203,423 209,427 215,430 245,442 474,442 503,430 513,426 521,418 527,410"];
+	M7 -> M2 [color=blue, font=6, pos="e,392,332 516,384 487,372 434,350 400,336"];
+	M7 -> M11 [color=blue, font=6, pos="e,186,251 553,378 571,357 596,320 575,296 552,269 294,273 258,268 229,263 223,256 195,252"];
+	M6 -> M11 [color=blue, font=6, pos="e,134,258 296,485 290,485 283,484 277,484 243,481 146,485 121,460 71,406 76,364 103,296 110,278 116,270 126,263"];
+	M6 -> M1 [color=blue, font=6, pos="e,152,179 296,485 286,485 275,484 265,484 224,482 107,491 80,460 15,380 68,322 116,232 128,210 126,196 142,183"];
+	M5 -> M6 [color=blue, font=6, pos="s,296,484 286,483 237,479 152,470 143,460 114,427 125,369 133,340"];
+	M5 -> M4 [color=blue, font=6, pos="s,300,385 291,381 254,367 195,344 162,331"];
+	M4 -> M13 [color=blue, font=6, pos="e,517,332 348,387 383,378 446,359 498,340 501,339 504,338 508,336"];
+	M4 -> M7 [color=blue, font=6, pos="e,512,394 350,394 400,394 451,394 501,394"];
+}

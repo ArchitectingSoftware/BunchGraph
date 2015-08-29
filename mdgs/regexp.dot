@@ -1,0 +1,55 @@
+/* ------------------------------------------------------------ */
+/* created with bunch v3 */
+/* Objective Function value = 1.0*/
+/* ------------------------------------------------------------ */
+
+digraph G {
+size= "10,10";
+rotate = 90;
+subgraph cluster0 {
+label = "(SS-L1):RE";
+color = black;
+style = bold;
+
+"RE"[label="RE",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"StringCharacterIterator"[label="StringCharacterIterator",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"REUtil"[label="REUtil",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"CharacterIterator"[label="CharacterIterator",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"CharacterArrayCharacterIterator"[label="CharacterArrayCharacterIterator",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"StreamCharacterIterator"[label="StreamCharacterIterator",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"ReaderCharacterIterator"[label="ReaderCharacterIterator",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster1 {
+label = "(SS-L1):RECompiler";
+color = black;
+style = bold;
+
+"RECompiler"[label="RECompiler",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"RESyntaxException"[label="RESyntaxException",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"recompile"[label="recompile",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"REProgram"[label="REProgram",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"RETest"[label="RETest",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"REDebugCompiler"[label="REDebugCompiler",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"REDemo"[label="REDemo",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+"REUtil" -> "RE" [color=blue,font=6];
+"ReaderCharacterIterator" -> "CharacterIterator" [color=blue,font=6];
+"recompile" -> "RECompiler" [color=blue,font=6];
+"recompile" -> "REProgram" [color=blue,font=6];
+"RETest" -> "REDebugCompiler" [color=blue,font=6];
+"RETest" -> "RECompiler" [color=blue,font=6];
+"RETest" -> "REProgram" [color=blue,font=6];
+"RETest" -> "RE" [color=blue,font=6];
+"CharacterArrayCharacterIterator" -> "CharacterIterator" [color=blue,font=6];
+"REDebugCompiler" -> "RECompiler" [color=blue,font=6];
+"RE" -> "StringCharacterIterator" [color=blue,font=6];
+"RE" -> "RECompiler" [color=blue,font=6];
+"RE" -> "REProgram" [color=blue,font=6];
+"RECompiler" -> "REProgram" [color=blue,font=6];
+"RECompiler" -> "RESyntaxException" [color=blue,font=6];
+"StringCharacterIterator" -> "CharacterIterator" [color=blue,font=6];
+"StreamCharacterIterator" -> "CharacterIterator" [color=blue,font=6];
+"REDemo" -> "REDebugCompiler" [color=blue,font=6];
+"REDemo" -> "RECompiler" [color=blue,font=6];
+"REDemo" -> "RE" [color=blue,font=6];
+}

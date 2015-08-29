@@ -1,0 +1,8968 @@
+%!PS-Adobe-2.0
+%%Creator: dot version 1.8.6 (Tue Jun 11 14:27:16 EDT 2002)
+%%For: Bill Gates
+%%Title: G
+%%Pages: (atend)
+%%BoundingBox: 35 35 469 85
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+
+EncodingVector
+  dup 306 /AE
+  dup 301 /Aacute
+  dup 302 /Acircumflex
+  dup 304 /Adieresis
+  dup 300 /Agrave
+  dup 305 /Aring
+  dup 303 /Atilde
+  dup 307 /Ccedilla
+  dup 311 /Eacute
+  dup 312 /Ecircumflex
+  dup 313 /Edieresis
+  dup 310 /Egrave
+  dup 315 /Iacute
+  dup 316 /Icircumflex
+  dup 317 /Idieresis
+  dup 314 /Igrave
+  dup 334 /Udieresis
+  dup 335 /Yacute
+  dup 376 /thorn
+  dup 337 /germandbls
+  dup 341 /aacute
+  dup 342 /acircumflex
+  dup 344 /adieresis
+  dup 346 /ae
+  dup 340 /agrave
+  dup 345 /aring
+  dup 347 /ccedilla
+  dup 351 /eacute
+  dup 352 /ecircumflex
+  dup 353 /edieresis
+  dup 350 /egrave
+  dup 355 /iacute
+  dup 356 /icircumflex
+  dup 357 /idieresis
+  dup 354 /igrave
+  dup 360 /dcroat
+  dup 361 /ntilde
+  dup 363 /oacute
+  dup 364 /ocircumflex
+  dup 366 /odieresis
+  dup 362 /ograve
+  dup 365 /otilde
+  dup 370 /oslash
+  dup 372 /uacute
+  dup 373 /ucircumflex
+  dup 374 /udieresis
+  dup 371 /ugrave
+  dup 375 /yacute
+  dup 377 /ydieresis  
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+	dup 1 exch div /InvScaleFactor exch def
+	dup scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw aligned label in bounding box aligned to current point
+/alignedtext {			% width adj text
+	/text exch def
+	/adj exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			text stringwidth pop adj mul 0 rmoveto
+		} if
+		[] 0 setdash
+		text show
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+%%Page: 1 1
+%%PageBoundingBox: 36 36 469 85
+%%PageOrientation: Portrait
+gsave
+35 35 434 50 boxprim clip newpath
+36 36 translate
+0 0 1 beginpage
+0.0473 set_scale
+0 0 translate 0 rotate
+0.000 0.000 0.000 graphcolor
+14.00 /Times-Roman set_font
+
+%	DefaultObjectiveFunctionCalculator
+gsave 10 dict begin
+4578 357 136 18 ellipse_path
+stroke
+gsave 10 dict begin
+4578 352 moveto 251 -0.5 (DefaultObjectiveFunctionCalculator) alignedtext
+end grestore
+end grestore
+
+%	Graph
+gsave 10 dict begin
+5140 285 33 18 ellipse_path
+stroke
+gsave 10 dict begin
+5140 280 moveto 44 -0.5 (Graph) alignedtext
+end grestore
+end grestore
+
+%	DefaultObjectiveFunctionCalculator -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4678 345 moveto
+4766 334 4897 318 5011 303 curveto
+5041 299 5074 294 5100 291 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5098 294 moveto
+5108 290 lineto
+5098 289 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Node
+gsave 10 dict begin
+3249 213 29 18 ellipse_path
+stroke
+gsave 10 dict begin
+3249 208 moveto 37 -0.5 (Node) alignedtext
+end grestore
+end grestore
+
+%	DefaultObjectiveFunctionCalculator -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4528 340 moveto
+4467 320 4360 288 4267 267 curveto
+4194 250 4174 251 4098 247 curveto
+4069 245 4061 244 4031 243 curveto
+3996 241 3987 240 3951 239 curveto
+3872 235 3852 234 3771 231 curveto
+3704 228 3687 227 3619 225 curveto
+3554 222 3537 221 3471 219 curveto
+3451 218 3445 217 3424 217 curveto
+3407 216 3402 215 3384 215 curveto
+3352 214 3314 213 3287 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3288 211 moveto
+3278 213 lineto
+3288 216 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Graph -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5107 284 moveto
+5033 280 4848 272 4692 267 curveto
+4135 245 3456 220 3288 214 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3288 212 moveto
+3278 214 lineto
+3288 217 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Cluster
+gsave 10 dict begin
+6277 213 35 18 ellipse_path
+stroke
+gsave 10 dict begin
+6277 208 moveto 48 -0.5 (Cluster) alignedtext
+end grestore
+end grestore
+
+%	Graph -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5173 283 moveto
+5335 272 6046 227 6232 216 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6232 218 moveto
+6242 215 lineto
+6232 214 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ObjectiveFunctionCalculatorFactory
+gsave 10 dict begin
+6182 141 136 18 ellipse_path
+stroke
+gsave 10 dict begin
+6182 136 moveto 250 -0.5 (ObjectiveFunctionCalculatorFactory) alignedtext
+end grestore
+end grestore
+
+%	Graph -> ObjectiveFunctionCalculatorFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5172 281 moveto
+5309 261 5849 187 6078 155 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6077 158 moveto
+6087 154 lineto
+6077 153 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	PrecisionRecallCalculator
+gsave 10 dict begin
+3138 357 98 18 ellipse_path
+stroke
+gsave 10 dict begin
+3138 352 moveto 174 -0.5 (PrecisionRecallCalculator) alignedtext
+end grestore
+end grestore
+
+%	GBunchRW
+gsave 10 dict begin
+3198 285 55 18 ellipse_path
+stroke
+gsave 10 dict begin
+3198 280 moveto 88 -0.5 (GBunchRW) alignedtext
+end grestore
+end grestore
+
+%	PrecisionRecallCalculator -> GBunchRW
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3153 339 moveto
+3160 330 3169 320 3177 310 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3179 312 moveto
+3184 303 lineto
+3175 308 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ParserFactory
+gsave 10 dict begin
+538 285 58 18 ellipse_path
+stroke
+gsave 10 dict begin
+538 280 moveto 95 -0.5 (ParserFactory) alignedtext
+end grestore
+end grestore
+
+%	GenericFactory
+gsave 10 dict begin
+7441 69 64 18 ellipse_path
+stroke
+gsave 10 dict begin
+7441 64 moveto 106 -0.5 (GenericFactory) alignedtext
+end grestore
+end grestore
+
+%	ParserFactory -> GenericFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 549 267 moveto
+573 230 633 148 709 123 curveto
+793 95 6639 72 7367 69 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7367 72 moveto
+7377 69 lineto
+7367 67 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusteringMethod2
+gsave 10 dict begin
+4830 429 77 18 ellipse_path
+stroke
+gsave 10 dict begin
+4830 424 moveto 133 -0.5 (ClusteringMethod2) alignedtext
+end grestore
+end grestore
+
+%	ClusteringMethod2 -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4904 424 moveto
+4924 419 4933 414 4959 411 curveto
+5016 402 5432 416 5470 375 curveto
+5481 363 5481 351 5470 339 curveto
+5469 337 5227 296 5181 288 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 286 moveto
+5173 287 lineto
+5183 291 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusteringMethod
+gsave 10 dict begin
+5355 357 73 18 ellipse_path
+stroke
+gsave 10 dict begin
+5355 352 moveto 124 -0.5 (ClusteringMethod) alignedtext
+end grestore
+end grestore
+
+%	ClusteringMethod2 -> ClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4887 417 moveto
+4899 415 4910 413 4921 411 curveto
+5075 387 5115 398 5268 375 curveto
+5275 374 5283 372 5291 371 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5291 374 moveto
+5300 369 lineto
+5290 369 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusteringMethod2 -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4907 427 moveto
+4944 422 4954 415 4992 411 curveto
+5056 404 5073 409 5136 407 curveto
+5246 402 5274 404 5383 395 curveto
+5409 392 5415 391 5440 387 curveto
+5449 385 5451 384 5459 383 curveto
+5805 309 5890 264 6233 216 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6232 219 moveto
+6242 215 lineto
+6232 214 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusteringMethod -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5311 342 moveto
+5272 329 5214 310 5177 297 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5178 295 moveto
+5168 294 lineto
+5177 300 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Cluster -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5182 282 moveto
+5362 271 6076 227 6242 215 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 279 moveto
+5173 283 lineto
+5183 284 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Cluster -> ObjectiveFunctionCalculatorFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6257 198 moveto
+6244 189 6227 176 6213 165 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6215 163 moveto
+6205 159 lineto
+6212 167 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	StatsManager
+gsave 10 dict begin
+776 141 58 18 ellipse_path
+stroke
+gsave 10 dict begin
+776 136 moveto 94 -0.5 (StatsManager) alignedtext
+end grestore
+end grestore
+
+%	Cluster -> StatsManager
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6242 212 moveto
+6131 209 5779 200 5486 195 curveto
+3591 162 1268 144 844 141 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 844 139 moveto
+834 141 lineto
+844 144 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NAHCClusteringConfigurationDialog
+gsave 10 dict begin
+6902 501 143 18 ellipse_path
+stroke
+gsave 10 dict begin
+6902 496 moveto 265 -0.5 (NAHCClusteringConfigurationDialog) alignedtext
+end grestore
+end grestore
+
+%	NAHCClusteringConfigurationDialog -> GenericFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7045 500 moveto
+7067 499 7090 499 7112 499 curveto
+7270 496 7310 495 7469 491 curveto
+7711 484 7772 490 8014 467 curveto
+8068 461 8085 469 8135 447 curveto
+8218 408 8420 282 8478 159 curveto
+8484 144 8489 134 8478 123 curveto
+8441 84 7584 73 7516 71 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7515 69 moveto
+7505 71 lineto
+7515 74 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	HillClimbingConfiguration
+gsave 10 dict begin
+7056 357 105 18 ellipse_path
+stroke
+gsave 10 dict begin
+7056 352 moveto 188 -0.5 (HillClimbingConfiguration) alignedtext
+end grestore
+end grestore
+
+%	NAHCClusteringConfigurationDialog -> HillClimbingConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6931 483 moveto
+6947 473 6965 460 6980 447 curveto
+7002 426 7024 400 7038 381 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7039 384 moveto
+7043 375 lineto
+7035 381 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Configuration
+gsave 10 dict begin
+8114 285 60 18 ellipse_path
+stroke
+gsave 10 dict begin
+8114 280 moveto 98 -0.5 (Configuration) alignedtext
+end grestore
+end grestore
+
+%	NAHCClusteringConfigurationDialog -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7029 493 moveto
+7085 489 7151 486 7211 483 curveto
+7259 480 8039 477 8077 447 curveto
+8115 414 8119 350 8117 313 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8119 313 moveto
+8116 303 lineto
+8115 313 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SATechniqueFactory
+gsave 10 dict begin
+8385 141 84 18 ellipse_path
+stroke
+gsave 10 dict begin
+8385 136 moveto 146 -0.5 (SATechniqueFactory) alignedtext
+end grestore
+end grestore
+
+%	NAHCClusteringConfigurationDialog -> SATechniqueFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7044 499 moveto
+7419 489 7518 491 7901 471 curveto
+7989 466 8022 491 8099 447 curveto
+8225 374 8330 227 8369 167 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8371 169 moveto
+8374 159 lineto
+8367 166 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SATechnique
+gsave 10 dict begin
+1123 429 57 18 ellipse_path
+stroke
+gsave 10 dict begin
+1123 424 moveto 93 -0.5 (SATechnique) alignedtext
+end grestore
+end grestore
+
+%	NAHCClusteringConfigurationDialog -> SATechnique
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6772 493 moveto
+6699 489 6606 485 6522 483 curveto
+4254 421 3685 524 1417 447 curveto
+1338 444 1248 438 1189 434 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1189 432 moveto
+1179 433 lineto
+1189 436 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusteringConfigurationDialog
+gsave 10 dict begin
+6518 357 118 18 ellipse_path
+stroke
+gsave 10 dict begin
+6518 352 moveto 214 -0.5 (ClusteringConfigurationDialog) alignedtext
+end grestore
+end grestore
+
+%	NAHCClusteringConfigurationDialog -> ClusteringConfigurationDialog
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6784 491 moveto
+6630 477 6379 454 6372 447 curveto
+6343 415 6394 390 6444 375 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6444 378 moveto
+6453 372 lineto
+6443 373 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NAHCConfiguration
+gsave 10 dict begin
+6886 429 85 18 ellipse_path
+stroke
+gsave 10 dict begin
+6886 424 moveto 149 -0.5 (NAHCConfiguration) alignedtext
+end grestore
+end grestore
+
+%	NAHCClusteringConfigurationDialog -> NAHCConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6898 483 moveto
+6896 475 6894 465 6892 456 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6895 456 moveto
+6890 447 lineto
+6890 457 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	HillClimbingConfiguration -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6958 350 moveto
+6899 347 6822 342 6753 339 curveto
+6129 310 5368 291 5182 286 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 284 moveto
+5173 286 lineto
+5183 289 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	HillClimbingConfiguration -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7129 344 moveto
+7143 342 7157 340 7170 339 curveto
+7495 304 7887 291 8044 286 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8044 289 moveto
+8054 286 lineto
+8044 284 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SATechniqueFactory -> GenericFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8306 135 moveto
+8126 121 7688 87 7514 75 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7513 72 moveto
+7503 74 lineto
+7513 77 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SATechnique -> StatsManager
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1081 417 moveto
+1072 414 1063 412 1054 411 curveto
+990 398 806 423 762 375 curveto
+711 316 743 216 763 168 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 765 169 moveto
+767 159 lineto
+761 167 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NAHCConfiguration -> HillClimbingConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6924 413 moveto
+6949 402 6982 389 7008 378 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7009 380 moveto
+7017 374 lineto
+7007 376 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchFrame
+gsave 10 dict begin
+4099 717 56 18 ellipse_path
+stroke
+gsave 10 dict begin
+4099 712 moveto 91 -0.5 (BunchFrame) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4045 712 moveto
+4019 703 3973 680 3962 663 curveto
+3920 595 3904 537 3962 483 curveto
+4013 435 4206 461 4274 447 curveto
+4327 435 4337 420 4389 411 curveto
+4473 396 5096 436 5154 375 curveto
+5160 368 5157 335 5153 312 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5155 311 moveto
+5151 302 lineto
+5151 312 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchFrame -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4043 716 moveto
+4025 716 4005 715 3987 715 curveto
+3961 714 3955 713 3928 713 curveto
+3879 711 3866 711 3816 711 curveto
+3765 710 3407 705 3355 705 curveto
+3281 704 3263 703 3188 703 curveto
+2924 699 2858 698 2593 695 curveto
+2441 693 2402 692 2249 691 curveto
+2125 689 2093 688 1968 687 curveto
+1910 686 1504 680 1446 679 curveto
+1425 678 693 671 673 663 curveto
+623 640 586 628 586 573 curveto
+586 573 586 573 586 501 curveto
+586 229 866 268 1134 231 curveto
+1201 221 1218 217 1284 215 curveto
+1310 213 2932 213 3209 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3210 216 moveto
+3220 213 lineto
+3210 211 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchFrame -> ParserFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4043 716 moveto
+4020 716 3994 715 3970 715 curveto
+3937 714 3928 713 3894 713 curveto
+3812 711 3791 711 3708 711 curveto
+2860 701 2648 700 1800 687 curveto
+1765 686 562 684 534 663 curveto
+502 637 510 614 510 573 curveto
+510 573 510 573 510 429 curveto
+510 388 521 341 529 312 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 531 313 moveto
+532 303 lineto
+526 312 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchFrame -> GenericFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4155 717 moveto
+4366 717 5125 716 5750 715 curveto
+5991 714 6051 714 6290 713 curveto
+6507 711 6561 711 6777 707 curveto
+6835 705 6850 705 6907 703 curveto
+6921 702 6925 702 6938 701 curveto
+6944 700 6945 699 6950 699 curveto
+7000 694 7343 695 7393 695 curveto
+7576 693 7622 693 7806 691 curveto
+7930 689 7962 689 8087 687 curveto
+8222 684 8570 711 8698 663 curveto
+8723 653 8722 637 8747 627 curveto
+8824 593 8867 643 8934 591 curveto
+8968 563 8976 545 8976 501 curveto
+8976 501 8976 501 8976 213 curveto
+8976 69 7832 76 7689 73 curveto
+7630 71 7564 70 7515 70 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7515 68 moveto
+7505 70 lineto
+7515 73 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchFrame -> ClusteringMethod2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4055 706 moveto
+4031 698 4014 692 3997 663 curveto
+3968 611 3970 536 4035 483 curveto
+4097 433 4666 457 4744 447 curveto
+4751 446 4757 445 4764 444 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4765 446 moveto
+4774 442 lineto
+4764 442 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchFrame -> ClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4046 711 moveto
+4015 701 4000 695 3981 663 curveto
+3943 592 3936 533 3998 483 curveto
+4067 427 4308 468 4393 447 curveto
+4434 437 4439 420 4479 411 curveto
+4642 373 5062 377 5228 367 curveto
+5249 365 5254 366 5273 363 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5274 365 moveto
+5283 361 lineto
+5273 361 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchFrame -> HillClimbingConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4155 717 moveto
+4297 717 4683 716 5003 715 curveto
+5852 711 6064 726 6911 701 curveto
+6929 700 6933 699 6950 699 curveto
+7150 692 7200 699 7399 695 curveto
+7452 693 7838 696 7880 663 curveto
+7947 608 8009 547 7952 483 curveto
+7905 431 7709 458 7641 447 curveto
+7634 445 7422 396 7416 395 curveto
+7351 381 7334 382 7268 379 curveto
+7249 378 7201 381 7183 375 curveto
+7176 372 7173 367 7168 363 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7170 361 moveto
+7160 360 lineto
+7168 366 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchFrame -> ClusteringConfigurationDialog
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4069 702 moveto
+4049 681 4047 658 4057 627 curveto
+4083 551 4094 519 4165 483 curveto
+4315 406 5521 511 5676 447 curveto
+5698 438 5693 420 5714 411 curveto
+5746 396 6227 369 6391 362 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6392 364 moveto
+6402 361 lineto
+6392 359 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchFrame -> NAHCConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4155 716 moveto
+4194 716 4248 716 4295 715 curveto
+4324 714 4332 713 4360 713 curveto
+4389 712 4844 703 4872 703 curveto
+5611 688 6748 665 6750 663 curveto
+6807 605 6699 552 6739 483 curveto
+6756 454 6778 466 6804 447 curveto
+6805 446 6805 446 6806 445 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6807 447 moveto
+6812 438 lineto
+6804 444 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEvent
+gsave 10 dict begin
+5777 429 54 18 ellipse_path
+stroke
+gsave 10 dict begin
+5777 424 moveto 87 -0.5 (BunchEvent) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> BunchEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4155 715 moveto
+4167 713 4171 712 4184 711 curveto
+4193 710 4195 709 4203 709 curveto
+4247 704 4259 703 4302 699 curveto
+4319 697 4324 696 4340 695 curveto
+4388 689 4400 688 4447 683 curveto
+4450 682 4550 671 4552 671 curveto
+4553 670 4630 663 4630 663 curveto
+4641 651 4641 638 4630 627 curveto
+4584 574 4384 611 4317 591 curveto
+4244 568 4129 537 4182 483 curveto
+4212 452 5662 460 5701 447 curveto
+5709 444 5711 439 5716 435 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5716 438 moveto
+5723 431 lineto
+5713 434 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Parser
+gsave 10 dict begin
+1398 285 32 18 ellipse_path
+stroke
+gsave 10 dict begin
+1398 280 moveto 42 -0.5 (Parser) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> Parser
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4043 716 moveto
+4013 716 3976 715 3943 715 curveto
+3908 714 3900 713 3864 713 curveto
+3803 711 3787 711 3725 711 curveto
+3420 706 3343 704 3037 699 curveto
+2610 691 1541 703 1115 663 curveto
+1005 652 624 683 624 573 curveto
+624 573 624 573 624 501 curveto
+624 200 973 343 1270 303 curveto
+1309 297 1319 291 1356 287 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1356 289 moveto
+1366 286 lineto
+1356 285 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistribInit
+gsave 10 dict begin
+6881 645 46 18 ellipse_path
+stroke
+gsave 10 dict begin
+6881 640 moveto 70 -0.5 (DistribInit) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> DistribInit
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4155 717 moveto
+4521 715 6550 705 6821 663 curveto
+6826 662 6831 661 6836 659 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6837 661 moveto
+6846 657 lineto
+6836 657 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DependencyFileParser
+gsave 10 dict begin
+968 357 88 18 ellipse_path
+stroke
+gsave 10 dict begin
+968 352 moveto 154 -0.5 (DependencyFileParser) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> DependencyFileParser
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4043 716 moveto
+3601 709 700 660 700 573 curveto
+700 573 700 573 700 501 curveto
+700 457 708 441 738 411 curveto
+752 397 845 369 874 361 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 872 364 moveto
+881 359 lineto
+871 359 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MQCalculatorUtil
+gsave 10 dict begin
+4150 645 73 18 ellipse_path
+stroke
+gsave 10 dict begin
+4150 640 moveto 125 -0.5 (MQCalculatorUtil) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> MQCalculatorUtil
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4112 699 moveto
+4118 691 4126 680 4132 671 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4134 673 moveto
+4137 663 lineto
+4130 670 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusteringMethodFactory
+gsave 10 dict begin
+177 285 99 18 ellipse_path
+stroke
+gsave 10 dict begin
+177 280 moveto 177 -0.5 (ClusteringMethodFactory) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> ClusteringMethodFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4043 717 moveto
+3938 716 3707 716 3512 715 curveto
+3330 714 3285 713 3102 713 curveto
+2141 708 1901 712 939 691 curveto
+763 687 154 749 154 573 curveto
+154 573 154 573 154 429 curveto
+154 388 163 341 170 312 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 172 313 moveto
+172 303 lineto
+167 312 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GraphOutputFactory
+gsave 10 dict begin
+378 285 84 18 ellipse_path
+stroke
+gsave 10 dict begin
+378 280 moveto 147 -0.5 (GraphOutputFactory) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> GraphOutputFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4043 717 moveto
+3903 716 3526 715 3210 713 curveto
+2225 707 1979 716 993 691 curveto
+752 684 677 749 451 663 curveto
+338 619 230 622 230 501 curveto
+230 501 230 501 230 429 curveto
+230 359 262 333 316 304 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 317 306 moveto
+325 299 lineto
+315 302 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchFrame -> ObjectiveFunctionCalculatorFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4155 717 moveto
+4348 717 5002 716 5541 715 curveto
+5727 714 5773 714 5958 713 curveto
+6253 710 6327 710 6621 707 curveto
+6759 705 6794 709 6931 701 curveto
+6940 700 6942 699 6950 699 curveto
+7140 688 8475 713 8659 663 curveto
+8690 654 8692 638 8723 627 curveto
+8806 596 8862 659 8919 591 curveto
+8946 558 8890 372 8691 267 curveto
+8566 201 6538 148 6327 143 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6327 141 moveto
+6317 143 lineto
+6327 146 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	CallbackImpl
+gsave 10 dict begin
+4676 573 57 18 ellipse_path
+stroke
+gsave 10 dict begin
+4676 568 moveto 92 -0.5 (CallbackImpl) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> CallbackImpl
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4084 700 moveto
+4069 680 4050 647 4068 627 curveto
+4104 587 4458 576 4609 574 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4609 577 moveto
+4619 574 lineto
+4609 572 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedHCClusteringMethod
+gsave 10 dict begin
+5277 645 123 18 ellipse_path
+stroke
+gsave 10 dict begin
+5277 640 moveto 225 -0.5 (DistributedHCClusteringMethod) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> DistributedHCClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4154 714 moveto
+4333 702 4899 668 5153 653 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5153 655 moveto
+5163 652 lineto
+5153 651 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericHillClimbingClusteringMethod
+gsave 10 dict begin
+6946 573 145 18 ellipse_path
+stroke
+gsave 10 dict begin
+6946 568 moveto 268 -0.5 (GenericHillClimbingClusteringMethod) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> GenericHillClimbingClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4155 716 moveto
+4195 716 4250 716 4298 715 curveto
+4442 712 4477 711 4620 709 curveto
+4681 707 6727 684 6783 663 curveto
+6807 654 6805 640 6826 627 curveto
+6846 614 6870 602 6891 593 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6891 596 moveto
+6900 590 lineto
+6890 591 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NextLevelGraph
+gsave 10 dict begin
+3923 357 69 18 ellipse_path
+stroke
+gsave 10 dict begin
+3923 352 moveto 117 -0.5 (NextLevelGraph) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> NextLevelGraph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4044 713 moveto
+3973 703 3929 724 3883 663 curveto
+3836 598 3859 559 3883 483 curveto
+3890 464 3901 464 3909 447 curveto
+3920 425 3922 418 3923 395 curveto
+3924 391 3924 388 3924 385 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3927 385 moveto
+3924 375 lineto
+3922 385 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchFrame -> StatsManager
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4043 716 moveto
+4030 716 4017 715 4005 715 curveto
+3982 714 3977 713 3953 713 curveto
+3910 711 3900 711 3856 711 curveto
+3795 709 3780 709 3718 709 curveto
+3641 707 3622 707 3544 707 curveto
+3472 706 3453 705 3380 705 curveto
+3286 703 3263 703 3168 703 curveto
+3078 702 3055 701 2964 701 curveto
+2878 700 2857 700 2770 699 curveto
+2680 697 2658 696 2567 695 curveto
+2438 692 2405 692 2275 691 curveto
+2268 690 1718 683 1710 683 curveto
+1547 680 1505 681 1341 679 curveto
+1321 678 624 673 606 663 curveto
+565 639 548 620 548 573 curveto
+548 573 548 573 548 501 curveto
+548 418 647 228 724 160 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 726 161 moveto
+732 153 lineto
+723 158 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchPreferences
+gsave 10 dict begin
+408 357 74 18 ellipse_path
+stroke
+gsave 10 dict begin
+408 352 moveto 126 -0.5 (BunchPreferences) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> BunchPreferences
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4043 716 moveto
+4002 716 3946 716 3896 715 curveto
+3802 713 579 709 496 663 curveto
+455 639 440 620 440 573 curveto
+440 573 440 573 440 501 curveto
+440 460 427 413 418 384 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 421 384 moveto
+415 375 lineto
+416 385 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistribClusteringProgressDlg
+gsave 10 dict begin
+4826 645 111 18 ellipse_path
+stroke
+gsave 10 dict begin
+4826 640 moveto 200 -0.5 (DistribClusteringProgressDlg) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> DistribClusteringProgressDlg
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4153 712 moveto
+4252 702 4470 681 4654 663 curveto
+4676 660 4699 658 4721 656 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4721 658 moveto
+4731 655 lineto
+4721 654 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchUtilities
+gsave 10 dict begin
+7883 501 60 18 ellipse_path
+stroke
+gsave 10 dict begin
+7883 496 moveto 98 -0.5 (BunchUtilities) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> BunchUtilities
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4155 717 moveto
+4336 716 4905 715 5088 713 curveto
+5282 711 5331 709 5524 707 curveto
+5589 706 7811 706 7860 663 curveto
+7898 629 7894 565 7888 528 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7891 529 moveto
+7887 519 lineto
+7886 529 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	FileDialog
+gsave 10 dict begin
+4287 645 46 18 ellipse_path
+stroke
+gsave 10 dict begin
+4287 640 moveto 70 -0.5 (FileDialog) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> FileDialog
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4135 703 moveto
+4167 691 4212 674 4245 661 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4245 664 moveto
+4254 658 lineto
+4244 659 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusteringProgressDialog
+gsave 10 dict begin
+4448 645 97 18 ellipse_path
+stroke
+gsave 10 dict begin
+4448 640 moveto 173 -0.5 (ClusteringProgressDialog) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> ClusteringProgressDialog
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4146 707 moveto
+4205 696 4305 675 4374 660 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4374 663 moveto
+4383 658 lineto
+4373 658 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GraphOutput
+gsave 10 dict begin
+3508 357 58 18 ellipse_path
+stroke
+gsave 10 dict begin
+3508 352 moveto 94 -0.5 (GraphOutput) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> GraphOutput
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4043 715 moveto
+4042 715 4042 715 4041 715 curveto
+4009 711 4001 708 3969 703 curveto
+3857 682 3473 686 3473 573 curveto
+3473 573 3473 573 3473 501 curveto
+3473 446 3482 426 3498 384 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3500 385 moveto
+3501 375 lineto
+3495 384 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericDistribHillClimbingClusteringMethod
+gsave 10 dict begin
+5827 573 168 18 ellipse_path
+stroke
+gsave 10 dict begin
+5827 568 moveto 315 -0.5 (GenericDistribHillClimbingClusteringMethod) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> GenericDistribHillClimbingClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4155 716 moveto
+4430 711 5621 687 5695 663 curveto
+5735 650 5775 620 5800 598 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5802 599 moveto
+5808 591 lineto
+5799 596 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Point
+gsave 10 dict begin
+4592 645 29 18 ellipse_path
+stroke
+gsave 10 dict begin
+4592 640 moveto 36 -0.5 (Point) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> Point
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4154 713 moveto
+4258 704 4481 684 4554 663 curveto
+4556 662 4558 661 4561 661 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4562 663 moveto
+4570 657 lineto
+4560 659 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MeasurementUtil
+gsave 10 dict begin
+1497 429 71 18 ellipse_path
+stroke
+gsave 10 dict begin
+1497 424 moveto 121 -0.5 (MeasurementUtil) alignedtext
+end grestore
+end grestore
+
+%	BunchFrame -> MeasurementUtil
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4043 716 moveto
+3682 706 1695 652 1584 591 curveto
+1533 563 1507 495 1498 457 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1500 456 moveto
+1496 447 lineto
+1496 457 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DependencyFileParser -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 982 339 moveto
+1000 317 1033 282 1070 267 curveto
+1260 189 1784 220 1988 215 curveto
+2020 213 3000 213 3210 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3210 216 moveto
+3220 213 lineto
+3210 211 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DependencyFileParser -> Parser
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1036 346 moveto
+1127 331 1284 304 1358 292 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1358 295 moveto
+1367 290 lineto
+1357 290 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusteringMethodFactory -> GenericFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 208 268 moveto
+270 234 417 159 549 123 curveto
+784 58 851 77 1093 71 curveto
+1135 69 6662 69 7367 69 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7367 72 moveto
+7377 69 lineto
+7367 67 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GraphOutputFactory -> GenericFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 398 267 moveto
+440 232 540 154 639 123 curveto
+820 67 1300 105 1488 103 curveto
+3394 80 3870 84 5775 75 curveto
+6179 73 6280 72 6683 71 curveto
+6934 69 7232 69 7368 69 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7367 72 moveto
+7377 69 lineto
+7367 67 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ObjectiveFunctionCalculatorFactory -> GenericFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6307 134 moveto
+6568 119 7163 85 7369 74 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7368 77 moveto
+7378 73 lineto
+7368 72 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	CallbackImpl -> BunchEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4725 564 moveto
+4800 543 4979 487 5009 483 curveto
+5029 479 5691 454 5708 447 curveto
+5713 444 5715 441 5717 438 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5718 441 moveto
+5723 432 lineto
+5714 437 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	CallbackImpl -> BunchUtilities
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4724 563 moveto
+4741 560 4762 557 4780 555 curveto
+5284 507 6549 528 7054 519 curveto
+7335 514 7671 506 7813 502 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7813 505 moveto
+7823 502 lineto
+7813 500 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	WorkRequestEvent
+gsave 10 dict begin
+4270 501 79 18 ellipse_path
+stroke
+gsave 10 dict begin
+4270 496 moveto 137 -0.5 (WorkRequestEvent) alignedtext
+end grestore
+end grestore
+
+%	CallbackImpl -> WorkRequestEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4625 565 moveto
+4562 555 4452 536 4358 519 curveto
+4351 518 4344 516 4337 515 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4339 513 moveto
+4329 513 lineto
+4338 518 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SynchronizedEventQueue
+gsave 10 dict begin
+5464 501 101 18 ellipse_path
+stroke
+gsave 10 dict begin
+5464 496 moveto 180 -0.5 (SynchronizedEventQueue) alignedtext
+end grestore
+end grestore
+
+%	CallbackImpl -> SynchronizedEventQueue
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4724 563 moveto
+4742 560 4762 557 4780 555 curveto
+4984 529 5036 535 5240 519 curveto
+5280 516 5323 513 5362 509 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5362 511 moveto
+5372 508 lineto
+5362 507 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	IterationManager
+gsave 10 dict begin
+5160 501 71 18 ellipse_path
+stroke
+gsave 10 dict begin
+5160 496 moveto 120 -0.5 (IterationManager) alignedtext
+end grestore
+end grestore
+
+%	CallbackImpl -> IterationManager
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4726 564 moveto
+4743 561 4762 558 4780 555 curveto
+4888 538 5011 520 5088 510 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5087 513 moveto
+5097 509 lineto
+5087 508 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	WorkFinishedEvent
+gsave 10 dict begin
+4447 501 80 18 ellipse_path
+stroke
+gsave 10 dict begin
+4447 496 moveto 139 -0.5 (WorkFinishedEvent) alignedtext
+end grestore
+end grestore
+
+%	CallbackImpl -> WorkFinishedEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4636 560 moveto
+4599 549 4544 531 4502 519 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4504 517 moveto
+4494 516 lineto
+4502 522 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Callback
+gsave 10 dict begin
+4662 501 41 18 ellipse_path
+stroke
+gsave 10 dict begin
+4662 496 moveto 60 -0.5 (Callback) alignedtext
+end grestore
+end grestore
+
+%	CallbackImpl -> Callback
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4672 555 moveto
+4671 547 4669 537 4667 529 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4669 528 moveto
+4665 519 lineto
+4665 529 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Manager
+gsave 10 dict begin
+4763 501 42 18 ellipse_path
+stroke
+gsave 10 dict begin
+4763 496 moveto 62 -0.5 (Manager) alignedtext
+end grestore
+end grestore
+
+%	CallbackImpl -> Manager
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4697 556 moveto
+4709 546 4724 534 4737 523 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4738 525 moveto
+4744 517 lineto
+4735 522 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedHCClusteringMethod -> ClusteringMethod2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5246 628 moveto
+5229 617 5206 604 5187 591 curveto
+5165 576 5164 566 5139 555 curveto
+5070 523 5042 548 4971 519 curveto
+4930 502 4887 473 4860 452 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4862 450 moveto
+4852 446 lineto
+4859 454 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedHCClusteringMethod -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5332 629 moveto
+5404 608 5535 573 5650 555 curveto
+5751 539 6022 574 6106 519 curveto
+6226 440 6156 323 6246 233 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6248 235 moveto
+6253 226 lineto
+6244 231 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedHCClusteringMethod -> HillClimbingConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5389 638 moveto
+5397 634 5402 630 5414 627 curveto
+5419 625 5583 619 5587 619 curveto
+5854 606 5921 610 6186 591 curveto
+6349 579 6389 568 6551 555 curveto
+6609 550 7026 560 7065 519 curveto
+7098 483 7069 458 7065 411 curveto
+7064 399 7065 391 7065 384 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7068 385 moveto
+7064 375 lineto
+7063 385 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedHCClusteringMethod -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5392 638 moveto
+5399 634 5403 629 5415 627 curveto
+5426 624 5780 615 5790 615 curveto
+5793 614 7388 591 7391 591 curveto
+7482 560 7656 375 7746 339 curveto
+7873 286 7922 299 8045 290 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8045 292 moveto
+8055 289 lineto
+8045 288 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedHCClusteringMethod -> NAHCConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5384 636 moveto
+5387 635 5389 634 5392 633 curveto
+5401 629 5403 628 5412 627 curveto
+5438 622 5445 624 5471 623 curveto
+5940 593 6062 611 6522 519 curveto
+6554 512 6762 461 6806 445 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6808 447 moveto
+6816 440 lineto
+6806 442 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedHCClusteringMethod -> BunchEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5262 627 moveto
+5244 607 5213 575 5180 555 curveto
+5140 530 5108 557 5080 519 curveto
+5071 505 5069 494 5080 483 curveto
+5084 479 5172 479 5177 479 curveto
+5259 475 5279 475 5360 471 curveto
+5457 466 5481 464 5576 459 curveto
+5606 457 5614 457 5643 455 curveto
+5670 452 5679 457 5703 447 curveto
+5710 444 5713 440 5717 436 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5717 439 moveto
+5724 432 lineto
+5714 435 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedHCClusteringMethod -> BunchUtilities
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5385 636 moveto
+5392 633 5397 629 5409 627 curveto
+5466 616 7410 598 7467 591 curveto
+7534 582 7549 570 7615 555 curveto
+7698 535 7721 534 7804 511 curveto
+7809 509 7811 508 7814 507 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7814 510 moveto
+7823 504 lineto
+7813 505 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedHCClusteringMethod -> GenericDistribHillClimbingClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5366 632 moveto
+5380 631 5395 629 5409 627 curveto
+5510 614 5625 599 5708 588 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5708 590 moveto
+5718 587 lineto
+5708 586 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedHCClusteringMethod -> WorkRequestEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5155 643 moveto
+5065 638 5041 633 4946 627 curveto
+4819 618 4491 639 4373 591 curveto
+4340 577 4309 547 4290 526 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4292 525 moveto
+4284 519 lineto
+4289 528 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedHCClusteringMethod -> IterationManager
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5276 627 moveto
+5275 607 5270 576 5253 555 curveto
+5242 540 5225 529 5209 520 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5210 518 moveto
+5200 516 lineto
+5208 522 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedHCClusteringMethod -> WorkFinishedEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5162 638 moveto
+4948 626 4508 599 4494 591 curveto
+4472 576 4460 547 4453 527 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4456 528 moveto
+4451 519 lineto
+4451 529 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericHillClimbingClusteringMethod -> ClusteringMethod2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6802 571 moveto
+6760 567 6747 564 6702 559 curveto
+6695 558 6677 555 6669 555 curveto
+6613 551 6472 552 6415 551 curveto
+6345 549 6328 549 6257 547 curveto
+6214 545 6204 544 6160 543 curveto
+5970 534 5911 584 5731 519 curveto
+5706 509 5708 492 5683 483 curveto
+5625 460 5605 475 5542 471 curveto
+5448 463 5424 463 5329 459 curveto
+5287 457 5276 456 5233 455 curveto
+5184 453 5171 452 5121 451 curveto
+5065 449 5050 451 4993 447 curveto
+4985 446 4929 440 4921 439 curveto
+4918 438 4916 437 4914 436 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4916 434 moveto
+4906 433 lineto
+4914 439 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericHillClimbingClusteringMethod -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7083 567 moveto
+7089 563 7092 558 7101 555 curveto
+7115 550 7119 552 7133 551 curveto
+7233 537 7258 537 7357 519 curveto
+7427 505 7443 493 7515 483 curveto
+7587 472 8120 498 8173 447 curveto
+8230 390 8238 324 8183 267 curveto
+8149 232 6608 216 6322 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6322 211 moveto
+6312 213 lineto
+6322 216 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericHillClimbingClusteringMethod -> HillClimbingConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7047 560 moveto
+7108 551 7177 537 7201 519 curveto
+7231 497 7232 482 7241 447 curveto
+7245 431 7250 423 7241 411 curveto
+7229 394 7184 381 7141 371 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7142 369 moveto
+7132 369 lineto
+7141 374 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericHillClimbingClusteringMethod -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7073 564 moveto
+7081 561 7088 558 7100 555 curveto
+7117 550 7122 550 7138 547 curveto
+7271 518 7303 500 7439 483 curveto
+7517 472 8098 504 8153 447 curveto
+8186 412 8167 384 8153 339 curveto
+8148 325 8144 317 8139 309 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8141 308 moveto
+8133 302 lineto
+8138 311 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericClusteringMethod2
+gsave 10 dict begin
+6409 501 104 18 ellipse_path
+stroke
+gsave 10 dict begin
+6409 496 moveto 186 -0.5 (GenericClusteringMethod2) alignedtext
+end grestore
+end grestore
+
+%	GenericHillClimbingClusteringMethod -> GenericClusteringMethod2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6847 560 moveto
+6748 546 6596 526 6499 513 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6501 511 moveto
+6491 512 lineto
+6501 516 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Population
+gsave 10 dict begin
+5897 429 48 18 ellipse_path
+stroke
+gsave 10 dict begin
+5897 424 moveto 74 -0.5 (Population) alignedtext
+end grestore
+end grestore
+
+%	GenericHillClimbingClusteringMethod -> Population
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6807 568 moveto
+6758 564 6733 559 6669 555 curveto
+6628 552 5948 546 5916 519 curveto
+5898 503 5895 476 5895 455 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5898 457 moveto
+5895 447 lineto
+5893 457 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NextLevelGraph -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3972 344 moveto
+3981 342 3991 340 4001 339 curveto
+4219 309 4915 291 5096 286 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5097 289 moveto
+5107 286 lineto
+5097 284 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NextLevelGraph -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3892 341 moveto
+3853 321 3784 288 3722 267 curveto
+3687 254 3678 255 3641 247 curveto
+3615 241 3608 239 3581 235 curveto
+3569 232 3566 232 3553 231 curveto
+3515 226 3505 226 3466 223 curveto
+3454 221 3361 215 3344 215 curveto
+3325 214 3305 213 3287 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3288 211 moveto
+3278 213 lineto
+3288 216 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchPreferences -> ParserFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 438 340 moveto
+456 329 481 316 501 305 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 501 308 moveto
+509 301 lineto
+499 303 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchPreferences -> ClusteringMethodFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 362 343 moveto
+326 332 275 316 236 304 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 237 302 moveto
+227 301 lineto
+236 307 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchPreferences -> GraphOutputFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 400 339 moveto
+397 331 393 321 389 312 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 392 312 moveto
+386 303 lineto
+387 313 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchPreferences -> ObjectiveFunctionCalculatorFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 481 354 moveto
+572 349 733 342 871 339 curveto
+1934 310 2200 341 3262 303 curveto
+4502 257 4819 191 6038 144 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6038 147 moveto
+6048 144 lineto
+6038 142 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistribClusteringProgressDlg -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4731 636 moveto
+4704 631 4682 627 4639 623 curveto
+4568 614 4386 611 4317 591 curveto
+4244 568 4131 540 4182 483 curveto
+4231 428 4436 461 4507 447 curveto
+4563 435 4574 420 4630 411 curveto
+4675 403 5406 407 5437 375 curveto
+5449 363 5448 351 5437 339 curveto
+5433 333 5210 294 5203 293 curveto
+5194 291 5190 289 5183 288 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 286 moveto
+5173 287 lineto
+5183 290 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistribClusteringProgressDlg -> ClusteringMethod2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4805 627 moveto
+4796 617 4785 605 4780 591 curveto
+4775 575 4775 569 4780 555 curveto
+4789 534 4805 538 4814 519 curveto
+4824 499 4828 474 4829 455 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4831 457 moveto
+4830 447 lineto
+4826 457 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistribClusteringProgressDlg -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4937 644 moveto
+4950 643 4961 643 4968 643 curveto
+5033 640 5049 637 5113 631 curveto
+5114 630 5145 627 5145 627 curveto
+5217 622 6365 623 6436 623 curveto
+6673 620 6733 620 6969 615 curveto
+7052 613 7273 639 7341 591 curveto
+7391 554 7501 385 7460 339 curveto
+7382 252 6528 221 6322 214 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6322 212 moveto
+6312 214 lineto
+6322 217 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistribClusteringProgressDlg -> BunchFrame
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4162 711 moveto
+4268 702 4487 681 4672 663 curveto
+4693 661 4716 658 4737 656 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4163 708 moveto
+4153 712 lineto
+4163 713 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistribClusteringProgressDlg -> BunchEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4870 628 moveto
+4891 619 4905 610 4932 591 curveto
+4951 577 4953 569 4970 555 curveto
+5012 520 5018 501 5069 483 curveto
+5074 481 5221 475 5225 475 curveto
+5270 472 5282 473 5326 471 curveto
+5428 466 5454 464 5555 459 curveto
+5586 457 5593 456 5623 455 curveto
+5641 453 5687 454 5703 447 curveto
+5710 444 5713 440 5716 436 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5716 439 moveto
+5723 432 lineto
+5713 435 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistribClusteringProgressDlg -> CallbackImpl
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4790 628 moveto
+4768 617 4738 603 4715 592 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4717 590 moveto
+4707 588 lineto
+4715 595 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistribClusteringProgressDlg -> GraphOutput
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4717 642 moveto
+4682 637 4670 631 4630 627 curveto
+4585 622 4574 624 4528 623 curveto
+4303 613 3691 605 3530 447 curveto
+3513 430 3508 404 3507 383 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3510 385 moveto
+3507 375 lineto
+3505 385 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistribClusteringProgressDlg -> GenericDistribHillClimbingClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4927 638 moveto
+5104 625 5471 599 5677 584 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5677 586 moveto
+5687 583 lineto
+5677 582 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SwingWorker
+gsave 10 dict begin
+5038 573 59 18 ellipse_path
+stroke
+gsave 10 dict begin
+5038 568 moveto 97 -0.5 (SwingWorker) alignedtext
+end grestore
+end grestore
+
+%	DistribClusteringProgressDlg -> SwingWorker
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4874 629 moveto
+4908 617 4955 602 4990 589 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4990 592 moveto
+4999 586 lineto
+4989 587 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	IterationEvent
+gsave 10 dict begin
+7353 429 60 18 ellipse_path
+stroke
+gsave 10 dict begin
+7353 424 moveto 99 -0.5 (IterationEvent) alignedtext
+end grestore
+end grestore
+
+%	DistribClusteringProgressDlg -> IterationEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4936 643 moveto
+5027 638 5051 631 5145 627 curveto
+5206 624 7273 629 7320 591 curveto
+7359 559 7360 493 7357 456 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7360 457 moveto
+7356 447 lineto
+7355 457 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Drifters
+gsave 10 dict begin
+4846 357 38 18 ellipse_path
+stroke
+gsave 10 dict begin
+4846 352 moveto 54 -0.5 (Drifters) alignedtext
+end grestore
+end grestore
+
+%	DistribClusteringProgressDlg -> Drifters
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4727 637 moveto
+4698 634 4675 631 4630 627 curveto
+4532 618 4270 645 4187 591 curveto
+4145 562 4118 522 4149 483 curveto
+4240 371 4647 404 4787 375 curveto
+4793 374 4799 372 4805 370 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4806 372 moveto
+4815 368 lineto
+4805 368 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	IterationListener
+gsave 10 dict begin
+4856 573 67 18 ellipse_path
+stroke
+gsave 10 dict begin
+4856 568 moveto 113 -0.5 (IterationListener) alignedtext
+end grestore
+end grestore
+
+%	DistribClusteringProgressDlg -> IterationListener
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4834 627 moveto
+4837 619 4841 609 4845 600 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4847 601 moveto
+4848 591 lineto
+4842 600 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericDistribHillClimbingClusteringMethod -> ClusteringMethod2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5757 557 moveto
+5725 548 5687 535 5655 519 curveto
+5632 506 5633 492 5607 483 curveto
+5575 471 5028 449 4993 447 curveto
+4979 446 4975 446 4960 445 curveto
+4942 443 4923 442 4906 439 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4907 437 moveto
+4897 438 lineto
+4907 442 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericDistribHillClimbingClusteringMethod -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5928 559 moveto
+6030 544 6173 523 6177 519 curveto
+6279 432 6231 357 6267 240 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6269 241 moveto
+6270 231 lineto
+6264 240 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericDistribHillClimbingClusteringMethod -> HillClimbingConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5986 567 moveto
+5995 567 6005 566 6019 565 curveto
+6034 564 6038 563 6052 563 curveto
+6066 562 7045 529 7054 519 curveto
+7063 510 7061 428 7058 385 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7060 385 moveto
+7057 375 lineto
+7056 385 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericDistribHillClimbingClusteringMethod -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5992 570 moveto
+6000 569 6005 568 6016 567 curveto
+6026 566 6029 565 6038 565 curveto
+6059 563 6064 563 6084 563 curveto
+6197 558 6225 559 6337 555 curveto
+6382 553 6393 552 6437 551 curveto
+6578 545 6614 544 6754 539 curveto
+6797 537 6905 533 6947 531 curveto
+6975 529 6982 529 7009 527 curveto
+7029 525 7034 525 7053 523 curveto
+7139 510 7158 493 7244 483 curveto
+7338 471 8021 502 8099 447 curveto
+8139 418 8131 388 8127 339 curveto
+8126 327 8126 319 8126 311 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8129 313 moveto
+8125 303 lineto
+8124 313 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericDistribHillClimbingClusteringMethod -> BunchEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5820 555 moveto
+5816 545 5811 531 5807 519 curveto
+5800 497 5792 473 5786 455 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5789 455 moveto
+5783 447 lineto
+5784 457 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericDistribHillClimbingClusteringMethod -> BunchUtilities
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5987 567 moveto
+6406 552 7525 514 7814 503 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7813 506 moveto
+7823 503 lineto
+7813 501 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericDistribHillClimbingClusteringMethod -> SynchronizedEventQueue
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5747 557 moveto
+5685 545 5601 529 5541 516 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5542 514 moveto
+5532 514 lineto
+5541 519 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericDistribHillClimbingClusteringMethod -> IterationManager
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5709 560 moveto
+5572 545 5349 521 5234 509 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5235 507 moveto
+5225 508 lineto
+5235 512 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericDistribHillClimbingClusteringMethod -> GenericClusteringMethod2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5937 559 moveto
+6046 545 6211 525 6314 512 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6314 514 moveto
+6324 511 lineto
+6314 510 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericDistribHillClimbingClusteringMethod -> Population
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5836 555 moveto
+5849 530 5870 485 5884 456 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5886 457 moveto
+5888 447 lineto
+5882 455 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MeasurementUtil -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1568 427 moveto
+1650 422 1671 422 1753 413 curveto
+1760 412 1761 411 1767 411 curveto
+1849 404 4650 410 4723 375 curveto
+4742 366 4734 348 4752 339 curveto
+4760 334 4784 336 4792 335 curveto
+4831 330 4935 317 5023 303 curveto
+5048 299 5054 297 5078 293 curveto
+5087 291 5091 289 5097 288 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5097 290 moveto
+5107 287 lineto
+5097 286 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MeasurementUtil -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1442 418 moveto
+1439 415 1435 413 1429 411 curveto
+1420 407 1417 408 1407 407 curveto
+1373 401 1365 399 1330 395 curveto
+1313 392 1309 392 1291 391 curveto
+1291 390 1131 375 1130 375 curveto
+1117 359 1118 285 1136 267 curveto
+1204 200 1894 217 1988 215 curveto
+2020 213 3000 213 3210 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3210 216 moveto
+3220 213 lineto
+3210 211 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MeasurementUtil -> PrecisionRecallCalculator
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1565 424 moveto
+1619 419 1698 414 1767 411 curveto
+2329 384 2472 429 3031 375 curveto
+3040 374 3050 373 3060 371 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3059 374 moveto
+3069 370 lineto
+3059 369 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MeasurementUtil -> GenericFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1427 426 moveto
+1328 420 1297 416 1189 411 curveto
+806 390 705 435 325 375 curveto
+204 355 0 369 69 267 curveto
+251 0 447 95 769 71 curveto
+792 69 6639 69 7367 69 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7367 72 moveto
+7377 69 lineto
+7367 67 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MeasurementUtil -> BunchFrame
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4033 716 moveto
+3649 705 1712 651 1602 591 curveto
+1546 560 1520 482 1506 447 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4033 719 moveto
+4043 716 lineto
+4033 714 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MeasurementUtil -> Parser
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1452 415 moveto
+1440 412 1428 409 1417 407 curveto
+1333 389 1311 391 1224 383 curveto
+1220 382 1145 378 1141 375 curveto
+1131 363 1131 351 1141 339 curveto
+1145 334 1339 298 1344 297 curveto
+1349 296 1354 295 1358 293 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1359 295 moveto
+1368 291 lineto
+1358 291 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MeasurementUtil -> DependencyFileParser
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1444 417 moveto
+1434 415 1423 413 1412 411 curveto
+1262 387 1222 396 1070 375 curveto
+1061 373 1052 372 1043 370 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1044 368 moveto
+1034 369 lineto
+1044 373 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MeasurementUtil -> ObjectiveFunctionCalculatorFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1568 428 moveto
+1578 427 1588 427 1597 427 curveto
+1664 424 1681 425 1746 415 curveto
+1749 414 1765 411 1767 411 curveto
+1801 407 2947 407 2980 407 curveto
+3136 406 5634 417 5783 375 curveto
+5962 324 5987 239 6133 163 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6134 165 moveto
+6142 158 lineto
+6132 161 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusterFileParser
+gsave 10 dict begin
+1495 357 69 18 ellipse_path
+stroke
+gsave 10 dict begin
+1495 352 moveto 116 -0.5 (ClusterFileParser) alignedtext
+end grestore
+end grestore
+
+%	MeasurementUtil -> ClusterFileParser
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1496 411 moveto
+1496 403 1496 394 1496 385 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1498 385 moveto
+1495 375 lineto
+1494 385 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SASimpleTechniqueDialog
+gsave 10 dict begin
+869 429 103 18 ellipse_path
+stroke
+gsave 10 dict begin
+869 424 moveto 185 -0.5 (SASimpleTechniqueDialog) alignedtext
+end grestore
+end grestore
+
+%	SASimpleTechnique
+gsave 10 dict begin
+869 501 81 18 ellipse_path
+stroke
+gsave 10 dict begin
+869 496 moveto 140 -0.5 (SASimpleTechnique) alignedtext
+end grestore
+end grestore
+
+%	SASimpleTechniqueDialog -> SASimpleTechnique
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 876 474 moveto
+876 465 876 455 875 447 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 874 473 moveto
+875 483 lineto
+879 473 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SASimpleTechnique -> SATechnique
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 919 487 moveto
+963 475 1027 457 1071 444 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1071 447 moveto
+1080 441 lineto
+1070 442 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SASimpleTechnique -> StatsManager
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 818 487 moveto
+797 478 773 466 757 447 curveto
+687 359 711 303 740 195 curveto
+744 182 744 173 747 165 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 749 167 moveto
+750 157 lineto
+744 165 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SASimpleTechnique -> SASimpleTechniqueDialog
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 863 483 moveto
+862 475 862 466 862 457 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 864 457 moveto
+863 447 lineto
+860 457 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GeneralHillClimbingClusteringMethod
+gsave 10 dict begin
+7104 717 145 18 ellipse_path
+stroke
+gsave 10 dict begin
+7104 712 moveto 269 -0.5 (GeneralHillClimbingClusteringMethod) alignedtext
+end grestore
+end grestore
+
+%	NextAscentHillClimbingClusteringMethod
+gsave 10 dict begin
+7104 645 159 18 ellipse_path
+stroke
+gsave 10 dict begin
+7104 640 moveto 296 -0.5 (NextAscentHillClimbingClusteringMethod) alignedtext
+end grestore
+end grestore
+
+%	GeneralHillClimbingClusteringMethod -> NextAscentHillClimbingClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7104 699 moveto
+7104 691 7104 682 7104 673 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7107 673 moveto
+7104 663 lineto
+7102 673 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NextAscentHillClimbingClusteringMethod -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6996 632 moveto
+6976 628 6957 625 6945 623 curveto
+6657 575 6562 640 6296 519 curveto
+6274 508 6274 497 6253 483 curveto
+6205 447 6193 438 6139 411 curveto
+6066 372 6048 360 5968 339 curveto
+5858 309 5827 316 5712 307 curveto
+5586 296 5554 299 5427 293 curveto
+5390 291 5380 291 5342 289 curveto
+5328 288 5325 287 5310 287 curveto
+5287 286 5225 285 5183 285 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 283 moveto
+5173 285 lineto
+5183 288 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NextAscentHillClimbingClusteringMethod -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6970 635 moveto
+6964 632 6958 629 6946 627 curveto
+6919 621 6912 624 6883 623 curveto
+6797 619 6776 620 6689 619 curveto
+6675 618 4590 599 4577 591 curveto
+4535 561 4577 515 4536 483 curveto
+4450 413 4395 481 4289 447 curveto
+4224 425 4210 413 4152 375 curveto
+4132 361 4132 350 4109 339 curveto
+3897 234 3822 262 3586 231 curveto
+3582 230 3611 232 3465 221 curveto
+3461 220 3389 215 3384 215 curveto
+3367 214 3321 213 3288 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3288 211 moveto
+3278 213 lineto
+3288 216 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NextAscentHillClimbingClusteringMethod -> ClusteringMethod2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6989 632 moveto
+6975 630 6959 629 6936 627 curveto
+6636 604 5877 641 5579 591 curveto
+5554 586 5379 528 5354 519 curveto
+5320 505 5315 494 5279 483 curveto
+5247 471 5237 473 5203 467 curveto
+5111 449 5086 453 4992 447 curveto
+4966 445 4959 445 4933 441 curveto
+4930 440 4929 440 4925 439 curveto
+4920 437 4918 436 4914 434 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4916 432 moveto
+4906 432 lineto
+4915 437 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NextAscentHillClimbingClusteringMethod -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7232 634 moveto
+7233 634 7234 633 7235 633 curveto
+7240 631 7257 627 7261 627 curveto
+7272 625 7460 615 7472 615 curveto
+7519 612 7641 611 7685 591 curveto
+7693 587 7805 486 7814 483 curveto
+7878 457 8385 497 8433 447 curveto
+8443 435 8438 426 8433 411 curveto
+8382 270 8295 251 8147 235 curveto
+8075 227 7566 241 7496 227 curveto
+7483 224 7481 217 7469 215 curveto
+7461 213 6536 213 6321 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6322 211 moveto
+6312 213 lineto
+6322 216 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NextAscentHillClimbingClusteringMethod -> HillClimbingConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7223 633 moveto
+7224 632 7226 632 7228 631 curveto
+7248 623 7254 625 7275 619 curveto
+7284 615 7286 615 7296 611 curveto
+7313 603 7320 604 7335 591 curveto
+7399 530 7480 478 7422 411 curveto
+7403 389 7197 383 7170 375 curveto
+7166 373 7163 372 7160 370 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7162 369 moveto
+7153 364 lineto
+7159 372 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NextAscentHillClimbingClusteringMethod -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7229 634 moveto
+7230 633 7230 633 7231 633 curveto
+7256 623 7264 625 7291 623 curveto
+7331 618 7619 606 7657 591 curveto
+7690 576 7747 496 7781 483 curveto
+7846 456 8370 498 8419 447 curveto
+8429 435 8425 425 8419 411 curveto
+8408 388 8394 391 8377 375 curveto
+8361 359 8361 350 8343 339 curveto
+8275 299 8242 300 8180 293 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8180 291 moveto
+8170 292 lineto
+8180 295 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NextAscentHillClimbingClusteringMethod -> SATechnique
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6966 636 moveto
+6958 632 6950 629 6936 627 curveto
+6863 615 1667 603 1593 591 curveto
+1428 562 1243 484 1163 448 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1165 446 moveto
+1155 444 lineto
+1163 451 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NextAscentHillClimbingClusteringMethod -> NAHCConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7206 631 moveto
+7255 622 7305 609 7320 591 curveto
+7329 578 7330 566 7320 555 curveto
+7234 462 6837 611 6750 519 curveto
+6721 487 6774 462 6822 446 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6823 448 moveto
+6832 443 lineto
+6822 443 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NextAscentHillClimbingClusteringMethod -> GenericHillClimbingClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7065 627 moveto
+7044 617 7016 605 6993 594 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6994 592 moveto
+6984 590 lineto
+6992 596 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	NextAscentHillClimbingClusteringMethod -> BunchUtilities
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7216 632 moveto
+7235 630 7254 628 7272 627 curveto
+7391 616 7703 646 7809 591 curveto
+7841 573 7841 549 7856 526 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7858 528 moveto
+7862 518 lineto
+7854 525 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MQCalculator
+gsave 10 dict begin
+2981 429 60 18 ellipse_path
+stroke
+gsave 10 dict begin
+2981 424 moveto 98 -0.5 (MQCalculator) alignedtext
+end grestore
+end grestore
+
+%	MQCalculator -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3024 416 moveto
+3032 414 3041 412 3050 411 curveto
+3152 396 4802 420 4893 375 curveto
+4912 365 4905 350 4922 339 curveto
+4929 334 5050 305 5057 303 curveto
+5066 300 5085 293 5098 290 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5098 293 moveto
+5107 288 lineto
+5097 288 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MQCalculator -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3022 416 moveto
+3028 414 3035 412 3041 411 curveto
+3077 404 3341 401 3365 375 curveto
+3410 326 3325 261 3278 230 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3280 228 moveto
+3270 225 lineto
+3277 232 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MQCalculator -> Parser
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2921 427 moveto
+2681 418 1790 385 1730 375 curveto
+1596 352 1566 315 1438 290 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1440 288 moveto
+1430 288 lineto
+1439 293 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MQCalculator -> DependencyFileParser
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2921 428 moveto
+2646 422 1500 399 1141 375 curveto
+1113 373 1082 370 1054 367 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1055 365 moveto
+1045 366 lineto
+1055 370 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MQCalculator -> ObjectiveFunctionCalculatorFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3035 421 moveto
+3040 417 3043 413 3051 411 curveto
+3057 409 6116 378 6120 375 curveto
+6185 328 6188 220 6185 169 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6187 169 moveto
+6184 159 lineto
+6183 169 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MQCalculator -> ClusterFileParser
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2921 428 moveto
+2688 424 1844 408 1578 375 curveto
+1571 374 1562 373 1555 371 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1556 369 moveto
+1546 369 lineto
+1555 374 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusterFileParser -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1562 353 moveto
+1639 349 1767 342 1877 339 curveto
+2546 317 4757 290 5096 285 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5097 288 moveto
+5107 285 lineto
+5097 283 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusterFileParser -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1517 340 moveto
+1547 318 1601 282 1654 267 curveto
+1923 189 2630 225 2909 219 curveto
+3018 216 3147 214 3210 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3210 216 moveto
+3220 213 lineto
+3210 211 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusterFileParser -> Parser
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1472 340 moveto
+1457 330 1439 316 1424 305 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1427 304 moveto
+1417 300 lineto
+1424 308 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchSvrMsgImpl
+gsave 10 dict begin
+7345 789 77 18 ellipse_path
+stroke
+gsave 10 dict begin
+7345 784 moveto 132 -0.5 (BunchSvrMsgImpl) alignedtext
+end grestore
+end grestore
+
+%	BunchSvrMsgImpl -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7268 787 moveto
+7267 787 7265 787 7264 787 curveto
+7176 781 7154 777 7065 767 curveto
+6961 754 6125 750 6125 645 curveto
+6125 645 6125 645 6125 573 curveto
+6125 532 6132 514 6106 483 curveto
+6080 451 6056 469 6021 447 curveto
+6002 434 6003 425 5984 411 curveto
+5961 392 5951 393 5926 375 curveto
+5908 360 5909 349 5888 339 curveto
+5843 314 5826 321 5774 315 curveto
+5737 310 5728 309 5690 307 curveto
+5579 299 5298 291 5186 287 curveto
+5185 287 5183 287 5182 287 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 285 moveto
+5173 286 lineto
+5183 290 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchSvrMsgImpl -> DistribInit
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7269 785 moveto
+7170 779 7003 765 6950 735 curveto
+6924 720 6904 691 6893 670 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6896 670 moveto
+6889 663 lineto
+6892 673 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchSvrMsgImpl -> BunchPreferences
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7268 788 moveto
+6501 783 268 737 268 645 curveto
+268 645 268 645 268 501 curveto
+268 444 325 401 366 378 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 367 380 moveto
+374 373 lineto
+364 376 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchSvrMsgImpl -> BunchUtilities
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7421 786 moveto
+7553 774 7874 759 7942 663 curveto
+7969 623 7956 600 7942 555 curveto
+7937 540 7934 530 7928 522 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7930 521 moveto
+7922 515 lineto
+7927 524 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerClusteringProgress
+gsave 10 dict begin
+8813 573 97 18 ellipse_path
+stroke
+gsave 10 dict begin
+8813 568 moveto 172 -0.5 (ServerClusteringProgress) alignedtext
+end grestore
+end grestore
+
+%	BunchSvrMsgImpl -> ServerClusteringProgress
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7422 787 moveto
+7706 781 8684 752 8789 663 curveto
+8807 647 8812 620 8813 599 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8815 601 moveto
+8814 591 lineto
+8810 601 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BSWindow
+gsave 10 dict begin
+7345 717 51 18 ellipse_path
+stroke
+gsave 10 dict begin
+7345 712 moveto 80 -0.5 (BSWindow) alignedtext
+end grestore
+end grestore
+
+%	BunchSvrMsgImpl -> BSWindow
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7339 771 moveto
+7338 763 7338 754 7338 745 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7340 745 moveto
+7339 735 lineto
+7336 745 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerClusteringEngine
+gsave 10 dict begin
+7506 717 92 18 ellipse_path
+stroke
+gsave 10 dict begin
+7506 712 moveto 163 -0.5 (ServerClusteringEngine) alignedtext
+end grestore
+end grestore
+
+%	BunchSvrMsgImpl -> ServerClusteringEngine
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7381 773 moveto
+7404 762 7435 749 7460 738 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7461 740 moveto
+7469 734 lineto
+7459 736 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchSvrMsgImpl -> SwingWorker
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7268 788 moveto
+6897 785 5306 764 5111 663 curveto
+5084 649 5063 619 5051 598 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5054 598 moveto
+5047 591 lineto
+5050 601 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerProperties
+gsave 10 dict begin
+9071 573 67 18 ellipse_path
+stroke
+gsave 10 dict begin
+9071 568 moveto 112 -0.5 (ServerProperties) alignedtext
+end grestore
+end grestore
+
+%	BunchSvrMsgImpl -> ServerProperties
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7422 788 moveto
+7442 788 7463 787 7483 787 curveto
+7554 785 7572 785 7644 783 curveto
+8052 770 8158 799 8562 735 curveto
+8760 703 8809 682 8996 607 curveto
+9006 602 9017 598 9028 593 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 9029 595 moveto
+9037 589 lineto
+9027 591 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchSvrMsg
+gsave 10 dict begin
+7676 717 60 18 ellipse_path
+stroke
+gsave 10 dict begin
+7676 712 moveto 99 -0.5 (BunchSvrMsg) alignedtext
+end grestore
+end grestore
+
+%	BunchSvrMsgImpl -> BunchSvrMsg
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7405 778 moveto
+7458 767 7538 751 7607 735 curveto
+7612 734 7617 733 7622 731 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7621 734 moveto
+7630 729 lineto
+7620 729 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BSWindow -> BunchUtilities
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7382 704 moveto
+7388 702 7395 701 7405 699 curveto
+7461 688 7883 705 7923 663 curveto
+7955 627 7938 600 7923 555 curveto
+7919 544 7913 534 7906 526 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7908 525 moveto
+7900 519 lineto
+7905 528 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BSWindow -> BunchSvrMsgImpl
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7352 761 moveto
+7352 752 7352 743 7351 735 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7350 761 moveto
+7351 771 lineto
+7354 761 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BSWindow_AboutBox
+gsave 10 dict begin
+7373 645 92 18 ellipse_path
+stroke
+gsave 10 dict begin
+7373 640 moveto 163 -0.5 (BSWindow_AboutBox) alignedtext
+end grestore
+end grestore
+
+%	BSWindow -> BSWindow_AboutBox
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7352 699 moveto
+7355 691 7359 681 7363 672 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7365 673 moveto
+7366 663 lineto
+7360 672 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerClusteringEngine -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7452 702 moveto
+7439 699 7426 697 7414 695 curveto
+7280 672 7246 672 7111 667 curveto
+7101 666 6396 666 6386 663 curveto
+6257 620 6252 559 6139 483 curveto
+6090 449 6077 442 6025 411 curveto
+5999 394 5989 394 5964 375 curveto
+5947 361 5950 349 5930 339 curveto
+5886 315 5755 311 5704 307 curveto
+5626 300 5429 293 5350 289 curveto
+5336 288 5333 287 5318 287 curveto
+5293 286 5227 285 5182 285 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 283 moveto
+5173 285 lineto
+5183 288 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerClusteringEngine -> ClusteringMethod2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7425 708 moveto
+7420 704 7415 701 7405 699 curveto
+7343 685 5197 699 5145 663 curveto
+5104 633 5146 587 5106 555 curveto
+5037 496 4983 565 4904 519 curveto
+4878 503 4857 475 4844 454 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4847 454 moveto
+4840 447 lineto
+4843 457 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerClusteringEngine -> ClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7418 711 moveto
+7413 707 7412 701 7404 699 curveto
+7401 697 5600 679 5596 679 curveto
+5399 676 4898 712 4706 663 curveto
+4674 654 4672 636 4639 627 curveto
+4548 599 4295 639 4213 591 curveto
+4169 564 4134 523 4166 483 curveto
+4191 453 4466 416 4503 411 curveto
+4834 366 4921 398 5252 367 curveto
+5259 366 5261 366 5267 365 curveto
+5270 364 5272 363 5274 363 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5274 366 moveto
+5283 360 lineto
+5273 361 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerClusteringEngine -> HillClimbingConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7567 703 moveto
+7575 702 7584 700 7592 699 curveto
+7603 696 7606 696 7619 695 curveto
+7663 689 7674 688 7719 683 curveto
+7754 679 7762 678 7798 675 curveto
+7813 673 7926 666 7942 663 curveto
+7966 657 8136 610 8151 591 curveto
+8160 577 8156 570 8151 555 curveto
+8136 515 8127 502 8090 483 curveto
+7927 398 7844 526 7679 447 curveto
+7659 437 7664 420 7645 411 curveto
+7583 381 7406 388 7338 383 curveto
+7316 381 7310 380 7289 379 curveto
+7277 378 7193 379 7181 375 curveto
+7174 372 7173 368 7168 364 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7170 362 moveto
+7160 359 lineto
+7167 366 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerClusteringEngine -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7585 708 moveto
+7593 703 7603 699 7604 699 curveto
+7611 697 7727 691 7732 691 curveto
+7732 690 8658 663 8659 663 curveto
+8777 541 8595 436 8456 339 curveto
+8355 268 8306 291 8185 287 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8184 285 moveto
+8174 287 lineto
+8184 290 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerClusteringEngine -> GenericDistribHillClimbingClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7442 704 moveto
+7430 702 7417 700 7405 699 curveto
+6884 644 6746 729 6225 663 curveto
+6107 648 5973 613 5894 592 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5896 590 moveto
+5886 590 lineto
+5895 595 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerClusteringEngine -> ServerProperties
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7586 708 moveto
+7592 704 7597 701 7607 699 curveto
+7639 691 8756 668 8789 663 curveto
+8874 648 8970 613 9025 591 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 9025 594 moveto
+9034 588 lineto
+9024 589 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerSteepestAscentClusteringMethod
+gsave 10 dict begin
+8243 645 146 18 ellipse_path
+stroke
+gsave 10 dict begin
+8243 640 moveto 270 -0.5 (ServerSteepestAscentClusteringMethod) alignedtext
+end grestore
+end grestore
+
+%	ServerClusteringEngine -> ServerSteepestAscentClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7570 704 moveto
+7582 702 7595 700 7607 699 curveto
+7797 674 7845 679 8037 663 curveto
+8062 661 8089 659 8115 656 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8114 659 moveto
+8124 655 lineto
+8114 654 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	OptimalClusteringMethod
+gsave 10 dict begin
+7210 573 101 18 ellipse_path
+stroke
+gsave 10 dict begin
+7210 568 moveto 181 -0.5 (OptimalClusteringMethod) alignedtext
+end grestore
+end grestore
+
+%	OptimalClusteringMethod -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7150 559 moveto
+7137 556 7123 553 7110 551 curveto
+6968 528 6931 530 6786 523 curveto
+6754 521 6673 524 6641 519 curveto
+6587 510 6576 495 6522 483 curveto
+6426 460 6396 477 6301 447 curveto
+6198 413 6187 368 6082 339 curveto
+5924 294 5877 318 5712 307 curveto
+5582 298 5549 298 5417 293 curveto
+5394 292 5389 291 5365 291 curveto
+5343 290 5337 290 5314 289 curveto
+5298 288 5294 287 5277 287 curveto
+5260 286 5216 285 5183 285 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 283 moveto
+5173 285 lineto
+5183 288 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	OptimalClusteringMethod -> ClusteringMethod2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7141 560 moveto
+7127 558 7113 556 7100 555 curveto
+6576 504 6440 577 5916 519 curveto
+5797 505 5770 483 5650 467 curveto
+5628 463 5622 464 5599 463 curveto
+5536 459 5521 460 5457 459 curveto
+5391 457 5224 452 5157 451 curveto
+5085 449 5066 452 4993 447 curveto
+4980 445 4947 441 4933 439 curveto
+4929 438 4928 437 4924 437 curveto
+4920 436 4918 435 4916 434 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4917 432 moveto
+4907 432 lineto
+4916 437 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	OptimalClusteringMethod -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7290 562 moveto
+7439 536 7492 506 7667 483 curveto
+7725 475 8149 480 8198 447 curveto
+8263 401 8268 321 8210 267 curveto
+8157 217 7959 242 7888 239 curveto
+7845 237 7835 236 7793 235 curveto
+7659 231 7625 238 7492 231 curveto
+7483 230 7480 229 7472 229 curveto
+7416 225 7402 226 7347 225 curveto
+7137 219 7085 220 6874 217 curveto
+6810 216 6794 215 6729 215 curveto
+6580 213 6403 213 6321 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6322 211 moveto
+6312 213 lineto
+6322 216 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	OptimalClusteringMethod -> StatsManager
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7156 558 moveto
+7147 555 7138 553 7130 551 curveto
+7124 549 7122 548 7115 547 curveto
+7066 536 7053 536 7002 531 curveto
+6979 528 6974 528 6950 527 curveto
+6919 524 6911 524 6878 523 curveto
+6848 521 6770 523 6739 519 curveto
+6680 510 6668 495 6609 483 curveto
+6501 460 6468 479 6361 447 curveto
+6309 430 6194 353 6141 339 curveto
+5729 226 5609 295 5182 267 curveto
+4460 218 4279 211 3556 171 curveto
+3438 164 3408 161 3289 159 curveto
+3186 156 3161 158 3057 157 curveto
+3034 156 2873 153 2849 153 curveto
+2788 151 2773 151 2711 151 curveto
+2445 148 2378 149 2111 149 curveto
+1784 148 1703 149 1375 147 curveto
+1294 146 1273 146 1191 145 curveto
+1127 144 1112 143 1047 143 curveto
+978 142 898 141 843 141 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 844 139 moveto
+834 141 lineto
+844 144 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	OptimalClusteringMethod -> BunchUtilities
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7297 564 moveto
+7433 549 7696 521 7818 508 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7816 511 moveto
+7826 507 lineto
+7816 506 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	OptimalClusteringMethod -> IterationEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7234 555 moveto
+7247 545 7263 532 7277 519 curveto
+7298 498 7320 471 7335 453 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7336 456 moveto
+7340 447 lineto
+7332 453 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	EventObject
+gsave 10 dict begin
+7397 357 54 18 ellipse_path
+stroke
+gsave 10 dict begin
+7397 352 moveto 86 -0.5 (EventObject) alignedtext
+end grestore
+end grestore
+
+%	IterationEvent -> EventObject
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7364 411 moveto
+7369 403 7375 392 7381 383 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7383 385 moveto
+7386 375 lineto
+7379 382 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedSAHCClusteringMethod
+gsave 10 dict begin
+5552 645 134 18 ellipse_path
+stroke
+gsave 10 dict begin
+5552 640 moveto 246 -0.5 (DistributedSAHCClusteringMethod) alignedtext
+end grestore
+end grestore
+
+%	DistributedSAHCClusteringMethod -> ClusteringMethod2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5452 633 moveto
+5403 618 5319 592 5312 591 curveto
+5209 559 5182 555 5080 519 curveto
+4996 488 4970 463 4901 442 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4903 440 moveto
+4893 439 lineto
+4901 445 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedSAHCClusteringMethod -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5685 643 moveto
+5700 642 5704 641 5720 641 curveto
+5740 640 5744 639 5763 639 curveto
+5789 637 5795 637 5820 637 curveto
+5976 631 6015 631 6170 627 curveto
+6170 627 7391 591 7391 591 curveto
+7417 574 7482 423 7493 375 curveto
+7502 328 7526 301 7493 267 curveto
+7471 245 6538 220 6321 214 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6322 212 moveto
+6312 214 lineto
+6322 217 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedSAHCClusteringMethod -> HillClimbingConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5681 640 moveto
+5921 631 6369 623 6555 591 curveto
+6611 581 6622 565 6677 555 curveto
+6727 545 7092 555 7125 519 curveto
+7153 489 7095 421 7089 411 curveto
+7083 398 7079 390 7075 383 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7077 382 moveto
+7070 375 lineto
+7073 385 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedSAHCClusteringMethod -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5685 643 moveto
+5703 642 5707 641 5726 641 curveto
+5749 640 5754 639 5776 639 curveto
+5807 637 5815 637 5845 637 curveto
+5869 636 7482 596 7505 591 curveto
+7539 582 7544 570 7577 555 curveto
+7612 538 7625 541 7657 519 curveto
+7674 506 7671 492 7691 483 curveto
+7787 436 8099 525 8173 447 curveto
+8179 440 8182 374 8172 339 curveto
+8167 324 8165 314 8160 305 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8163 304 moveto
+8154 299 lineto
+8159 308 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedSAHCClusteringMethod -> BunchEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5503 628 moveto
+5435 603 5395 593 5354 519 curveto
+5347 504 5344 494 5354 483 curveto
+5366 470 5647 457 5664 455 curveto
+5687 452 5694 453 5713 443 curveto
+5715 442 5717 441 5718 439 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5718 442 moveto
+5725 434 lineto
+5715 438 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedSAHCClusteringMethod -> BunchUtilities
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5684 642 moveto
+6133 632 7571 599 7619 591 curveto
+7716 572 7740 536 7821 512 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7821 515 moveto
+7830 509 lineto
+7820 510 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedSAHCClusteringMethod -> GenericDistribHillClimbingClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5613 629 moveto
+5655 618 5710 604 5754 592 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5754 595 moveto
+5763 590 lineto
+5753 590 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedSAHCClusteringMethod -> WorkRequestEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5432 637 moveto
+5425 633 5420 629 5409 627 curveto
+5404 625 4979 615 4972 615 curveto
+4909 613 4894 612 4830 611 curveto
+4774 609 4760 609 4703 607 curveto
+4612 603 4587 613 4497 591 curveto
+4418 570 4394 541 4334 517 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4336 515 moveto
+4326 514 lineto
+4334 520 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedSAHCClusteringMethod -> SynchronizedEventQueue
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5541 627 moveto
+5526 602 5498 556 5480 527 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5482 526 moveto
+5475 519 lineto
+5478 529 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedSAHCClusteringMethod -> IterationManager
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5487 629 moveto
+5451 620 5427 612 5377 591 curveto
+5309 561 5294 532 5234 511 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5236 509 moveto
+5226 508 lineto
+5234 514 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DistributedSAHCClusteringMethod -> WorkFinishedEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5446 634 moveto
+5436 631 5426 629 5409 627 curveto
+5313 615 4628 630 4539 591 curveto
+4502 574 4498 549 4478 525 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4480 524 moveto
+4472 518 lineto
+4477 527 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SynchronizedEventQueue -> BunchEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5530 487 moveto
+5579 477 5649 462 5709 447 curveto
+5714 446 5719 444 5725 443 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5726 445 moveto
+5735 440 lineto
+5725 440 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchGraphPR
+gsave 10 dict begin
+1627 501 67 18 ellipse_path
+stroke
+gsave 10 dict begin
+1627 496 moveto 112 -0.5 (BunchGraphPR) alignedtext
+end grestore
+end grestore
+
+%	BunchGraph
+gsave 10 dict begin
+1832 429 56 18 ellipse_path
+stroke
+gsave 10 dict begin
+1832 424 moveto 90 -0.5 (BunchGraph) alignedtext
+end grestore
+end grestore
+
+%	BunchGraphPR -> BunchGraph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1668 487 moveto
+1702 475 1750 458 1785 445 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1785 448 moveto
+1794 442 lineto
+1784 443 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchNode
+gsave 10 dict begin
+1203 357 53 18 ellipse_path
+stroke
+gsave 10 dict begin
+1203 352 moveto 84 -0.5 (BunchNode) alignedtext
+end grestore
+end grestore
+
+%	BunchGraphPR -> BunchNode
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1629 483 moveto
+1631 462 1630 429 1610 411 curveto
+1610 410 1291 373 1290 373 curveto
+1280 371 1268 369 1257 367 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1259 365 moveto
+1249 366 lineto
+1259 370 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchCluster
+gsave 10 dict begin
+1203 285 58 18 ellipse_path
+stroke
+gsave 10 dict begin
+1203 280 moveto 95 -0.5 (BunchCluster) alignedtext
+end grestore
+end grestore
+
+%	BunchGraphPR -> BunchCluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1567 493 moveto
+1515 484 1436 470 1370 447 curveto
+1337 435 1333 420 1298 411 curveto
+1207 385 936 445 871 375 curveto
+861 363 861 351 871 339 curveto
+888 319 1046 300 1137 291 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1137 293 moveto
+1147 290 lineto
+1137 289 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchGraph -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1888 429 moveto
+1933 428 1997 428 2052 427 curveto
+2224 424 2267 423 2438 421 curveto
+2576 418 2610 417 2747 415 curveto
+2821 413 2839 412 2912 411 curveto
+3015 408 4661 410 4756 375 curveto
+4780 366 4777 349 4799 339 curveto
+4804 336 4975 311 4979 311 curveto
+4991 309 4993 308 5004 307 curveto
+5031 302 5038 301 5064 297 curveto
+5069 296 5071 296 5075 295 curveto
+5078 294 5090 291 5099 289 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5098 292 moveto
+5107 287 lineto
+5097 287 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchGraph -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1817 411 moveto
+1792 380 1747 311 1781 267 curveto
+1824 211 2967 215 3036 215 curveto
+3097 214 3167 213 3209 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3210 216 moveto
+3220 213 lineto
+3210 211 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchGraph -> NextLevelGraph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1888 428 moveto
+2193 423 3647 400 3845 375 curveto
+3852 374 3858 373 3865 372 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3865 375 moveto
+3874 370 lineto
+3864 370 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchGraph -> BunchNode
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1784 420 moveto
+1765 417 1744 413 1724 411 curveto
+1540 387 1493 398 1308 375 curveto
+1292 372 1274 370 1258 367 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1260 365 moveto
+1250 365 lineto
+1259 370 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchGraph -> BunchCluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1787 418 moveto
+1770 414 1750 410 1732 407 curveto
+1689 399 1678 399 1634 395 curveto
+1573 388 1557 387 1495 383 curveto
+1489 382 1390 376 1384 375 curveto
+1355 367 1284 329 1241 306 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1242 304 moveto
+1232 301 lineto
+1240 308 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEdge
+gsave 10 dict begin
+3305 357 51 18 ellipse_path
+stroke
+gsave 10 dict begin
+3305 352 moveto 81 -0.5 (BunchEdge) alignedtext
+end grestore
+end grestore
+
+%	BunchGraph -> BunchEdge
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1873 417 moveto
+1883 414 1893 412 1902 411 curveto
+2494 328 2656 469 3245 375 curveto
+3250 374 3254 374 3259 372 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3259 375 moveto
+3268 370 lineto
+3258 370 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchNode -> BunchCluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1197 339 moveto
+1196 331 1196 322 1196 313 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1198 313 moveto
+1197 303 lineto
+1194 313 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchCluster -> BunchNode
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1210 330 moveto
+1210 321 1210 311 1209 303 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1208 329 moveto
+1209 339 lineto
+1213 329 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine
+gsave 10 dict begin
+3227 501 58 18 ellipse_path
+stroke
+gsave 10 dict begin
+3227 496 moveto 95 -0.5 (BunchEngine) alignedtext
+end grestore
+end grestore
+
+%	BunchEngine -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3278 492 moveto
+3283 488 3286 485 3293 483 curveto
+3314 475 3469 468 3491 467 curveto
+3497 466 3877 451 3882 451 curveto
+3910 450 4105 452 4132 447 curveto
+4171 438 4175 419 4213 411 curveto
+4311 388 5029 433 5109 375 curveto
+5129 360 5136 332 5139 311 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5141 313 moveto
+5140 303 lineto
+5136 313 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3266 488 moveto
+3310 472 3377 449 3378 447 curveto
+3398 421 3384 407 3385 375 curveto
+3388 325 3391 305 3360 267 curveto
+3336 235 3320 234 3286 220 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3288 218 moveto
+3278 217 lineto
+3286 223 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> PrecisionRecallCalculator
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3225 483 moveto
+3223 464 3217 433 3202 411 curveto
+3195 399 3184 389 3173 380 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3175 379 moveto
+3166 374 lineto
+3172 382 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> ParserFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3169 499 moveto
+3165 499 3162 499 3158 499 curveto
+3139 498 3134 497 3114 497 curveto
+3075 495 3066 495 3026 495 curveto
+2983 494 2973 493 2929 493 curveto
+2855 491 2836 490 2761 489 curveto
+2723 488 2713 487 2674 487 curveto
+2632 486 2621 486 2578 485 curveto
+2552 484 2545 483 2518 483 curveto
+2447 480 2269 476 2197 475 curveto
+2135 473 2120 472 2057 471 curveto
+1996 469 1980 468 1918 467 curveto
+1859 465 1845 464 1785 463 curveto
+1671 459 1643 458 1528 455 curveto
+1480 453 1468 452 1419 451 curveto
+1395 450 1332 453 1308 447 curveto
+1274 438 1271 420 1236 411 curveto
+1033 354 968 422 762 375 curveto
+695 359 621 326 577 304 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 578 302 moveto
+568 300 lineto
+576 306 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> ClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3278 492 moveto
+3283 489 3287 485 3295 483 curveto
+3304 480 3367 475 3375 475 curveto
+3399 472 3405 472 3429 471 curveto
+3461 468 3468 468 3499 467 curveto
+3589 462 3611 462 3700 459 curveto
+3750 457 3872 452 3921 451 curveto
+3957 450 4206 451 4241 447 curveto
+4315 438 4330 421 4403 411 curveto
+4731 366 4816 389 5146 371 curveto
+5162 370 5166 369 5181 369 curveto
+5222 366 5233 368 5273 363 curveto
+5273 363 5273 363 5274 363 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5274 366 moveto
+5283 360 lineto
+5273 361 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3280 494 moveto
+3284 490 3286 486 3294 483 curveto
+3301 480 3383 475 3387 475 curveto
+3412 473 3419 472 3443 471 curveto
+3564 463 3594 463 3714 459 curveto
+3759 457 3770 456 3814 455 curveto
+3890 452 3908 452 3983 451 curveto
+4004 450 4151 452 4171 447 curveto
+4204 438 4205 419 4237 411 curveto
+4430 357 4937 404 5134 375 curveto
+5198 365 5211 351 5273 339 curveto
+5498 294 5557 296 5784 267 curveto
+5784 267 6175 222 6232 216 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6232 218 moveto
+6242 215 lineto
+6232 214 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3279 493 moveto
+3284 489 3288 485 3297 483 curveto
+3313 478 3430 471 3446 471 curveto
+3483 468 3493 468 3529 467 curveto
+3572 465 3583 464 3625 463 curveto
+3676 461 3688 460 3738 459 curveto
+3875 454 3909 452 4045 451 curveto
+4064 450 6698 451 6716 447 curveto
+6723 445 6936 340 6942 339 curveto
+7130 291 7617 301 7810 293 curveto
+7832 291 7838 291 7861 291 curveto
+7890 289 7897 289 7927 289 curveto
+7955 288 7963 287 7992 287 curveto
+8009 286 8027 286 8044 285 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8044 288 moveto
+8054 285 lineto
+8044 283 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> SATechnique
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3169 500 moveto
+2857 496 1394 474 1194 447 curveto
+1188 446 1181 445 1175 443 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1176 441 moveto
+1166 441 lineto
+1175 446 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> NAHCConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3268 488 moveto
+3277 486 3286 484 3294 483 curveto
+3679 430 6401 483 6787 447 curveto
+6796 446 6806 445 6816 443 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6815 446 moveto
+6825 442 lineto
+6815 441 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> Parser
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3170 498 moveto
+3158 496 3151 496 3134 495 curveto
+3129 494 1422 378 1417 375 curveto
+1399 359 1396 332 1396 311 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1399 313 moveto
+1396 303 lineto
+1394 313 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> DependencyFileParser
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3169 499 moveto
+3147 498 3121 497 3098 497 curveto
+3052 495 1461 463 1417 447 curveto
+1394 438 1397 420 1374 411 curveto
+1346 398 1132 382 1101 379 curveto
+1087 377 1083 376 1068 375 curveto
+1059 373 1050 372 1041 370 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1042 368 moveto
+1032 369 lineto
+1042 373 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> ClusteringMethodFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3169 500 moveto
+3125 500 3064 500 3010 499 curveto
+2718 495 2644 493 2351 489 curveto
+2203 486 2166 485 2017 483 curveto
+1937 481 1917 480 1837 479 curveto
+1769 477 1752 477 1684 475 curveto
+1589 471 1566 470 1470 467 curveto
+1368 462 1102 493 1010 447 curveto
+992 437 1000 420 981 411 curveto
+850 343 456 421 315 375 curveto
+273 361 230 330 204 309 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 206 308 moveto
+197 303 lineto
+203 311 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> GraphOutputFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3169 500 moveto
+3135 500 3091 500 3051 499 curveto
+2823 495 2766 494 2537 491 curveto
+2325 487 2272 487 2060 483 curveto
+1861 478 1811 477 1611 471 curveto
+1485 466 1454 464 1327 459 curveto
+1207 453 1169 490 1057 447 curveto
+1034 437 1038 420 1014 411 curveto
+943 382 378 430 325 375 curveto
+307 355 328 328 349 308 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 350 310 moveto
+356 302 lineto
+347 307 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> ObjectiveFunctionCalculatorFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3283 496 moveto
+3289 491 3289 485 3296 483 curveto
+3312 476 7994 458 8006 447 curveto
+8102 349 7805 301 7569 267 curveto
+7113 201 6565 163 6317 149 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6318 147 moveto
+6308 148 lineto
+6318 152 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> NextLevelGraph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3275 491 moveto
+3279 488 3283 485 3290 483 curveto
+3313 476 3372 472 3395 471 curveto
+3425 468 3433 468 3462 467 curveto
+3498 465 3506 464 3541 463 curveto
+3546 462 3893 450 3896 447 curveto
+3915 432 3922 404 3923 383 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3926 385 moveto
+3923 375 lineto
+3921 385 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> StatsManager
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3169 499 moveto
+3167 499 3164 499 3162 499 curveto
+3145 498 3140 497 3122 497 curveto
+3093 495 3086 495 3056 495 curveto
+2979 492 2960 492 2882 491 curveto
+2869 490 2646 485 2632 485 curveto
+2604 484 2596 483 2567 483 curveto
+2504 481 2489 480 2425 479 curveto
+2346 476 2326 477 2246 475 curveto
+2184 473 2169 472 2106 471 curveto
+1873 464 1814 463 1580 455 curveto
+1580 454 1371 447 1370 447 curveto
+1334 438 1331 420 1294 411 curveto
+1203 386 947 430 871 375 curveto
+804 325 784 219 778 169 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 780 169 moveto
+777 159 lineto
+776 169 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> BunchPreferences
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3169 500 moveto
+3160 499 3151 499 3143 499 curveto
+3115 498 3108 497 3079 497 curveto
+3070 496 2420 483 2410 483 curveto
+2275 479 2242 478 2106 475 curveto
+2041 473 2024 472 1958 471 curveto
+1897 469 1882 468 1820 467 curveto
+1765 465 1751 464 1695 463 curveto
+1683 462 1245 451 1232 447 curveto
+1209 438 1213 420 1189 411 curveto
+1158 397 684 372 491 362 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 491 360 moveto
+481 361 lineto
+491 364 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> GraphOutput
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3268 488 moveto
+3269 488 3271 487 3272 487 curveto
+3278 485 3280 484 3285 483 curveto
+3341 466 3361 475 3411 447 curveto
+3442 430 3471 401 3488 381 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3489 383 moveto
+3494 374 lineto
+3486 380 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchEngine -> MQCalculator
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3185 489 moveto
+3143 477 3077 457 3032 444 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3034 442 moveto
+3024 442 lineto
+3033 447 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAConfiguration
+gsave 10 dict begin
+7252 357 73 18 ellipse_path
+stroke
+gsave 10 dict begin
+7252 352 moveto 124 -0.5 (GAConfiguration) alignedtext
+end grestore
+end grestore
+
+%	BunchEngine -> GAConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3279 493 moveto
+3284 489 3287 485 3295 483 curveto
+3345 469 6930 455 6980 447 curveto
+7028 438 7123 396 7190 373 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7191 375 moveto
+7200 370 lineto
+7190 370 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAConfiguration -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7201 344 moveto
+7191 342 7180 340 7170 339 curveto
+6967 313 5456 290 5183 285 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 283 moveto
+5173 285 lineto
+5183 288 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAConfiguration -> GenericFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7264 339 moveto
+7296 289 7386 153 7424 95 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7426 97 moveto
+7429 87 lineto
+7422 94 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAConfiguration -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7304 344 moveto
+7314 342 7324 340 7334 339 curveto
+7594 301 7907 290 8045 286 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8044 289 moveto
+8054 286 lineto
+8044 284 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAMethodFactory
+gsave 10 dict begin
+7570 213 77 18 ellipse_path
+stroke
+gsave 10 dict begin
+7570 208 moveto 132 -0.5 (GAMethodFactory) alignedtext
+end grestore
+end grestore
+
+%	GAConfiguration -> GAMethodFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7302 344 moveto
+7361 328 7451 304 7455 303 curveto
+7489 286 7523 257 7545 237 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7546 239 moveto
+7552 231 lineto
+7543 236 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TurboMQIncrW
+gsave 10 dict begin
+3767 357 69 18 ellipse_path
+stroke
+gsave 10 dict begin
+3767 352 moveto 116 -0.5 (TurboMQIncrW) alignedtext
+end grestore
+end grestore
+
+%	TurboMQIncrW -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3816 344 moveto
+3825 342 3835 340 3845 339 curveto
+4095 305 4900 290 5097 286 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5097 289 moveto
+5107 286 lineto
+5097 284 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TurboMQIncrW -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3756 339 moveto
+3743 318 3717 283 3684 267 curveto
+3615 231 3381 218 3288 214 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3288 212 moveto
+3278 214 lineto
+3288 217 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TurboMQIncrW -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3814 344 moveto
+3827 340 3842 337 3855 335 curveto
+4128 292 4197 288 4471 267 curveto
+5199 210 5382 226 6111 215 curveto
+6151 214 6198 213 6231 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6232 216 moveto
+6242 213 lineto
+6232 211 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TurboMQIncrW -> StatsManager
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3763 339 moveto
+3758 318 3746 284 3722 267 curveto
+3565 150 3483 213 3287 195 curveto
+3039 171 1220 146 844 142 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 844 140 moveto
+834 142 lineto
+844 145 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ObjectiveFunctionCalculator
+gsave 10 dict begin
+2977 285 110 18 ellipse_path
+stroke
+gsave 10 dict begin
+2977 280 moveto 198 -0.5 (ObjectiveFunctionCalculator) alignedtext
+end grestore
+end grestore
+
+%	TurboMQIncrW -> ObjectiveFunctionCalculator
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3702 351 moveto
+3665 347 3618 342 3575 339 curveto
+3380 321 3330 322 3134 303 curveto
+3115 301 3095 299 3076 297 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3076 295 moveto
+3066 296 lineto
+3076 299 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TSGraphOutput
+gsave 10 dict begin
+3126 429 67 18 ellipse_path
+stroke
+gsave 10 dict begin
+3126 424 moveto 113 -0.5 (TSGraphOutput) alignedtext
+end grestore
+end grestore
+
+%	TSGraphOutput -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3191 425 moveto
+3210 420 3218 414 3240 411 curveto
+3333 397 4841 413 4926 375 curveto
+4947 366 4942 351 4960 339 curveto
+4961 338 5079 297 5103 288 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5098 292 moveto
+5107 287 lineto
+5097 287 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TSGraphOutput -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3067 420 moveto
+3063 417 3059 413 3050 411 curveto
+3049 410 2549 403 2547 403 curveto
+2454 401 2430 400 2336 399 curveto
+2248 397 2226 397 2137 395 curveto
+2079 393 2065 393 2006 391 curveto
+1927 387 1890 425 1827 375 curveto
+1789 343 1768 303 1801 267 curveto
+1843 221 2848 220 2909 219 curveto
+3018 216 3147 214 3210 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3210 216 moveto
+3220 213 lineto
+3210 211 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TSGraphOutput -> GraphOutput
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3181 419 moveto
+3253 406 3376 382 3449 368 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3449 371 moveto
+3458 366 lineto
+3448 366 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Edge
+gsave 10 dict begin
+1838 285 28 18 ellipse_path
+stroke
+gsave 10 dict begin
+1838 280 moveto 35 -0.5 (Edge) alignedtext
+end grestore
+end grestore
+
+%	TSGraphOutput -> Edge
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3079 416 moveto
+3070 414 3060 412 3050 411 curveto
+2984 402 1893 421 1844 375 curveto
+1828 359 1829 332 1832 311 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1834 313 moveto
+1833 303 lineto
+1829 313 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Edge -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1860 274 moveto
+1866 271 1873 268 1880 267 curveto
+2013 237 3000 218 3210 214 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3210 217 moveto
+3220 214 lineto
+3210 212 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerSteepestAscentClusteringMethod -> ClusteringMethod2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8115 636 moveto
+8044 632 7955 626 7875 623 curveto
+7586 610 7513 611 7225 603 curveto
+7033 597 6985 599 6792 591 curveto
+6731 588 5735 546 5679 519 curveto
+5661 509 5667 492 5648 483 curveto
+5607 460 5590 475 5542 471 curveto
+5471 464 5291 457 5219 455 curveto
+5175 453 5163 452 5118 451 curveto
+5065 449 5051 450 4997 447 curveto
+4982 445 4944 442 4929 439 curveto
+4922 437 4919 435 4914 434 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4916 432 moveto
+4906 432 lineto
+4915 437 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerSteepestAscentClusteringMethod -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8367 636 moveto
+8447 625 8575 607 8593 591 curveto
+8699 491 8731 374 8634 267 curveto
+8607 237 8499 236 8460 235 curveto
+8446 234 7504 235 7492 231 curveto
+7482 227 7483 221 7475 217 curveto
+7472 215 7471 215 7469 215 curveto
+7461 213 6536 213 6321 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6322 211 moveto
+6312 213 lineto
+6322 216 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerSteepestAscentClusteringMethod -> HillClimbingConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8242 627 moveto
+8240 593 8229 518 8183 483 curveto
+8101 421 7820 485 7726 447 curveto
+7702 437 7706 420 7683 411 curveto
+7605 379 7390 383 7307 379 curveto
+7292 378 7192 380 7178 375 curveto
+7172 372 7172 368 7168 364 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7170 362 moveto
+7160 359 lineto
+7167 366 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerSteepestAscentClusteringMethod -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8291 628 moveto
+8376 595 8540 516 8495 411 curveto
+8485 389 8439 349 8419 339 curveto
+8320 288 8275 299 8181 292 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8181 290 moveto
+8171 291 lineto
+8181 294 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerSteepestAscentClusteringMethod -> BunchUtilities
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8215 627 moveto
+8182 607 8126 575 8075 555 curveto
+8032 538 7980 523 7942 514 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7942 512 moveto
+7932 512 lineto
+7941 516 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerSteepestAscentClusteringMethod -> GenericDistribHillClimbingClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8109 638 moveto
+8035 634 7943 630 7860 627 curveto
+7500 613 6423 587 6000 577 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6001 575 moveto
+5991 577 lineto
+6001 580 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	FindNeighbor
+gsave 10 dict begin
+8525 573 59 18 ellipse_path
+stroke
+gsave 10 dict begin
+8525 568 moveto 97 -0.5 (FindNeighbor) alignedtext
+end grestore
+end grestore
+
+%	ServerSteepestAscentClusteringMethod -> FindNeighbor
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8307 629 moveto
+8357 617 8424 599 8471 587 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8471 590 moveto
+8480 585 lineto
+8470 585 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	FindNeighbor -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8542 555 moveto
+8562 533 8595 490 8609 447 curveto
+8632 370 8663 325 8609 267 curveto
+8573 229 8198 236 8147 235 curveto
+8137 234 7500 234 7492 231 curveto
+7481 226 7483 217 7472 215 curveto
+7464 213 6537 213 6321 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6322 211 moveto
+6312 213 lineto
+6322 216 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	FindNeighbor -> BunchUtilities
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8469 567 moveto
+8351 553 8076 523 7950 508 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7950 506 moveto
+7940 507 lineto
+7950 510 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DotGraphOutput
+gsave 10 dict begin
+4052 429 71 18 ellipse_path
+stroke
+gsave 10 dict begin
+4052 424 moveto 120 -0.5 (DotGraphOutput) alignedtext
+end grestore
+end grestore
+
+%	DotGraphOutput -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4103 416 moveto
+4114 414 4126 412 4137 411 curveto
+4241 398 4987 425 5078 375 curveto
+5104 361 5121 331 5131 310 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5132 313 moveto
+5134 303 lineto
+5128 311 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DotGraphOutput -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3990 420 moveto
+3988 420 3986 419 3984 419 curveto
+3956 413 3949 411 3920 407 curveto
+3914 405 3695 377 3689 375 curveto
+3669 364 3669 354 3652 339 curveto
+3617 306 3613 290 3570 267 curveto
+3518 238 3500 240 3441 231 curveto
+3391 222 3378 219 3326 215 curveto
+3319 214 3303 213 3287 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3288 211 moveto
+3278 213 lineto
+3288 216 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DotGraphOutput -> NextLevelGraph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4022 412 moveto
+4004 401 3980 389 3960 378 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3962 376 moveto
+3952 373 lineto
+3959 380 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	DotGraphOutput -> GraphOutput
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3989 421 moveto
+3883 407 3674 380 3570 365 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3571 363 moveto
+3561 364 lineto
+3571 368 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Hashtable
+gsave 10 dict begin
+4055 357 45 18 ellipse_path
+stroke
+gsave 10 dict begin
+4055 352 moveto 68 -0.5 (Hashtable) alignedtext
+end grestore
+end grestore
+
+%	DotGraphOutput -> Hashtable
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4053 411 moveto
+4054 403 4054 394 4054 385 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4057 385 moveto
+4054 375 lineto
+4052 385 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GATournamentMethod
+gsave 10 dict begin
+5313 429 94 18 ellipse_path
+stroke
+gsave 10 dict begin
+5313 424 moveto 166 -0.5 (GATournamentMethod) alignedtext
+end grestore
+end grestore
+
+%	GATournamentMethod -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5378 416 moveto
+5452 401 5562 378 5565 375 curveto
+5576 362 5575 351 5565 339 curveto
+5554 324 5263 297 5245 295 curveto
+5217 291 5210 289 5182 287 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 285 moveto
+5173 286 lineto
+5183 290 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAMethod
+gsave 10 dict begin
+5724 357 50 18 ellipse_path
+stroke
+gsave 10 dict begin
+5724 352 moveto 79 -0.5 (GAMethod) alignedtext
+end grestore
+end grestore
+
+%	GATournamentMethod -> GAMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5383 417 moveto
+5396 415 5409 413 5421 411 curveto
+5528 394 5555 397 5660 375 curveto
+5665 374 5670 373 5675 371 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5676 373 moveto
+5685 368 lineto
+5675 368 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAMethod -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5680 348 moveto
+5662 345 5641 342 5622 339 curveto
+5461 316 5267 297 5183 289 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 287 moveto
+5173 288 lineto
+5183 291 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchGraphUtils
+gsave 10 dict begin
+1674 573 72 18 ellipse_path
+stroke
+gsave 10 dict begin
+1674 568 moveto 123 -0.5 (BunchGraphUtils) alignedtext
+end grestore
+end grestore
+
+%	BunchGraphUtils -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1604 568 moveto
+1500 542 1284 433 1189 411 curveto
+1044 376 781 465 860 339 curveto
+916 250 1208 219 1312 215 curveto
+1337 213 2935 213 3209 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3210 216 moveto
+3220 213 lineto
+3210 211 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchGraphUtils -> DependencyFileParser
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1602 571 moveto
+1396 564 812 544 779 519 curveto
+741 488 727 449 757 411 curveto
+773 390 831 377 882 368 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 883 370 moveto
+892 366 lineto
+882 366 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchGraphUtils -> ClusterFileParser
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1687 555 moveto
+1699 537 1713 507 1703 483 curveto
+1678 421 1607 389 1555 372 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1556 370 moveto
+1546 369 lineto
+1555 375 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchGraphUtils -> BunchGraphPR
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1662 555 moveto
+1657 547 1650 536 1644 527 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1646 526 moveto
+1639 519 lineto
+1642 529 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchGraphUtils -> BunchGraph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1735 563 moveto
+1770 557 1792 554 1819 519 curveto
+1833 501 1835 475 1835 455 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1838 457 moveto
+1834 447 lineto
+1833 457 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchGraphUtils -> BunchNode
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1616 562 moveto
+1592 554 1566 541 1551 519 curveto
+1543 505 1547 498 1551 483 curveto
+1558 464 1571 465 1577 447 curveto
+1582 431 1588 422 1577 411 curveto
+1575 408 1327 379 1323 379 curveto
+1306 376 1302 376 1284 373 curveto
+1276 372 1266 369 1258 368 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1259 366 moveto
+1249 366 lineto
+1258 371 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchGraphUtils -> BunchEdge
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1745 570 moveto
+2264 525 2391 472 2912 411 curveto
+3055 394 3092 399 3234 379 curveto
+3244 377 3246 377 3255 375 curveto
+3257 375 3259 374 3261 374 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3262 376 moveto
+3270 370 lineto
+3260 372 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MeCl
+gsave 10 dict begin
+1780 501 30 18 ellipse_path
+stroke
+gsave 10 dict begin
+1780 496 moveto 38 -0.5 (MeCl) alignedtext
+end grestore
+end grestore
+
+%	BunchGraphUtils -> MeCl
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1699 556 moveto
+1715 546 1736 531 1753 520 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1753 523 moveto
+1760 515 lineto
+1750 519 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MeCl -> BunchGraph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1792 484 moveto
+1798 475 1806 464 1813 455 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1815 457 moveto
+1819 447 lineto
+1811 454 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MeCl -> BunchNode
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1762 487 moveto
+1736 466 1684 430 1634 411 curveto
+1599 397 1587 403 1549 399 curveto
+1505 393 1493 391 1448 387 curveto
+1448 386 1308 375 1307 375 curveto
+1300 374 1298 374 1290 373 curveto
+1278 371 1272 367 1264 363 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1265 361 moveto
+1255 360 lineto
+1264 366 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MeCl -> BunchCluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1768 484 moveto
+1752 463 1721 427 1685 411 curveto
+1530 340 1459 445 1303 375 curveto
+1282 365 1283 354 1265 339 curveto
+1254 328 1241 317 1230 308 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1232 307 moveto
+1223 302 lineto
+1229 310 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	MeCl -> BunchEdge
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 1808 494 moveto
+1845 480 1859 472 1897 447 curveto
+1918 433 1917 419 1940 411 curveto
+2009 384 3187 386 3259 373 curveto
+3259 373 3260 373 3260 373 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3261 375 moveto
+3270 370 lineto
+3260 370 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Drifters -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4876 346 moveto
+4883 343 4891 341 4898 339 curveto
+4968 318 5050 301 5099 293 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5100 295 moveto
+5109 291 lineto
+5099 291 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Drifters -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4811 350 moveto
+4731 333 4527 291 4355 267 curveto
+4288 257 4271 256 4202 251 curveto
+4139 245 4123 246 4058 243 curveto
+4020 241 4011 240 3972 239 curveto
+3890 235 3870 234 3787 231 curveto
+3697 227 3674 226 3583 223 curveto
+3516 220 3500 219 3432 217 curveto
+3414 216 3410 215 3391 215 curveto
+3356 214 3316 213 3287 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3288 211 moveto
+3278 213 lineto
+3288 216 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TXTGraphOutput
+gsave 10 dict begin
+3614 429 75 18 ellipse_path
+stroke
+gsave 10 dict begin
+3614 424 moveto 128 -0.5 (TXTGraphOutput) alignedtext
+end grestore
+end grestore
+
+%	TXTGraphOutput -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3681 421 moveto
+3686 417 3689 413 3698 411 curveto
+3769 392 4936 404 5002 375 curveto
+5023 366 5020 353 5036 339 curveto
+5049 327 5079 304 5100 293 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5100 296 moveto
+5107 289 lineto
+5097 292 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TXTGraphOutput -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3610 411 moveto
+3605 391 3594 359 3575 339 curveto
+3480 236 3421 242 3287 217 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3288 215 moveto
+3278 215 lineto
+3287 220 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TXTGraphOutput -> NextLevelGraph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3668 416 moveto
+3722 404 3806 384 3863 371 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3863 374 moveto
+3872 369 lineto
+3862 369 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TXTGraphOutput -> GraphOutput
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3589 412 moveto
+3574 403 3556 390 3540 379 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3542 377 moveto
+3532 374 lineto
+3539 381 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusterUsingVectorSAHC
+gsave 10 dict begin
+8549 645 101 18 ellipse_path
+stroke
+gsave 10 dict begin
+8549 640 moveto 181 -0.5 (ClusterUsingVectorSAHC) alignedtext
+end grestore
+end grestore
+
+%	ClusterUsingVectorSAHC -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8575 627 moveto
+8589 617 8606 604 8620 591 curveto
+8672 539 8688 519 8701 447 curveto
+8714 366 8722 321 8662 267 curveto
+8642 249 8631 254 8606 247 curveto
+8576 237 8568 236 8538 235 curveto
+8523 234 7505 235 7492 231 curveto
+7480 226 7481 217 7469 215 curveto
+7461 213 6536 213 6321 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6322 211 moveto
+6312 213 lineto
+6322 216 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusterUsingVectorSAHC -> BunchUtilities
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8483 631 moveto
+8373 608 8146 559 7957 509 curveto
+7954 508 7952 508 7951 507 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7952 505 moveto
+7942 504 lineto
+7951 510 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusterUsingVectorSAHC -> ServerClusteringProgress
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8604 630 moveto
+8647 619 8706 602 8750 590 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8749 593 moveto
+8758 588 lineto
+8748 588 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusterUsingVectorSAHC -> ServerProperties
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8629 634 moveto
+8731 620 8907 595 9003 582 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 9001 585 moveto
+9011 581 lineto
+9001 580 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusterUsingVectorSAHC -> IterationManager
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8455 638 moveto
+8437 634 8425 629 8398 627 curveto
+7790 566 6258 655 5650 591 curveto
+5472 571 5428 554 5253 511 curveto
+5246 509 5243 507 5238 505 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5240 503 moveto
+5230 503 lineto
+5239 508 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ClusterUsingVectorSAHC -> FindNeighbor
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 8543 627 moveto
+8540 619 8537 609 8534 600 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8537 600 moveto
+8531 591 lineto
+8532 601 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchServer
+gsave 10 dict begin
+7240 933 56 18 ellipse_path
+stroke
+gsave 10 dict begin
+7240 928 moveto 90 -0.5 (BunchServer) alignedtext
+end grestore
+end grestore
+
+%	BunchServer -> BSWindow
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7237 915 moveto
+7234 883 7231 816 7259 771 curveto
+7273 749 7285 740 7301 733 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7301 736 moveto
+7310 730 lineto
+7300 731 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BSTextServer
+gsave 10 dict begin
+7335 861 58 18 ellipse_path
+stroke
+gsave 10 dict begin
+7335 856 moveto 94 -0.5 (BSTextServer) alignedtext
+end grestore
+end grestore
+
+%	BunchServer -> BSTextServer
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7262 916 moveto
+7275 907 7291 894 7305 884 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7307 886 moveto
+7313 878 lineto
+7304 882 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BSTextServer -> BunchSvrMsgImpl
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7338 843 moveto
+7339 835 7340 825 7341 817 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7343 817 moveto
+7342 807 lineto
+7339 817 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericClusteringMethod2 -> ClusteringMethod2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6312 494 moveto
+6253 491 6175 486 6106 483 curveto
+5612 460 5487 482 4992 447 curveto
+4964 444 4933 442 4906 438 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4908 436 moveto
+4898 437 lineto
+4908 441 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericClusteringMethod2 -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6349 486 moveto
+6314 476 6274 462 6263 447 curveto
+6257 437 6266 403 6272 303 curveto
+6274 281 6275 257 6276 239 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6279 241 moveto
+6276 231 lineto
+6274 241 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericClusteringMethod2 -> IterationEvent
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6509 496 moveto
+6659 488 6954 470 7203 447 curveto
+7231 444 7262 441 7290 437 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7288 440 moveto
+7298 436 lineto
+7288 435 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericClusteringMethod2 -> Population
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6328 490 moveto
+6222 475 6041 449 5950 436 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5952 434 moveto
+5942 435 lineto
+5952 439 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Population -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5883 412 moveto
+5866 391 5835 358 5801 339 curveto
+5787 330 5782 330 5765 327 curveto
+5657 300 5374 294 5262 289 curveto
+5246 288 5243 287 5226 287 curveto
+5212 286 5196 286 5182 285 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 283 moveto
+5173 285 lineto
+5183 288 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Population -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5916 412 moveto
+5939 393 5979 361 6016 339 curveto
+6092 292 6188 249 6240 228 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6241 230 moveto
+6249 224 lineto
+6239 226 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericClusteringMethod
+gsave 10 dict begin
+5101 429 100 18 ellipse_path
+stroke
+gsave 10 dict begin
+5101 424 moveto 178 -0.5 (GenericClusteringMethod) alignedtext
+end grestore
+end grestore
+
+%	GenericClusteringMethod -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5183 419 moveto
+5191 416 5198 413 5210 411 curveto
+5284 396 5496 430 5546 375 curveto
+5557 363 5557 351 5546 339 curveto
+5540 331 5221 294 5211 293 curveto
+5205 292 5204 292 5197 291 curveto
+5191 290 5187 289 5182 288 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 286 moveto
+5173 287 lineto
+5183 291 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GenericClusteringMethod -> ClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5155 414 moveto
+5197 402 5255 386 5297 374 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5298 376 moveto
+5307 371 lineto
+5297 371 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TXTTreeGraphOutput
+gsave 10 dict begin
+3797 429 90 18 ellipse_path
+stroke
+gsave 10 dict begin
+3797 424 moveto 159 -0.5 (TXTTreeGraphOutput) alignedtext
+end grestore
+end grestore
+
+%	TXTTreeGraphOutput -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3878 421 moveto
+3908 417 3929 414 3972 411 curveto
+4091 402 4932 423 5040 375 curveto
+5061 365 5059 354 5074 339 curveto
+5090 323 5097 312 5107 303 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5108 305 moveto
+5114 297 lineto
+5105 302 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TXTTreeGraphOutput -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3751 413 moveto
+3717 401 3673 385 3656 375 curveto
+3593 337 3595 302 3530 267 curveto
+3479 238 3462 241 3404 231 curveto
+3356 221 3344 219 3294 215 curveto
+3292 215 3290 214 3288 214 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3288 212 moveto
+3278 214 lineto
+3288 217 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TXTTreeGraphOutput -> NextLevelGraph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3827 412 moveto
+3844 402 3867 389 3886 379 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3887 381 moveto
+3894 374 lineto
+3884 377 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TXTTreeGraphOutput -> GraphOutput
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3741 415 moveto
+3689 402 3613 383 3561 370 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3563 368 moveto
+3553 368 lineto
+3562 373 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	ServerStats
+gsave 10 dict begin
+4687 429 48 18 ellipse_path
+stroke
+gsave 10 dict begin
+4687 424 moveto 75 -0.5 (ServerStats) alignedtext
+end grestore
+end grestore
+
+%	Manager -> ServerStats
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4745 484 moveto
+4735 475 4723 463 4712 452 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4714 451 moveto
+4705 446 lineto
+4711 454 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	WeightedObjectiveFunctionCalculator
+gsave 10 dict begin
+2029 357 143 18 ellipse_path
+stroke
+gsave 10 dict begin
+2029 352 moveto 264 -0.5 (WeightedObjectiveFunctionCalculator) alignedtext
+end grestore
+end grestore
+
+%	WeightedObjectiveFunctionCalculator -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2127 344 moveto
+2145 342 2163 340 2181 339 curveto
+2485 318 4751 290 5096 285 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5097 288 moveto
+5107 285 lineto
+5097 283 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	WeightedObjectiveFunctionCalculator -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2109 342 moveto
+2214 323 2405 289 2569 267 curveto
+2754 242 2801 243 2985 225 curveto
+2994 224 2997 223 3005 223 curveto
+3021 221 3024 221 3039 221 curveto
+3082 218 3093 219 3135 217 curveto
+3151 216 3155 215 3170 215 curveto
+3184 214 3198 214 3211 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3210 216 moveto
+3220 213 lineto
+3210 211 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	WeightedObjectiveFunctionCalculator -> ObjectiveFunctionCalculator
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2130 344 moveto
+2147 342 2165 340 2181 339 curveto
+2423 317 2707 300 2861 291 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 2862 293 moveto
+2872 290 lineto
+2862 288 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAMethodFactory -> GenericFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7554 195 moveto
+7532 170 7490 123 7464 94 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7466 92 moveto
+7457 87 lineto
+7462 96 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SteepestAscentHillClimbingClusteringMethod
+gsave 10 dict begin
+7682 645 169 18 ellipse_path
+stroke
+gsave 10 dict begin
+7682 640 moveto 316 -0.5 (SteepestAscentHillClimbingClusteringMethod) alignedtext
+end grestore
+end grestore
+
+%	SteepestAscentHillClimbingClusteringMethod -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7528 637 moveto
+7524 636 7520 635 7513 633 curveto
+7502 630 7499 628 7489 627 curveto
+7460 622 7388 620 7360 619 curveto
+7108 606 7045 607 6792 591 curveto
+6393 565 6293 563 5895 519 curveto
+5785 506 5759 494 5648 483 curveto
+5576 475 5043 500 4992 447 curveto
+4982 435 4982 422 4992 411 curveto
+5068 330 5413 455 5488 375 curveto
+5499 363 5498 351 5488 339 curveto
+5487 336 5488 336 5412 323 curveto
+5387 318 5211 290 5182 287 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 285 moveto
+5173 286 lineto
+5183 290 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SteepestAscentHillClimbingClusteringMethod -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7516 641 moveto
+7500 637 7494 630 7474 627 curveto
+7395 614 4677 634 4610 591 curveto
+4566 562 4601 517 4561 483 curveto
+4430 369 4336 462 4185 375 curveto
+4166 363 4167 351 4148 339 curveto
+4086 295 4065 289 3992 267 curveto
+3934 248 3918 251 3857 243 curveto
+3816 237 3806 237 3764 235 curveto
+3733 232 3725 232 3692 231 curveto
+3665 229 3659 229 3631 229 curveto
+3609 228 3604 228 3581 227 curveto
+3567 226 3564 225 3549 225 curveto
+3533 223 3420 215 3403 215 curveto
+3382 214 3326 213 3288 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3288 211 moveto
+3278 213 lineto
+3288 216 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SteepestAscentHillClimbingClusteringMethod -> ClusteringMethod2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7525 638 moveto
+7508 634 7498 629 7474 627 curveto
+7373 615 5740 638 5650 591 curveto
+5625 577 5600 497 5574 483 curveto
+5574 482 5086 451 5085 451 curveto
+5044 448 5034 450 4992 447 curveto
+4970 445 4964 444 4941 441 curveto
+4937 440 4936 440 4931 439 curveto
+4923 436 4920 434 4914 433 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4916 431 moveto
+4906 431 lineto
+4915 436 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SteepestAscentHillClimbingClusteringMethod -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7839 638 moveto
+8004 612 8364 559 8447 447 curveto
+8500 374 8430 310 8351 267 curveto
+8281 228 8253 239 8174 235 curveto
+8098 230 7569 241 7496 227 curveto
+7482 224 7480 217 7467 215 curveto
+7459 213 6536 213 6321 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6322 211 moveto
+6312 213 lineto
+6322 216 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SteepestAscentHillClimbingClusteringMethod -> HillClimbingConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7669 627 moveto
+7636 583 7546 471 7445 411 curveto
+7421 397 7412 399 7386 395 curveto
+7361 390 7354 390 7330 387 curveto
+7316 385 7312 384 7299 383 curveto
+7298 382 7179 375 7178 375 curveto
+7172 372 7169 369 7167 365 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7170 364 moveto
+7160 360 lineto
+7167 368 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SteepestAscentHillClimbingClusteringMethod -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7810 633 moveto
+7938 592 7964 524 8111 483 curveto
+8185 462 8405 504 8457 447 curveto
+8467 435 8463 425 8457 411 curveto
+8446 388 8432 391 8415 375 curveto
+8399 359 8400 349 8381 339 curveto
+8299 293 8259 298 8182 292 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8181 289 moveto
+8171 291 lineto
+8181 294 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SteepestAscentHillClimbingClusteringMethod -> GenericHillClimbingClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7550 634 moveto
+7432 623 7254 607 7100 591 curveto
+7087 589 7074 588 7061 586 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7062 584 moveto
+7052 585 lineto
+7062 589 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SteepestAscentHillClimbingClusteringMethod -> BunchUtilities
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7774 630 moveto
+7800 622 7827 610 7847 591 curveto
+7865 574 7874 547 7878 527 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7880 529 moveto
+7880 519 lineto
+7875 528 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SteepestAscentHillClimbingClusteringMethod2
+gsave 10 dict begin
+6568 645 173 18 ellipse_path
+stroke
+gsave 10 dict begin
+6568 640 moveto 324 -0.5 (SteepestAscentHillClimbingClusteringMethod2) alignedtext
+end grestore
+end grestore
+
+%	SteepestAscentHillClimbingClusteringMethod2 -> ClusteringMethod2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6398 642 moveto
+6011 631 5892 669 5491 591 curveto
+5444 581 5326 543 5283 519 curveto
+5262 506 5263 492 5240 483 curveto
+5177 455 4998 455 4929 443 curveto
+4925 442 4924 441 4920 441 curveto
+4917 440 4916 440 4912 439 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4914 437 moveto
+4904 434 lineto
+4911 441 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SteepestAscentHillClimbingClusteringMethod2 -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6569 627 moveto
+6568 593 6563 521 6522 483 curveto
+6469 432 6416 495 6361 447 curveto
+6330 419 6297 297 6283 241 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6285 240 moveto
+6281 231 lineto
+6281 241 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SteepestAscentHillClimbingClusteringMethod2 -> HillClimbingConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6603 627 moveto
+6646 606 6723 572 6792 555 curveto
+6873 535 7108 580 7163 519 curveto
+7204 474 7135 413 7090 380 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7093 379 moveto
+7083 375 lineto
+7090 383 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SteepestAscentHillClimbingClusteringMethod2 -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6710 635 moveto
+6742 632 6774 630 6826 627 curveto
+6994 616 7420 641 7581 591 curveto
+7638 572 7648 557 7695 519 curveto
+7711 505 7709 492 7729 483 curveto
+7794 452 8331 499 8381 447 curveto
+8391 435 8387 425 8381 411 curveto
+8370 388 8356 391 8339 375 curveto
+8323 359 8323 350 8305 339 curveto
+8252 306 8225 301 8178 294 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8179 292 moveto
+8169 292 lineto
+8178 297 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SteepestAscentHillClimbingClusteringMethod2 -> GenericDistribHillClimbingClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6441 633 moveto
+6308 619 6098 599 5961 586 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5962 584 moveto
+5952 585 lineto
+5962 589 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Bunch
+gsave 10 dict begin
+5658 1005 34 18 ellipse_path
+stroke
+gsave 10 dict begin
+5658 1000 moveto 46 -0.5 (Bunch) alignedtext
+end grestore
+end grestore
+
+%	Bunch -> BunchFrame
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5626 999 moveto
+5431 963 4409 774 4156 727 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 4158 725 moveto
+4148 726 lineto
+4158 730 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Bunch -> BunchServer
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5692 1003 moveto
+5891 994 6903 948 7173 936 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7174 939 moveto
+7184 936 lineto
+7174 934 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	WeightedObjectiveFunctionCalculator3
+gsave 10 dict begin
+2337 357 147 18 ellipse_path
+stroke
+gsave 10 dict begin
+2337 352 moveto 272 -0.5 (WeightedObjectiveFunctionCalculator3) alignedtext
+end grestore
+end grestore
+
+%	WeightedObjectiveFunctionCalculator3 -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2437 344 moveto
+2456 342 2475 340 2493 339 curveto
+2763 320 4774 291 5097 285 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5097 288 moveto
+5107 285 lineto
+5097 283 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	WeightedObjectiveFunctionCalculator3 -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2406 341 moveto
+2519 315 2750 264 2948 231 curveto
+2989 224 3000 225 3040 223 curveto
+3044 222 3171 215 3174 215 curveto
+3186 214 3199 214 3211 214 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3210 217 moveto
+3220 213 lineto
+3210 212 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	WeightedObjectiveFunctionCalculator3 -> ObjectiveFunctionCalculator
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2442 344 moveto
+2459 343 2477 341 2493 339 curveto
+2626 324 2778 307 2876 296 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 2875 299 moveto
+2885 295 lineto
+2875 294 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	WeightedObjectiveFunctionCalculator2
+gsave 10 dict begin
+2649 357 147 18 ellipse_path
+stroke
+gsave 10 dict begin
+2649 352 moveto 273 -0.5 (WeightedObjectiveFunctionCalculator2) alignedtext
+end grestore
+end grestore
+
+%	WeightedObjectiveFunctionCalculator2 -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2749 344 moveto
+2768 342 2787 340 2805 339 curveto
+3276 306 4815 288 5096 285 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5097 288 moveto
+5107 285 lineto
+5097 283 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	WeightedObjectiveFunctionCalculator2 -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2685 339 moveto
+2724 321 2789 290 2845 267 curveto
+2949 224 2983 232 3094 223 curveto
+3143 218 3156 217 3204 215 curveto
+3206 215 3208 214 3210 214 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3210 217 moveto
+3220 214 lineto
+3210 212 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	WeightedObjectiveFunctionCalculator2 -> ObjectiveFunctionCalculator
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2721 341 moveto
+2775 330 2847 314 2901 301 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 2902 303 moveto
+2911 299 lineto
+2901 299 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchAPIOld
+gsave 10 dict begin
+3309 429 60 18 ellipse_path
+stroke
+gsave 10 dict begin
+3309 424 moveto 99 -0.5 (BunchAPIOld) alignedtext
+end grestore
+end grestore
+
+%	BunchAPIOld -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3366 424 moveto
+3375 422 3381 420 3394 419 curveto
+3576 399 3622 403 3804 395 curveto
+3940 388 3974 386 4110 383 curveto
+4180 380 4198 380 4267 379 curveto
+4277 378 4956 378 4964 375 curveto
+4985 366 4981 351 4998 339 curveto
+5039 310 5055 309 5098 292 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5099 294 moveto
+5107 288 lineto
+5097 290 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchAPIOld -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3269 415 moveto
+3259 412 3248 409 3238 407 curveto
+3154 385 3131 390 3043 387 curveto
+2952 382 2929 380 2836 379 curveto
+2830 378 1882 379 1877 375 curveto
+1823 320 1798 326 2314 267 curveto
+2622 231 2701 236 3010 221 curveto
+3035 219 3042 219 3066 219 curveto
+3088 218 3094 217 3115 217 curveto
+3133 216 3138 215 3155 215 curveto
+3174 214 3194 213 3211 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3210 216 moveto
+3220 213 lineto
+3210 211 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchAPIOld -> ParserFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3257 420 moveto
+3257 419 3256 419 3255 419 curveto
+3230 410 3222 410 3195 407 curveto
+3106 395 2879 385 2788 383 curveto
+2685 379 2660 380 2556 379 curveto
+2533 378 1740 378 1716 375 curveto
+1666 366 1657 348 1606 339 curveto
+1508 320 825 295 606 287 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 606 285 moveto
+596 287 lineto
+606 290 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchAPIOld -> ClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3366 423 moveto
+3411 419 3474 414 3530 411 curveto
+4184 376 4349 399 5002 375 curveto
+5095 371 5201 366 5273 362 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5274 364 moveto
+5284 361 lineto
+5274 359 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchAPIOld -> HillClimbingConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3366 423 moveto
+3411 419 3474 413 3530 411 curveto
+4962 344 5322 425 6753 375 curveto
+6818 372 6891 368 6948 365 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6949 367 moveto
+6959 364 lineto
+6949 362 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchAPIOld -> Parser
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3264 417 moveto
+3247 413 3228 409 3210 407 curveto
+3107 392 3081 397 2976 391 curveto
+2851 383 2820 381 2694 379 curveto
+2671 378 1868 378 1844 375 curveto
+1788 366 1776 352 1720 339 curveto
+1596 309 1565 301 1439 287 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1440 285 moveto
+1430 286 lineto
+1440 290 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchAPIOld -> ClusteringMethodFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3254 422 moveto
+3252 421 3249 420 3246 419 curveto
+3219 408 3211 409 3182 407 curveto
+3135 402 3123 402 3074 399 curveto
+2927 388 2890 386 2742 383 curveto
+2639 380 2613 380 2508 379 curveto
+2478 378 1448 378 1417 375 curveto
+1349 366 1334 348 1265 339 curveto
+834 280 715 379 285 303 curveto
+278 302 273 300 269 298 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 271 296 moveto
+261 295 lineto
+269 301 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchAPIOld -> GraphOutputFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3254 421 moveto
+3253 421 3251 420 3248 419 curveto
+3222 408 3214 409 3186 407 curveto
+3140 402 3128 402 3081 399 curveto
+2941 388 2906 386 2765 383 curveto
+2662 380 2636 380 2532 379 curveto
+2526 378 1608 377 1602 375 curveto
+1584 366 1592 348 1573 339 curveto
+1464 284 593 316 471 303 curveto
+462 302 454 300 448 299 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 449 297 moveto
+439 297 lineto
+448 302 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchAPIOld -> ObjectiveFunctionCalculatorFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3368 426 moveto
+3379 424 3385 423 3399 421 curveto
+3427 417 3497 412 3524 411 curveto
+3566 408 3670 404 3711 403 curveto
+3835 397 3865 395 3988 391 curveto
+4039 389 4052 388 4102 387 curveto
+4241 382 4276 380 4414 379 curveto
+4420 378 6116 378 6120 375 curveto
+6122 373 6159 230 6175 169 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6177 169 moveto
+6177 159 lineto
+6173 168 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchAPIOld -> BunchPreferences
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3259 419 moveto
+3241 416 3221 413 3202 411 curveto
+2687 363 1389 389 871 375 curveto
+739 371 584 364 491 360 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 491 358 moveto
+481 360 lineto
+491 363 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchAPIOld -> GraphOutput
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3347 415 moveto
+3379 403 3426 386 3460 374 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3461 376 moveto
+3470 371 lineto
+3460 371 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchAPIOld -> GAConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3366 423 moveto
+3411 419 3474 413 3530 411 curveto
+3935 392 6769 420 7170 375 curveto
+7177 374 7183 373 7190 372 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7191 374 moveto
+7200 370 lineto
+7190 370 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TurboMQ2
+gsave 10 dict begin
+2864 357 50 18 ellipse_path
+stroke
+gsave 10 dict begin
+2864 352 moveto 79 -0.5 (TurboMQ2) alignedtext
+end grestore
+end grestore
+
+%	TurboMQ2 -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2900 344 moveto
+2907 342 2915 340 2923 339 curveto
+3145 302 4807 287 5097 285 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5097 288 moveto
+5107 285 lineto
+5097 283 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TurboMQ2 -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2856 339 moveto
+2849 319 2841 287 2858 267 curveto
+2884 237 3152 220 3210 216 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3210 218 moveto
+3220 215 lineto
+3210 214 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TurboMQ2 -> ObjectiveFunctionCalculator
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2889 341 moveto
+2904 332 2924 318 2941 308 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 2942 310 moveto
+2949 303 lineto
+2939 306 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchAPI
+gsave 10 dict begin
+3299 573 48 18 ellipse_path
+stroke
+gsave 10 dict begin
+3299 568 moveto 74 -0.5 (BunchAPI) alignedtext
+end grestore
+end grestore
+
+%	BunchAPI -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3344 567 moveto
+3574 535 3641 517 3883 483 curveto
+4011 465 4044 466 4171 447 curveto
+4258 433 4278 421 4365 411 curveto
+4408 406 5104 404 5134 375 curveto
+5151 359 5150 332 5147 311 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5150 312 moveto
+5145 303 lineto
+5145 313 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchAPI -> BunchGraph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3252 569 moveto
+3082 554 2477 501 1978 447 curveto
+1950 443 1919 440 1892 436 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 1894 434 moveto
+1884 435 lineto
+1894 439 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchAPI -> BunchEngine
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3282 556 moveto
+3273 547 3262 536 3252 526 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3254 524 moveto
+3245 519 lineto
+3250 528 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchProperties
+gsave 10 dict begin
+3371 501 68 18 ellipse_path
+stroke
+gsave 10 dict begin
+3371 496 moveto 114 -0.5 (BunchProperties) alignedtext
+end grestore
+end grestore
+
+%	BunchAPI -> BunchProperties
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3316 556 moveto
+3325 547 3336 536 3346 526 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3348 528 moveto
+3353 519 lineto
+3344 524 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAClusteringConfigurationDialog
+gsave 10 dict begin
+7866 429 131 18 ellipse_path
+stroke
+gsave 10 dict begin
+7866 424 moveto 240 -0.5 (GAClusteringConfigurationDialog) alignedtext
+end grestore
+end grestore
+
+%	GAClusteringConfigurationDialog -> GenericFactory
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7894 411 moveto
+7906 402 7921 389 7930 375 curveto
+7950 339 7949 325 7949 285 curveto
+7949 285 7949 285 7949 213 curveto
+7949 112 7653 94 7510 77 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7510 75 moveto
+7500 76 lineto
+7510 79 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAClusteringConfigurationDialog -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7897 411 moveto
+7916 401 7941 387 7963 375 curveto
+8003 351 8049 324 8079 306 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8080 308 moveto
+8087 301 lineto
+8077 304 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAClusteringConfigurationDialog -> ClusteringConfigurationDialog
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7741 424 moveto
+7440 411 6699 380 6645 375 curveto
+6634 374 6622 373 6611 371 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6612 369 moveto
+6602 370 lineto
+6612 374 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAClusteringConfigurationDialog -> GAConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7770 417 moveto
+7754 415 7737 413 7721 411 curveto
+7549 392 7504 401 7334 375 curveto
+7327 374 7321 373 7314 371 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7315 369 moveto
+7305 369 lineto
+7314 374 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GridBagConstraints2
+gsave 10 dict begin
+7838 357 83 18 ellipse_path
+stroke
+gsave 10 dict begin
+7838 352 moveto 145 -0.5 (GridBagConstraints2) alignedtext
+end grestore
+end grestore
+
+%	GAClusteringConfigurationDialog -> GridBagConstraints2
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7859 411 moveto
+7856 403 7852 393 7848 384 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7851 384 moveto
+7845 375 lineto
+7846 385 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	BunchCliMsgImpl
+gsave 10 dict begin
+7372 1005 75 18 ellipse_path
+stroke
+gsave 10 dict begin
+7372 1000 moveto 128 -0.5 (BunchCliMsgImpl) alignedtext
+end grestore
+end grestore
+
+%	BunchCliMsg
+gsave 10 dict begin
+7372 933 58 18 ellipse_path
+stroke
+gsave 10 dict begin
+7372 928 moveto 95 -0.5 (BunchCliMsg) alignedtext
+end grestore
+end grestore
+
+%	BunchCliMsgImpl -> BunchCliMsg
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 7372 987 moveto
+7372 979 7372 970 7372 961 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7375 961 moveto
+7372 951 lineto
+7370 961 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAClusteringMethod
+gsave 10 dict begin
+6011 501 86 18 ellipse_path
+stroke
+gsave 10 dict begin
+6011 496 moveto 150 -0.5 (GAClusteringMethod) alignedtext
+end grestore
+end grestore
+
+%	GAClusteringMethod -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6003 483 moveto
+5993 464 5976 432 5954 411 curveto
+5944 400 5855 344 5841 339 curveto
+5795 319 5781 323 5731 315 curveto
+5637 298 5395 293 5298 289 curveto
+5282 288 5277 287 5260 287 curveto
+5234 286 5205 285 5182 285 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 283 moveto
+5173 285 lineto
+5183 288 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAClusteringMethod -> ClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5926 498 moveto
+5857 493 5836 488 5759 483 curveto
+5717 480 5022 477 4992 447 curveto
+4981 435 4982 422 4992 411 curveto
+5002 399 5245 381 5259 379 curveto
+5269 377 5272 378 5280 375 curveto
+5282 374 5284 373 5285 372 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5286 374 moveto
+5292 366 lineto
+5283 371 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAClusteringMethod -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6091 494 moveto
+6103 493 6116 492 6128 491 curveto
+6145 489 6703 456 6716 447 curveto
+6746 427 6745 409 6753 375 curveto
+6757 359 6763 351 6753 339 curveto
+6701 269 6427 230 6320 218 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6321 216 moveto
+6311 217 lineto
+6321 221 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAClusteringMethod -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6096 499 moveto
+6179 494 6200 494 6282 485 curveto
+6289 484 6290 483 6296 483 curveto
+6345 479 6686 479 6734 479 curveto
+6807 477 7978 486 8039 447 curveto
+8063 431 8092 354 8105 312 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8107 313 moveto
+8108 303 lineto
+8102 312 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAClusteringMethod -> GAConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6093 495 moveto
+6150 491 6228 486 6296 483 curveto
+6393 477 7077 486 7165 447 curveto
+7196 434 7221 404 7236 382 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 7237 385 moveto
+7241 375 lineto
+7233 382 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAClusteringMethod -> GAMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5947 489 moveto
+5927 485 5903 482 5882 479 curveto
+5844 473 5835 474 5796 471 curveto
+5776 469 5771 468 5750 467 curveto
+5706 463 5694 462 5649 459 curveto
+5648 458 5455 447 5454 447 curveto
+5444 435 5444 423 5454 411 curveto
+5457 408 5564 395 5567 395 curveto
+5580 393 5583 392 5594 391 curveto
+5622 386 5630 387 5656 379 curveto
+5662 377 5664 377 5668 375 curveto
+5670 374 5672 373 5673 372 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5674 374 moveto
+5679 365 lineto
+5671 371 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GAClusteringMethod -> GenericClusteringMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5941 491 moveto
+5919 488 5895 485 5873 483 curveto
+5580 455 5504 479 5210 447 curveto
+5201 445 5190 444 5180 443 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5182 441 moveto
+5172 442 lineto
+5182 446 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TurboMQ
+gsave 10 dict begin
+4240 357 46 18 ellipse_path
+stroke
+gsave 10 dict begin
+4240 352 moveto 71 -0.5 (TurboMQ) alignedtext
+end grestore
+end grestore
+
+%	TurboMQ -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4273 344 moveto
+4280 342 4288 340 4295 339 curveto
+4557 289 4627 320 4892 303 curveto
+4964 297 5047 292 5096 288 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5097 290 moveto
+5107 287 lineto
+5097 285 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TurboMQ -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4234 339 moveto
+4225 318 4208 283 4180 267 curveto
+4146 247 3506 223 3466 221 curveto
+3466 220 3362 215 3361 215 curveto
+3336 214 3309 213 3287 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3288 211 moveto
+3278 213 lineto
+3288 216 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TurboMQ -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4272 344 moveto
+4277 342 4282 340 4287 339 curveto
+4295 336 4297 336 4305 335 curveto
+4390 317 4412 313 4497 303 curveto
+5123 227 5283 244 5912 223 curveto
+6025 219 6053 217 6165 215 curveto
+6188 214 6213 213 6233 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6232 216 moveto
+6242 213 lineto
+6232 211 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TurboMQ -> ObjectiveFunctionCalculator
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4198 350 moveto
+4172 346 4139 342 4109 339 curveto
+3678 301 3567 335 3134 303 curveto
+3114 301 3093 300 3074 297 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3075 295 moveto
+3065 296 lineto
+3075 300 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	HillClimbingClusteringConfigurationDialog
+gsave 10 dict begin
+6544 429 163 18 ellipse_path
+stroke
+gsave 10 dict begin
+6544 424 moveto 304 -0.5 (HillClimbingClusteringConfigurationDialog) alignedtext
+end grestore
+end grestore
+
+%	HillClimbingClusteringConfigurationDialog -> HillClimbingConfiguration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6645 415 moveto
+6738 401 6875 382 6965 369 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6965 371 moveto
+6975 368 lineto
+6965 367 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	HillClimbingClusteringConfigurationDialog -> Configuration
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6641 414 moveto
+6677 405 6702 394 6753 375 curveto
+6790 361 6796 348 6834 339 curveto
+7046 288 7593 302 7810 293 curveto
+7890 289 7911 288 7992 287 curveto
+8009 286 8027 286 8044 285 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 8044 288 moveto
+8054 285 lineto
+8044 283 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	HillClimbingClusteringConfigurationDialog -> ClusteringConfigurationDialog
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6537 411 moveto
+6534 403 6531 393 6528 384 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6531 384 moveto
+6525 375 lineto
+6526 385 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	Container
+gsave 10 dict begin
+6699 357 45 18 ellipse_path
+stroke
+gsave 10 dict begin
+6699 352 moveto 68 -0.5 (Container) alignedtext
+end grestore
+end grestore
+
+%	HillClimbingClusteringConfigurationDialog -> Container
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 6582 411 moveto
+6606 400 6637 385 6661 375 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6661 378 moveto
+6669 371 lineto
+6659 373 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GARouletteWheelMethod
+gsave 10 dict begin
+5565 429 102 18 ellipse_path
+stroke
+gsave 10 dict begin
+5565 424 moveto 183 -0.5 (GARouletteWheelMethod) alignedtext
+end grestore
+end grestore
+
+%	GARouletteWheelMethod -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5645 418 moveto
+5696 406 5774 386 5783 375 curveto
+5793 362 5794 350 5783 339 curveto
+5761 314 5225 289 5192 287 curveto
+5189 287 5186 286 5183 286 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5183 284 moveto
+5173 286 lineto
+5183 289 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	GARouletteWheelMethod -> GAMethod
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 5602 412 moveto
+5627 401 5660 386 5685 375 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5685 378 moveto
+5693 371 lineto
+5683 373 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TurboMQIncr
+gsave 10 dict begin
+4364 357 60 18 ellipse_path
+stroke
+gsave 10 dict begin
+4364 352 moveto 99 -0.5 (TurboMQIncr) alignedtext
+end grestore
+end grestore
+
+%	TurboMQIncr -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4407 344 moveto
+4416 342 4425 340 4433 339 curveto
+4688 298 4755 328 5011 303 curveto
+5041 300 5074 295 5100 291 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5098 294 moveto
+5108 290 lineto
+5098 289 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TurboMQIncr -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4342 340 moveto
+4314 319 4263 284 4214 267 curveto
+4184 255 4175 259 4142 255 curveto
+4077 246 4060 246 3994 243 curveto
+3937 239 3795 233 3737 231 curveto
+3669 228 3652 227 3583 225 curveto
+3564 224 3559 223 3539 223 curveto
+3483 220 3469 219 3413 217 curveto
+3396 216 3392 215 3374 215 curveto
+3344 214 3312 213 3286 213 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3288 211 moveto
+3278 213 lineto
+3288 216 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TurboMQIncr -> Cluster
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4405 344 moveto
+4417 340 4430 337 4442 335 curveto
+4535 317 4559 312 4653 307 curveto
+4707 303 4840 308 4892 303 curveto
+4985 294 5006 277 5098 267 curveto
+5325 241 6045 220 6232 214 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 6232 217 moveto
+6242 214 lineto
+6232 212 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	TurboMQIncr -> ObjectiveFunctionCalculator
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 4322 344 moveto
+4313 342 4304 340 4295 339 curveto
+3785 265 3649 340 3134 303 curveto
+3114 301 3093 300 3074 297 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3075 295 moveto
+3065 296 lineto
+3075 300 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SpirosMQ
+gsave 10 dict begin
+2977 357 45 18 ellipse_path
+stroke
+gsave 10 dict begin
+2977 352 moveto 69 -0.5 (SpirosMQ) alignedtext
+end grestore
+end grestore
+
+%	SpirosMQ -> Graph
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3010 344 moveto
+3017 342 3024 340 3031 339 curveto
+3241 302 4812 287 5096 285 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 5097 288 moveto
+5107 285 lineto
+5097 283 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SpirosMQ -> Node
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 3009 344 moveto
+3039 331 3081 313 3096 303 curveto
+3116 290 3115 280 3134 267 curveto
+3160 249 3193 235 3216 225 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 3216 228 moveto
+3224 222 lineto
+3214 223 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+
+%	SpirosMQ -> ObjectiveFunctionCalculator
+gsave 10 dict begin
+0.667 1.000 1.000 edgecolor
+newpath 2977 339 moveto
+2977 331 2977 322 2977 313 curveto
+stroke
+gsave 10 dict begin
+solid
+0.667 1.000 1.000 edgecolor
+newpath 2980 313 moveto
+2977 303 lineto
+2975 313 lineto
+closepath
+fill
+0.667 1.000 1.000 edgecolor
+end grestore
+end grestore
+endpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+end
+restore
+%%EOF

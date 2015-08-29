@@ -1,0 +1,8 @@
+SS(ispell.h.ss) = hash.c, ispell.h, buildhash.c
+SS(makedent.c.ss) = lookup.c, makedent.c, tree.c
+SS(correct.c.ss) = defmt.c, correct.c, version.h
+SS(fields.c.ss) = ijoin.c, fields.c, fields.h
+SS(proto.h.ss) = xgets.c, ispell.c, dump.c, proto.h, term.c
+SS(config.h.ss) = config.h, local.h
+SS(msgs.h.ss) = msgs.h, icombine.c, unsq.c
+SS(tgood.c.ss) = good.c, tgood.c

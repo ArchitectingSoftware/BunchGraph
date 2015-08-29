@@ -1,0 +1,2250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- GXL FILE GENERATED FROM MDG FILE FOLLOWS
+     MDG Source File = C:\research\mdgs\bunch.mdg
+     Generation TimeStamp = Mon Sep 23 19:54:59 EDT 2002
+ -->
+
+
+<!-- GXL DTD FILE IS INCLUDED INLINE
+     Check for updates to the DTD at: http://www.gupro.de/GXL/
+ -->
+<!DOCTYPE gxl [
+<!-- Attribute values -->
+<!ENTITY % val "
+           locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup
+           ">
+<!-- gxl -->
+<!ELEMENT gxl (graph*) >
+<!ATTLIST gxl
+	xmlns:xlink CDATA #FIXED "http://www.w3.org/1999/xlink"
+>
+<!-- type -->
+<!ELEMENT type EMPTY>
+<!ATTLIST type
+	xlink:type (simple) #FIXED "simple"
+	xlink:href CDATA #REQUIRED
+>
+<!-- graph -->
+<!ELEMENT graph (type? , attr* , ( node | edge | rel )* ) >
+<!ATTLIST graph
+	id ID #REQUIRED
+	role NMTOKEN #IMPLIED
+	edgeids (true | false) "false"
+	hypergraph (true | false) "false"
+	edgemode (directed | undirected | defaultdirected | defaultundirected) "directed"
+>
+<!-- node -->
+<!ELEMENT node (type? , attr*, graph* ) >
+<!ATTLIST node
+	id ID #REQUIRED
+>
+<!-- edge -->
+<!ELEMENT edge (type?, attr*, graph* ) >
+<!ATTLIST edge
+	id ID #IMPLIED
+	from IDREF #REQUIRED
+	to IDREF #REQUIRED
+	fromorder CDATA #IMPLIED
+	toorder CDATA #IMPLIED
+	isdirected (true | false) #IMPLIED
+>
+<!-- rel -->
+<!ELEMENT rel (type? , attr*, graph*, relend* ) >
+<!ATTLIST rel
+	id ID #IMPLIED
+	isdirected (true | false) #IMPLIED
+>
+<!-- relend -->
+<!ELEMENT relend (attr*) >
+<!ATTLIST relend
+	target IDREF #REQUIRED
+	role NMTOKEN #IMPLIED
+	direction (in | out | none) #IMPLIED
+	startorder CDATA #IMPLIED
+	endorder CDATA #IMPLIED
+>
+<!-- attr -->
+<!ELEMENT attr (type?, attr*,
+          (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup))>
+<!ATTLIST attr
+	id ID #IMPLIED
+	name NMTOKEN #REQUIRED
+	kind NMTOKEN #IMPLIED
+>
+<!-- locator -->
+<!ELEMENT locator EMPTY>
+<!ATTLIST locator
+	xlink:type (simple) #FIXED "simple"
+	xlink:href CDATA #REQUIRED
+>
+<!-- atomic values -->
+<!ELEMENT bool (#PCDATA)>
+<!ELEMENT int (#PCDATA)>
+<!ELEMENT float (#PCDATA)>
+<!ELEMENT string (#PCDATA)>
+<!-- enumeration value -->
+<!ELEMENT enum (#PCDATA)>
+<!-- composite values -->
+<!ELEMENT seq (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)* >
+<!ELEMENT set (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)*>
+<!ELEMENT bag (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)*>
+<!ELEMENT tup (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)*>
+]>
+
+<!-- END OF INCLUDED INLINE DTD FOR GXL
+     Check for updates to the DTD at: http://www.gupro.de/GXL/
+
+     NOW THE XML FILE BEGINS...
+ -->
+
+
+<gxl xmlns:xlink="http://www.w3.org/1999/xlink">
+   <graph id="generatedGXL">
+      <node id="StatsManager"/>
+      <node id="BunchStatsTest"/>
+      <node id="BunchEvent"/>
+      <node id="FileDialog"/>
+      <node id="DefaultObjectiveFunctionCalculator"/>
+      <node id="Point"/>
+      <node id="PrecisionRecallCalculator"/>
+      <node id="ParserFactory"/>
+      <node id="ClusteringMethod2"/>
+      <node id="NAHCClusteringConfigurationDialog"/>
+      <node id="BunchAPISimAnalysis"/>
+      <node id="HillClimbingConfiguration"/>
+      <node id="BunchUtilities"/>
+      <node id="BunchFrame"/>
+      <node id="ServerProperties"/>
+      <node id="SATechnique"/>
+      <node id="ClusteringMethod"/>
+      <node id="SASimpleTechniqueDialog"/>
+      <node id="BunchEdge"/>
+      <node id="SwingWorker"/>
+      <node id="ObjectiveFunctionCalculatorFactory"/>
+      <node id="GeneralHillClimbingClusteringMethod"/>
+      <node id="MQCalculator"/>
+      <node id="Cluster"/>
+      <node id="BunchSvrMsgImpl"/>
+      <node id="Hashtable"/>
+      <node id="OptimalClusteringMethod"/>
+      <node id="DistributedSAHCClusteringMethod"/>
+      <node id="BunchGraphPR"/>
+      <node id="BunchEngine"/>
+      <node id="TurboMQIncrW"/>
+      <node id="TSGraphOutput"/>
+      <node id="IterationListener"/>
+      <node id="BunchSvrMsg"/>
+      <node id="ClusterFileParser"/>
+      <node id="BunchCluster"/>
+      <node id="ServerSteepestAscentClusteringMethod"/>
+      <node id="IterationManager"/>
+      <node id="DotGraphOutput"/>
+      <node id="GATournamentMethod"/>
+      <node id="BunchGraphUtils"/>
+      <node id="Drifters"/>
+      <node id="TXTGraphOutput"/>
+      <node id="NextAscentHillClimbingClusteringMethod"/>
+      <node id="ServerStats"/>
+      <node id="ClusteringProgressDialog"/>
+      <node id="ObjectiveFunctionCalculator"/>
+      <node id="ClusterUsingVectorSAHC"/>
+      <node id="Callback"/>
+      <node id="BunchServer"/>
+      <node id="MeCl"/>
+      <node id="BunchCliMsg"/>
+      <node id="GenericDistribHillClimbingClusteringMethod"/>
+      <node id="DistribClusteringProgressDlg"/>
+      <node id="Edge"/>
+      <node id="GenericClusteringMethod"/>
+      <node id="BunchGraph"/>
+      <node id="GBunchRW"/>
+      <node id="EventObject"/>
+      <node id="ClusteringMethodFactory"/>
+      <node id="TXTTreeGraphOutput"/>
+      <node id="CallbackImpl"/>
+      <node id="WeightedObjectiveFunctionCalculator"/>
+      <node id="GAConfiguration"/>
+      <node id="SATechniqueFactory"/>
+      <node id="BunchTest"/>
+      <node id="GenericFactory"/>
+      <node id="Population"/>
+      <node id="BunchPreferences"/>
+      <node id="BunchNode"/>
+      <node id="WorkRequestEvent"/>
+      <node id="SteepestAscentHillClimbingClusteringMethod"/>
+      <node id="SteepestAscentHillClimbingClusteringMethod2"/>
+      <node id="ProgressCallbackInterface"/>
+      <node id="Parser"/>
+      <node id="Bunch"/>
+      <node id="WeightedObjectiveFunctionCalculator3"/>
+      <node id="WeightedObjectiveFunctionCalculator2"/>
+      <node id="GridBagConstraints2"/>
+      <node id="NAHCConfiguration"/>
+      <node id="BunchAPIOld"/>
+      <node id="FindNeighbor"/>
+      <node id="DistributedHCClusteringMethod"/>
+      <node id="MQCalculatorUtil"/>
+      <node id="GAMethodFactory"/>
+      <node id="Configuration"/>
+      <node id="WorkFinishedEvent"/>
+      <node id="TurboMQ2"/>
+      <node id="NextLevelGraph"/>
+      <node id="DependencyFileParser"/>
+      <node id="ServerClusteringProgress"/>
+      <node id="GraphOutput"/>
+      <node id="ServerClusteringEngine"/>
+      <node id="Container"/>
+      <node id="IterationEvent"/>
+      <node id="BunchAPI"/>
+      <node id="BunchEngine$ExecuteClusteringEngine"/>
+      <node id="GAMethod"/>
+      <node id="BunchProperties"/>
+      <node id="GenericClusteringMethod2"/>
+      <node id="DistribInit"/>
+      <node id="GAClusteringConfigurationDialog"/>
+      <node id="BunchCliMsgImpl"/>
+      <node id="GraphOutputFactory"/>
+      <node id="Node"/>
+      <node id="BSTextServer"/>
+      <node id="BSWindow_AboutBox"/>
+      <node id="GAClusteringMethod"/>
+      <node id="BSWindow"/>
+      <node id="Graph"/>
+      <node id="ClusteringConfigurationDialog"/>
+      <node id="BunchAPITestCallback"/>
+      <node id="GenericHillClimbingClusteringMethod"/>
+      <node id="BunchAPISimEdgeTest"/>
+      <node id="TurboMQ"/>
+      <node id="SASimpleTechnique"/>
+      <node id="HillClimbingClusteringConfigurationDialog"/>
+      <node id="BunchAPITest"/>
+      <node id="Manager"/>
+      <node id="GARouletteWheelMethod"/>
+      <node id="SynchronizedEventQueue"/>
+      <node id="TurboMQIncr"/>
+      <node id="SpirosMQ"/>
+      <node id="MeasurementUtil"/>
+      <node id="BunchEngine$TimeoutTimer"/>
+      <edge id="idBunchStatsTestParserFactory" from="BunchStatsTest" to="ParserFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchStatsTestGraph" from="BunchStatsTest" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchStatsTestBunchPreferences" from="BunchStatsTest" to="BunchPreferences">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchStatsTestBunchProperties" from="BunchStatsTest" to="BunchProperties">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchStatsTestObjectiveFunctionCalculatorFactory" from="BunchStatsTest" to="ObjectiveFunctionCalculatorFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchStatsTestParser" from="BunchStatsTest" to="Parser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchStatsTestCluster" from="BunchStatsTest" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchStatsTestBunchAPI" from="BunchStatsTest" to="BunchAPI">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDefaultObjectiveFunctionCalculatorGraph" from="DefaultObjectiveFunctionCalculator" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDefaultObjectiveFunctionCalculatorNode" from="DefaultObjectiveFunctionCalculator" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idPrecisionRecallCalculatorGBunchRW" from="PrecisionRecallCalculator" to="GBunchRW">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idParserFactoryGenericFactory" from="ParserFactory" to="GenericFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusteringMethod2Graph" from="ClusteringMethod2" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusteringMethod2ClusteringMethod" from="ClusteringMethod2" to="ClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusteringMethod2Cluster" from="ClusteringMethod2" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNAHCClusteringConfigurationDialogGenericFactory" from="NAHCClusteringConfigurationDialog" to="GenericFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNAHCClusteringConfigurationDialogHillClimbingConfiguration" from="NAHCClusteringConfigurationDialog" to="HillClimbingConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNAHCClusteringConfigurationDialogConfiguration" from="NAHCClusteringConfigurationDialog" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNAHCClusteringConfigurationDialogSATechniqueFactory" from="NAHCClusteringConfigurationDialog" to="SATechniqueFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNAHCClusteringConfigurationDialogSATechnique" from="NAHCClusteringConfigurationDialog" to="SATechnique">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNAHCClusteringConfigurationDialogClusteringConfigurationDialog" from="NAHCClusteringConfigurationDialog" to="ClusteringConfigurationDialog">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNAHCClusteringConfigurationDialogNAHCConfiguration" from="NAHCClusteringConfigurationDialog" to="NAHCConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPISimAnalysisBunchGraphUtils" from="BunchAPISimAnalysis" to="BunchGraphUtils">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPISimAnalysisBunchGraph" from="BunchAPISimAnalysis" to="BunchGraph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPISimAnalysisBunchNode" from="BunchAPISimAnalysis" to="BunchNode">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idHillClimbingConfigurationGraph" from="HillClimbingConfiguration" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idHillClimbingConfigurationConfiguration" from="HillClimbingConfiguration" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameBunchEvent" from="BunchFrame" to="BunchEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameParser" from="BunchFrame" to="Parser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameDistribInit" from="BunchFrame" to="DistribInit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameDependencyFileParser" from="BunchFrame" to="DependencyFileParser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameParserFactory" from="BunchFrame" to="ParserFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameMQCalculatorUtil" from="BunchFrame" to="MQCalculatorUtil">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameClusteringConfigurationDialog" from="BunchFrame" to="ClusteringConfigurationDialog">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameNAHCConfiguration" from="BunchFrame" to="NAHCConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameClusteringMethodFactory" from="BunchFrame" to="ClusteringMethodFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameGraphOutputFactory" from="BunchFrame" to="GraphOutputFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameObjectiveFunctionCalculatorFactory" from="BunchFrame" to="ObjectiveFunctionCalculatorFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameCallbackImpl" from="BunchFrame" to="CallbackImpl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameGraph" from="BunchFrame" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameDistributedHCClusteringMethod" from="BunchFrame" to="DistributedHCClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameGenericHillClimbingClusteringMethod" from="BunchFrame" to="GenericHillClimbingClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameClusteringMethod2" from="BunchFrame" to="ClusteringMethod2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameNextLevelGraph" from="BunchFrame" to="NextLevelGraph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameClusteringMethod" from="BunchFrame" to="ClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameStatsManager" from="BunchFrame" to="StatsManager">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameBunchPreferences" from="BunchFrame" to="BunchPreferences">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameDistribClusteringProgressDlg" from="BunchFrame" to="DistribClusteringProgressDlg">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameBunchUtilities" from="BunchFrame" to="BunchUtilities">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameHillClimbingConfiguration" from="BunchFrame" to="HillClimbingConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameGenericFactory" from="BunchFrame" to="GenericFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameFileDialog" from="BunchFrame" to="FileDialog">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameClusteringProgressDialog" from="BunchFrame" to="ClusteringProgressDialog">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameGraphOutput" from="BunchFrame" to="GraphOutput">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameNode" from="BunchFrame" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameGenericDistribHillClimbingClusteringMethod" from="BunchFrame" to="GenericDistribHillClimbingClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFramePoint" from="BunchFrame" to="Point">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchFrameMeasurementUtil" from="BunchFrame" to="MeasurementUtil">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSATechniqueStatsManager" from="SATechnique" to="StatsManager">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusteringMethodGraph" from="ClusteringMethod" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSASimpleTechniqueDialogSASimpleTechnique" from="SASimpleTechniqueDialog" to="SASimpleTechnique">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idObjectiveFunctionCalculatorFactoryGenericFactory" from="ObjectiveFunctionCalculatorFactory" to="GenericFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGeneralHillClimbingClusteringMethodNextAscentHillClimbingClusteringMethod" from="GeneralHillClimbingClusteringMethod" to="NextAscentHillClimbingClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMQCalculatorGraph" from="MQCalculator" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMQCalculatorNode" from="MQCalculator" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMQCalculatorObjectiveFunctionCalculatorFactory" from="MQCalculator" to="ObjectiveFunctionCalculatorFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMQCalculatorDependencyFileParser" from="MQCalculator" to="DependencyFileParser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMQCalculatorClusterFileParser" from="MQCalculator" to="ClusterFileParser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMQCalculatorParser" from="MQCalculator" to="Parser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusterGraph" from="Cluster" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusterStatsManager" from="Cluster" to="StatsManager">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusterObjectiveFunctionCalculatorFactory" from="Cluster" to="ObjectiveFunctionCalculatorFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchSvrMsgImplServerClusteringProgress" from="BunchSvrMsgImpl" to="ServerClusteringProgress">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchSvrMsgImplBSWindow" from="BunchSvrMsgImpl" to="BSWindow">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchSvrMsgImplDistribInit" from="BunchSvrMsgImpl" to="DistribInit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchSvrMsgImplServerClusteringEngine" from="BunchSvrMsgImpl" to="ServerClusteringEngine">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchSvrMsgImplSwingWorker" from="BunchSvrMsgImpl" to="SwingWorker">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchSvrMsgImplServerProperties" from="BunchSvrMsgImpl" to="ServerProperties">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchSvrMsgImplBunchPreferences" from="BunchSvrMsgImpl" to="BunchPreferences">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchSvrMsgImplBunchSvrMsg" from="BunchSvrMsgImpl" to="BunchSvrMsg">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchSvrMsgImplGraph" from="BunchSvrMsgImpl" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchSvrMsgImplBunchUtilities" from="BunchSvrMsgImpl" to="BunchUtilities">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idOptimalClusteringMethodBunchUtilities" from="OptimalClusteringMethod" to="BunchUtilities">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idOptimalClusteringMethodGraph" from="OptimalClusteringMethod" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idOptimalClusteringMethodStatsManager" from="OptimalClusteringMethod" to="StatsManager">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idOptimalClusteringMethodIterationEvent" from="OptimalClusteringMethod" to="IterationEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idOptimalClusteringMethodClusteringMethod2" from="OptimalClusteringMethod" to="ClusteringMethod2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idOptimalClusteringMethodCluster" from="OptimalClusteringMethod" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedSAHCClusteringMethodWorkRequestEvent" from="DistributedSAHCClusteringMethod" to="WorkRequestEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedSAHCClusteringMethodSynchronizedEventQueue" from="DistributedSAHCClusteringMethod" to="SynchronizedEventQueue">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedSAHCClusteringMethodClusteringMethod2" from="DistributedSAHCClusteringMethod" to="ClusteringMethod2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedSAHCClusteringMethodConfiguration" from="DistributedSAHCClusteringMethod" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedSAHCClusteringMethodGenericDistribHillClimbingClusteringMethod" from="DistributedSAHCClusteringMethod" to="GenericDistribHillClimbingClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedSAHCClusteringMethodIterationManager" from="DistributedSAHCClusteringMethod" to="IterationManager">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedSAHCClusteringMethodCluster" from="DistributedSAHCClusteringMethod" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedSAHCClusteringMethodBunchEvent" from="DistributedSAHCClusteringMethod" to="BunchEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedSAHCClusteringMethodHillClimbingConfiguration" from="DistributedSAHCClusteringMethod" to="HillClimbingConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedSAHCClusteringMethodWorkFinishedEvent" from="DistributedSAHCClusteringMethod" to="WorkFinishedEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedSAHCClusteringMethodBunchUtilities" from="DistributedSAHCClusteringMethod" to="BunchUtilities">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphPRBunchGraph" from="BunchGraphPR" to="BunchGraph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphPRBunchNode" from="BunchGraphPR" to="BunchNode">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphPRBunchCluster" from="BunchGraphPR" to="BunchCluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineParser" from="BunchEngine" to="Parser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineDependencyFileParser" from="BunchEngine" to="DependencyFileParser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineSATechnique" from="BunchEngine" to="SATechnique">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineParserFactory" from="BunchEngine" to="ParserFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineNAHCConfiguration" from="BunchEngine" to="NAHCConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineBunchEngine$TimeoutTimer" from="BunchEngine" to="BunchEngine$TimeoutTimer">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineClusteringMethodFactory" from="BunchEngine" to="ClusteringMethodFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineMQCalculator" from="BunchEngine" to="MQCalculator">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineGraphOutputFactory" from="BunchEngine" to="GraphOutputFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineConfiguration" from="BunchEngine" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineObjectiveFunctionCalculatorFactory" from="BunchEngine" to="ObjectiveFunctionCalculatorFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineCluster" from="BunchEngine" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineGraph" from="BunchEngine" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineNextLevelGraph" from="BunchEngine" to="NextLevelGraph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineClusteringMethod" from="BunchEngine" to="ClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineGAConfiguration" from="BunchEngine" to="GAConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineStatsManager" from="BunchEngine" to="StatsManager">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineBunchPreferences" from="BunchEngine" to="BunchPreferences">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineBunchEngine$ExecuteClusteringEngine" from="BunchEngine" to="BunchEngine$ExecuteClusteringEngine">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineGraphOutput" from="BunchEngine" to="GraphOutput">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEngineNode" from="BunchEngine" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchEnginePrecisionRecallCalculator" from="BunchEngine" to="PrecisionRecallCalculator">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQIncrWObjectiveFunctionCalculator" from="TurboMQIncrW" to="ObjectiveFunctionCalculator">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQIncrWGraph" from="TurboMQIncrW" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQIncrWStatsManager" from="TurboMQIncrW" to="StatsManager">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQIncrWNode" from="TurboMQIncrW" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQIncrWCluster" from="TurboMQIncrW" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTSGraphOutputGraph" from="TSGraphOutput" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTSGraphOutputNode" from="TSGraphOutput" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTSGraphOutputEdge" from="TSGraphOutput" to="Edge">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTSGraphOutputGraphOutput" from="TSGraphOutput" to="GraphOutput">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusterFileParserGraph" from="ClusterFileParser" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusterFileParserNode" from="ClusterFileParser" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusterFileParserParser" from="ClusterFileParser" to="Parser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchClusterBunchNode" from="BunchCluster" to="BunchNode">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idServerSteepestAscentClusteringMethodBunchUtilities" from="ServerSteepestAscentClusteringMethod" to="BunchUtilities">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idServerSteepestAscentClusteringMethodGenericDistribHillClimbingClusteringMethod" from="ServerSteepestAscentClusteringMethod" to="GenericDistribHillClimbingClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idServerSteepestAscentClusteringMethodHillClimbingConfiguration" from="ServerSteepestAscentClusteringMethod" to="HillClimbingConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idServerSteepestAscentClusteringMethodClusteringMethod2" from="ServerSteepestAscentClusteringMethod" to="ClusteringMethod2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idServerSteepestAscentClusteringMethodConfiguration" from="ServerSteepestAscentClusteringMethod" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idServerSteepestAscentClusteringMethodFindNeighbor" from="ServerSteepestAscentClusteringMethod" to="FindNeighbor">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idServerSteepestAscentClusteringMethodCluster" from="ServerSteepestAscentClusteringMethod" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDotGraphOutputHashtable" from="DotGraphOutput" to="Hashtable">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDotGraphOutputGraph" from="DotGraphOutput" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDotGraphOutputNode" from="DotGraphOutput" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDotGraphOutputNextLevelGraph" from="DotGraphOutput" to="NextLevelGraph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDotGraphOutputGraphOutput" from="DotGraphOutput" to="GraphOutput">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGATournamentMethodGAMethod" from="GATournamentMethod" to="GAMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGATournamentMethodGraph" from="GATournamentMethod" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphUtilsBunchGraphPR" from="BunchGraphUtils" to="BunchGraphPR">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphUtilsNode" from="BunchGraphUtils" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphUtilsBunchGraph" from="BunchGraphUtils" to="BunchGraph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphUtilsBunchNode" from="BunchGraphUtils" to="BunchNode">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphUtilsBunchEdge" from="BunchGraphUtils" to="BunchEdge">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphUtilsMeCl" from="BunchGraphUtils" to="MeCl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphUtilsDependencyFileParser" from="BunchGraphUtils" to="DependencyFileParser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphUtilsClusterFileParser" from="BunchGraphUtils" to="ClusterFileParser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDriftersGraph" from="Drifters" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDriftersNode" from="Drifters" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTXTGraphOutputGraph" from="TXTGraphOutput" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTXTGraphOutputNode" from="TXTGraphOutput" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTXTGraphOutputNextLevelGraph" from="TXTGraphOutput" to="NextLevelGraph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTXTGraphOutputGraphOutput" from="TXTGraphOutput" to="GraphOutput">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNextAscentHillClimbingClusteringMethodClusteringMethod2" from="NextAscentHillClimbingClusteringMethod" to="ClusteringMethod2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNextAscentHillClimbingClusteringMethodConfiguration" from="NextAscentHillClimbingClusteringMethod" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNextAscentHillClimbingClusteringMethodSATechnique" from="NextAscentHillClimbingClusteringMethod" to="SATechnique">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNextAscentHillClimbingClusteringMethodCluster" from="NextAscentHillClimbingClusteringMethod" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNextAscentHillClimbingClusteringMethodNode" from="NextAscentHillClimbingClusteringMethod" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNextAscentHillClimbingClusteringMethodHillClimbingConfiguration" from="NextAscentHillClimbingClusteringMethod" to="HillClimbingConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNextAscentHillClimbingClusteringMethodGraph" from="NextAscentHillClimbingClusteringMethod" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNextAscentHillClimbingClusteringMethodGenericHillClimbingClusteringMethod" from="NextAscentHillClimbingClusteringMethod" to="GenericHillClimbingClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNextAscentHillClimbingClusteringMethodNAHCConfiguration" from="NextAscentHillClimbingClusteringMethod" to="NAHCConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNextAscentHillClimbingClusteringMethodBunchUtilities" from="NextAscentHillClimbingClusteringMethod" to="BunchUtilities">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusterUsingVectorSAHCBunchUtilities" from="ClusterUsingVectorSAHC" to="BunchUtilities">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusterUsingVectorSAHCServerClusteringProgress" from="ClusterUsingVectorSAHC" to="ServerClusteringProgress">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusterUsingVectorSAHCIterationManager" from="ClusterUsingVectorSAHC" to="IterationManager">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusterUsingVectorSAHCServerProperties" from="ClusterUsingVectorSAHC" to="ServerProperties">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusterUsingVectorSAHCFindNeighbor" from="ClusterUsingVectorSAHC" to="FindNeighbor">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusterUsingVectorSAHCCluster" from="ClusterUsingVectorSAHC" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchServerBSTextServer" from="BunchServer" to="BSTextServer">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchServerBSWindow" from="BunchServer" to="BSWindow">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMeClBunchGraph" from="MeCl" to="BunchGraph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMeClBunchNode" from="MeCl" to="BunchNode">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMeClBunchEdge" from="MeCl" to="BunchEdge">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMeClBunchCluster" from="MeCl" to="BunchCluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericDistribHillClimbingClusteringMethodSynchronizedEventQueue" from="GenericDistribHillClimbingClusteringMethod" to="SynchronizedEventQueue">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericDistribHillClimbingClusteringMethodClusteringMethod2" from="GenericDistribHillClimbingClusteringMethod" to="ClusteringMethod2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericDistribHillClimbingClusteringMethodConfiguration" from="GenericDistribHillClimbingClusteringMethod" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericDistribHillClimbingClusteringMethodIterationManager" from="GenericDistribHillClimbingClusteringMethod" to="IterationManager">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericDistribHillClimbingClusteringMethodCluster" from="GenericDistribHillClimbingClusteringMethod" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericDistribHillClimbingClusteringMethodBunchEvent" from="GenericDistribHillClimbingClusteringMethod" to="BunchEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericDistribHillClimbingClusteringMethodHillClimbingConfiguration" from="GenericDistribHillClimbingClusteringMethod" to="HillClimbingConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericDistribHillClimbingClusteringMethodGenericClusteringMethod2" from="GenericDistribHillClimbingClusteringMethod" to="GenericClusteringMethod2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericDistribHillClimbingClusteringMethodPopulation" from="GenericDistribHillClimbingClusteringMethod" to="Population">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericDistribHillClimbingClusteringMethodBunchUtilities" from="GenericDistribHillClimbingClusteringMethod" to="BunchUtilities">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistribClusteringProgressDlgClusteringMethod2" from="DistribClusteringProgressDlg" to="ClusteringMethod2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistribClusteringProgressDlgSwingWorker" from="DistribClusteringProgressDlg" to="SwingWorker">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistribClusteringProgressDlgCallbackImpl" from="DistribClusteringProgressDlg" to="CallbackImpl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistribClusteringProgressDlgIterationListener" from="DistribClusteringProgressDlg" to="IterationListener">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistribClusteringProgressDlgGenericDistribHillClimbingClusteringMethod" from="DistribClusteringProgressDlg" to="GenericDistribHillClimbingClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistribClusteringProgressDlgIterationEvent" from="DistribClusteringProgressDlg" to="IterationEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistribClusteringProgressDlgCluster" from="DistribClusteringProgressDlg" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistribClusteringProgressDlgBunchEvent" from="DistribClusteringProgressDlg" to="BunchEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistribClusteringProgressDlgBunchFrame" from="DistribClusteringProgressDlg" to="BunchFrame">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistribClusteringProgressDlgGraph" from="DistribClusteringProgressDlg" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistribClusteringProgressDlgGraphOutput" from="DistribClusteringProgressDlg" to="GraphOutput">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistribClusteringProgressDlgDrifters" from="DistribClusteringProgressDlg" to="Drifters">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idEdgeNode" from="Edge" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericClusteringMethodGraph" from="GenericClusteringMethod" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericClusteringMethodClusteringMethod" from="GenericClusteringMethod" to="ClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphGraph" from="BunchGraph" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphNode" from="BunchGraph" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphNextLevelGraph" from="BunchGraph" to="NextLevelGraph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphBunchNode" from="BunchGraph" to="BunchNode">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphBunchEdge" from="BunchGraph" to="BunchEdge">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchGraphBunchCluster" from="BunchGraph" to="BunchCluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idClusteringMethodFactoryGenericFactory" from="ClusteringMethodFactory" to="GenericFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTXTTreeGraphOutputGraph" from="TXTTreeGraphOutput" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTXTTreeGraphOutputNode" from="TXTTreeGraphOutput" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTXTTreeGraphOutputNextLevelGraph" from="TXTTreeGraphOutput" to="NextLevelGraph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTXTTreeGraphOutputGraphOutput" from="TXTTreeGraphOutput" to="GraphOutput">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idCallbackImplSynchronizedEventQueue" from="CallbackImpl" to="SynchronizedEventQueue">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idCallbackImplCallback" from="CallbackImpl" to="Callback">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idCallbackImplBunchUtilities" from="CallbackImpl" to="BunchUtilities">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idCallbackImplWorkFinishedEvent" from="CallbackImpl" to="WorkFinishedEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idCallbackImplManager" from="CallbackImpl" to="Manager">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idCallbackImplBunchEvent" from="CallbackImpl" to="BunchEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idCallbackImplIterationManager" from="CallbackImpl" to="IterationManager">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idCallbackImplWorkRequestEvent" from="CallbackImpl" to="WorkRequestEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idWeightedObjectiveFunctionCalculatorObjectiveFunctionCalculator" from="WeightedObjectiveFunctionCalculator" to="ObjectiveFunctionCalculator">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idWeightedObjectiveFunctionCalculatorGraph" from="WeightedObjectiveFunctionCalculator" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idWeightedObjectiveFunctionCalculatorNode" from="WeightedObjectiveFunctionCalculator" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAConfigurationGenericFactory" from="GAConfiguration" to="GenericFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAConfigurationGraph" from="GAConfiguration" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAConfigurationGAMethodFactory" from="GAConfiguration" to="GAMethodFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAConfigurationConfiguration" from="GAConfiguration" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSATechniqueFactoryGenericFactory" from="SATechniqueFactory" to="GenericFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchTestBunchAPIOld" from="BunchTest" to="BunchAPIOld">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idPopulationGraph" from="Population" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idPopulationCluster" from="Population" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchPreferencesParserFactory" from="BunchPreferences" to="ParserFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchPreferencesGraphOutputFactory" from="BunchPreferences" to="GraphOutputFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchPreferencesObjectiveFunctionCalculatorFactory" from="BunchPreferences" to="ObjectiveFunctionCalculatorFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchPreferencesClusteringMethodFactory" from="BunchPreferences" to="ClusteringMethodFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchNodeBunchCluster" from="BunchNode" to="BunchCluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSteepestAscentHillClimbingClusteringMethodBunchUtilities" from="SteepestAscentHillClimbingClusteringMethod" to="BunchUtilities">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSteepestAscentHillClimbingClusteringMethodGraph" from="SteepestAscentHillClimbingClusteringMethod" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSteepestAscentHillClimbingClusteringMethodNode" from="SteepestAscentHillClimbingClusteringMethod" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSteepestAscentHillClimbingClusteringMethodHillClimbingConfiguration" from="SteepestAscentHillClimbingClusteringMethod" to="HillClimbingConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSteepestAscentHillClimbingClusteringMethodGenericHillClimbingClusteringMethod" from="SteepestAscentHillClimbingClusteringMethod" to="GenericHillClimbingClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSteepestAscentHillClimbingClusteringMethodClusteringMethod2" from="SteepestAscentHillClimbingClusteringMethod" to="ClusteringMethod2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSteepestAscentHillClimbingClusteringMethodConfiguration" from="SteepestAscentHillClimbingClusteringMethod" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSteepestAscentHillClimbingClusteringMethodCluster" from="SteepestAscentHillClimbingClusteringMethod" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSteepestAscentHillClimbingClusteringMethod2GenericDistribHillClimbingClusteringMethod" from="SteepestAscentHillClimbingClusteringMethod2" to="GenericDistribHillClimbingClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSteepestAscentHillClimbingClusteringMethod2HillClimbingConfiguration" from="SteepestAscentHillClimbingClusteringMethod2" to="HillClimbingConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSteepestAscentHillClimbingClusteringMethod2ClusteringMethod2" from="SteepestAscentHillClimbingClusteringMethod2" to="ClusteringMethod2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSteepestAscentHillClimbingClusteringMethod2Configuration" from="SteepestAscentHillClimbingClusteringMethod2" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSteepestAscentHillClimbingClusteringMethod2Cluster" from="SteepestAscentHillClimbingClusteringMethod2" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchBunchFrame" from="Bunch" to="BunchFrame">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchBunchServer" from="Bunch" to="BunchServer">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idWeightedObjectiveFunctionCalculator3ObjectiveFunctionCalculator" from="WeightedObjectiveFunctionCalculator3" to="ObjectiveFunctionCalculator">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idWeightedObjectiveFunctionCalculator3Graph" from="WeightedObjectiveFunctionCalculator3" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idWeightedObjectiveFunctionCalculator3Node" from="WeightedObjectiveFunctionCalculator3" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idWeightedObjectiveFunctionCalculator2ObjectiveFunctionCalculator" from="WeightedObjectiveFunctionCalculator2" to="ObjectiveFunctionCalculator">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idWeightedObjectiveFunctionCalculator2Graph" from="WeightedObjectiveFunctionCalculator2" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idWeightedObjectiveFunctionCalculator2Node" from="WeightedObjectiveFunctionCalculator2" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNAHCConfigurationHillClimbingConfiguration" from="NAHCConfiguration" to="HillClimbingConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIOldGAConfiguration" from="BunchAPIOld" to="GAConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIOldParser" from="BunchAPIOld" to="Parser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIOldClusteringMethod" from="BunchAPIOld" to="ClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIOldBunchPreferences" from="BunchAPIOld" to="BunchPreferences">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIOldGraphOutputFactory" from="BunchAPIOld" to="GraphOutputFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIOldNode" from="BunchAPIOld" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIOldHillClimbingConfiguration" from="BunchAPIOld" to="HillClimbingConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIOldObjectiveFunctionCalculatorFactory" from="BunchAPIOld" to="ObjectiveFunctionCalculatorFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIOldClusteringMethodFactory" from="BunchAPIOld" to="ClusteringMethodFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIOldGraph" from="BunchAPIOld" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIOldParserFactory" from="BunchAPIOld" to="ParserFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIOldGraphOutput" from="BunchAPIOld" to="GraphOutput">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idFindNeighborBunchUtilities" from="FindNeighbor" to="BunchUtilities">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idFindNeighborCluster" from="FindNeighbor" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedHCClusteringMethodWorkRequestEvent" from="DistributedHCClusteringMethod" to="WorkRequestEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedHCClusteringMethodClusteringMethod2" from="DistributedHCClusteringMethod" to="ClusteringMethod2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedHCClusteringMethodConfiguration" from="DistributedHCClusteringMethod" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedHCClusteringMethodGenericDistribHillClimbingClusteringMethod" from="DistributedHCClusteringMethod" to="GenericDistribHillClimbingClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedHCClusteringMethodIterationManager" from="DistributedHCClusteringMethod" to="IterationManager">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedHCClusteringMethodCluster" from="DistributedHCClusteringMethod" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedHCClusteringMethodBunchEvent" from="DistributedHCClusteringMethod" to="BunchEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedHCClusteringMethodHillClimbingConfiguration" from="DistributedHCClusteringMethod" to="HillClimbingConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedHCClusteringMethodWorkFinishedEvent" from="DistributedHCClusteringMethod" to="WorkFinishedEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedHCClusteringMethodNAHCConfiguration" from="DistributedHCClusteringMethod" to="NAHCConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDistributedHCClusteringMethodBunchUtilities" from="DistributedHCClusteringMethod" to="BunchUtilities">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAMethodFactoryGenericFactory" from="GAMethodFactory" to="GenericFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQ2ObjectiveFunctionCalculator" from="TurboMQ2" to="ObjectiveFunctionCalculator">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQ2Graph" from="TurboMQ2" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQ2Node" from="TurboMQ2" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNextLevelGraphGraph" from="NextLevelGraph" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idNextLevelGraphNode" from="NextLevelGraph" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDependencyFileParserNode" from="DependencyFileParser" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idDependencyFileParserParser" from="DependencyFileParser" to="Parser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idServerClusteringEngineGraph" from="ServerClusteringEngine" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idServerClusteringEngineGenericDistribHillClimbingClusteringMethod" from="ServerClusteringEngine" to="GenericDistribHillClimbingClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idServerClusteringEngineServerSteepestAscentClusteringMethod" from="ServerClusteringEngine" to="ServerSteepestAscentClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idServerClusteringEngineHillClimbingConfiguration" from="ServerClusteringEngine" to="HillClimbingConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idServerClusteringEngineClusteringMethod2" from="ServerClusteringEngine" to="ClusteringMethod2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idServerClusteringEngineServerProperties" from="ServerClusteringEngine" to="ServerProperties">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idServerClusteringEngineConfiguration" from="ServerClusteringEngine" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idServerClusteringEngineClusteringMethod" from="ServerClusteringEngine" to="ClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idIterationEventEventObject" from="IterationEvent" to="EventObject">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIGraph" from="BunchAPI" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIBunchProperties" from="BunchAPI" to="BunchProperties">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIBunchGraph" from="BunchAPI" to="BunchGraph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPIBunchEngine" from="BunchAPI" to="BunchEngine">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAMethodGraph" from="GAMethod" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericClusteringMethod2IterationEvent" from="GenericClusteringMethod2" to="IterationEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericClusteringMethod2ClusteringMethod2" from="GenericClusteringMethod2" to="ClusteringMethod2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericClusteringMethod2Population" from="GenericClusteringMethod2" to="Population">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericClusteringMethod2Cluster" from="GenericClusteringMethod2" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAClusteringConfigurationDialogGenericFactory" from="GAClusteringConfigurationDialog" to="GenericFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAClusteringConfigurationDialogGridBagConstraints2" from="GAClusteringConfigurationDialog" to="GridBagConstraints2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAClusteringConfigurationDialogGAConfiguration" from="GAClusteringConfigurationDialog" to="GAConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAClusteringConfigurationDialogConfiguration" from="GAClusteringConfigurationDialog" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAClusteringConfigurationDialogClusteringConfigurationDialog" from="GAClusteringConfigurationDialog" to="ClusteringConfigurationDialog">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchCliMsgImplBunchCliMsg" from="BunchCliMsgImpl" to="BunchCliMsg">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGraphOutputFactoryGenericFactory" from="GraphOutputFactory" to="GenericFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBSTextServerBunchSvrMsgImpl" from="BSTextServer" to="BunchSvrMsgImpl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAClusteringMethodGenericClusteringMethod" from="GAClusteringMethod" to="GenericClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAClusteringMethodGAMethod" from="GAClusteringMethod" to="GAMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAClusteringMethodGraph" from="GAClusteringMethod" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAClusteringMethodGAConfiguration" from="GAClusteringMethod" to="GAConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAClusteringMethodConfiguration" from="GAClusteringMethod" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAClusteringMethodClusteringMethod" from="GAClusteringMethod" to="ClusteringMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGAClusteringMethodCluster" from="GAClusteringMethod" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBSWindowBunchUtilities" from="BSWindow" to="BunchUtilities">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBSWindowBSWindow_AboutBox" from="BSWindow" to="BSWindow_AboutBox">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBSWindowBunchSvrMsgImpl" from="BSWindow" to="BunchSvrMsgImpl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGraphNode" from="Graph" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGraphObjectiveFunctionCalculatorFactory" from="Graph" to="ObjectiveFunctionCalculatorFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGraphCluster" from="Graph" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPITestCallbackProgressCallbackInterface" from="BunchAPITestCallback" to="ProgressCallbackInterface">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericHillClimbingClusteringMethodGenericClusteringMethod2" from="GenericHillClimbingClusteringMethod" to="GenericClusteringMethod2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericHillClimbingClusteringMethodHillClimbingConfiguration" from="GenericHillClimbingClusteringMethod" to="HillClimbingConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericHillClimbingClusteringMethodClusteringMethod2" from="GenericHillClimbingClusteringMethod" to="ClusteringMethod2">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericHillClimbingClusteringMethodConfiguration" from="GenericHillClimbingClusteringMethod" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericHillClimbingClusteringMethodPopulation" from="GenericHillClimbingClusteringMethod" to="Population">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGenericHillClimbingClusteringMethodCluster" from="GenericHillClimbingClusteringMethod" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPISimEdgeTestBunchGraphUtils" from="BunchAPISimEdgeTest" to="BunchGraphUtils">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPISimEdgeTestBunchProperties" from="BunchAPISimEdgeTest" to="BunchProperties">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPISimEdgeTestBunchGraph" from="BunchAPISimEdgeTest" to="BunchGraph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPISimEdgeTestBunchNode" from="BunchAPISimEdgeTest" to="BunchNode">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPISimEdgeTestBunchEdge" from="BunchAPISimEdgeTest" to="BunchEdge">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPISimEdgeTestBunchCluster" from="BunchAPISimEdgeTest" to="BunchCluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPISimEdgeTestBunchAPI" from="BunchAPISimEdgeTest" to="BunchAPI">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQObjectiveFunctionCalculator" from="TurboMQ" to="ObjectiveFunctionCalculator">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQGraph" from="TurboMQ" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQNode" from="TurboMQ" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQCluster" from="TurboMQ" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSASimpleTechniqueStatsManager" from="SASimpleTechnique" to="StatsManager">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSASimpleTechniqueSASimpleTechniqueDialog" from="SASimpleTechnique" to="SASimpleTechniqueDialog">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSASimpleTechniqueSATechnique" from="SASimpleTechnique" to="SATechnique">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idHillClimbingClusteringConfigurationDialogContainer" from="HillClimbingClusteringConfigurationDialog" to="Container">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idHillClimbingClusteringConfigurationDialogHillClimbingConfiguration" from="HillClimbingClusteringConfigurationDialog" to="HillClimbingConfiguration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idHillClimbingClusteringConfigurationDialogConfiguration" from="HillClimbingClusteringConfigurationDialog" to="Configuration">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idHillClimbingClusteringConfigurationDialogClusteringConfigurationDialog" from="HillClimbingClusteringConfigurationDialog" to="ClusteringConfigurationDialog">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPITestBunchGraphUtils" from="BunchAPITest" to="BunchGraphUtils">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPITestBunchProperties" from="BunchAPITest" to="BunchProperties">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPITestBunchGraph" from="BunchAPITest" to="BunchGraph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPITestBunchNode" from="BunchAPITest" to="BunchNode">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPITestBunchEdge" from="BunchAPITest" to="BunchEdge">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPITestBunchCluster" from="BunchAPITest" to="BunchCluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idBunchAPITestBunchAPI" from="BunchAPITest" to="BunchAPI">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idManagerServerStats" from="Manager" to="ServerStats">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGARouletteWheelMethodGAMethod" from="GARouletteWheelMethod" to="GAMethod">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idGARouletteWheelMethodGraph" from="GARouletteWheelMethod" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSynchronizedEventQueueBunchEvent" from="SynchronizedEventQueue" to="BunchEvent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQIncrObjectiveFunctionCalculator" from="TurboMQIncr" to="ObjectiveFunctionCalculator">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQIncrGraph" from="TurboMQIncr" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQIncrNode" from="TurboMQIncr" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idTurboMQIncrCluster" from="TurboMQIncr" to="Cluster">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSpirosMQObjectiveFunctionCalculator" from="SpirosMQ" to="ObjectiveFunctionCalculator">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSpirosMQGraph" from="SpirosMQ" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idSpirosMQNode" from="SpirosMQ" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMeasurementUtilClusterFileParser" from="MeasurementUtil" to="ClusterFileParser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMeasurementUtilDependencyFileParser" from="MeasurementUtil" to="DependencyFileParser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMeasurementUtilParser" from="MeasurementUtil" to="Parser">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMeasurementUtilGenericFactory" from="MeasurementUtil" to="GenericFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMeasurementUtilPrecisionRecallCalculator" from="MeasurementUtil" to="PrecisionRecallCalculator">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMeasurementUtilNode" from="MeasurementUtil" to="Node">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMeasurementUtilBunchFrame" from="MeasurementUtil" to="BunchFrame">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMeasurementUtilObjectiveFunctionCalculatorFactory" from="MeasurementUtil" to="ObjectiveFunctionCalculatorFactory">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idMeasurementUtilGraph" from="MeasurementUtil" to="Graph">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+   </graph>
+</gxl>

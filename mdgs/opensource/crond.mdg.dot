@@ -1,0 +1,84 @@
+/* ------------------------------------------------------------ */
+/* created with bunch v3 */
+/* Objective Function value = 1.0*/
+/* ------------------------------------------------------------ */
+
+digraph G {
+size= "10,10";
+rotate = 90;
+subgraph cluster_libraries {
+label = "libraries";
+color = black;
+style = bold;
+
+"string"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"syslog"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"getopt"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"ctype"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"time"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"pwd"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"errno"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"utime"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"wait"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"fcntl"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"locale"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"dirent"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"signal"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"libio"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"unistd"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"file"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"stdio"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"stdlib"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+}
+subgraph cluster_omnipresent_clients {
+label = "omnipresent clients";
+color = black;
+style = bold;
+
+"crontab"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"misc"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+"do_command"[shape=diamond,color=lightgray,fontcolor=black,style=filled];
+}
+subgraph cluster0 {
+label = "(SS-L0):user";
+color = black;
+style = bold;
+
+"user"[label="user",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"env"[label="env",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"entry"[label="entry",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster1 {
+label = "(SS-L0):cron";
+color = black;
+style = bold;
+
+"job"[label="job",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"cron"[label="cron",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster2 {
+label = "(SS-L0):database";
+color = black;
+style = bold;
+
+"stat"[label="stat",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"database"[label="database",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+"entry" -> "user" [color=blue,font=6];
+"entry" -> "cron" [color=blue,font=6];
+"entry" -> "env" [color=blue,font=6];
+"cron" -> "env" [color=blue,font=6];
+"cron" -> "job" [color=blue,font=6];
+"job" -> "cron" [color=blue,font=6];
+"database" -> "user" [color=blue,font=6];
+"database" -> "stat" [color=blue,font=6];
+"database" -> "cron" [color=blue,font=6];
+"env" -> "user" [color=blue,font=6];
+"env" -> "cron" [color=blue,font=6];
+"env" -> "entry" [color=blue,font=6];
+"stat" -> "database" [color=blue,font=6];
+"user" -> "env" [color=blue,font=6];
+"user" -> "entry" [color=blue,font=6];
+"user" -> "cron" [color=blue,font=6];
+"user" -> "database" [color=blue,font=6];
+}

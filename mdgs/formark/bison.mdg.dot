@@ -1,0 +1,261 @@
+/* ------------------------------------------------------------ */
+/* created with bunch v3 */
+/* Objective Function value = 1.0*/
+/* ------------------------------------------------------------ */
+
+digraph G {
+size= "10,10";
+rotate = 90;
+subgraph cluster0 {
+label = "(SS-L1):main.c";
+color = black;
+style = bold;
+
+"reduce.c"[label="reduce.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"main.c"[label="main.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"version.c"[label="version.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"getargs.c"[label="getargs.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster1 {
+label = "(SS-L1):conflicts.c";
+color = black;
+style = bold;
+
+"state.h"[label="state.h",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"LR0.c"[label="LR0.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"print.c"[label="print.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"conflicts.c"[label="conflicts.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"gram.c"[label="gram.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"lalr.c"[label="lalr.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"gram.h"[label="gram.h",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"warshall.c"[label="warshall.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"closure.c"[label="closure.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"machine.h"[label="machine.h",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster2 {
+label = "(SS-L1):reader.c";
+color = black;
+style = bold;
+
+"/usr/include/string.h"[label="/usr/include/string.h",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"output.c"[label="output.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"reader.c"[label="reader.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"symtab.c"[label="symtab.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"symtab.h"[label="symtab.h",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"/usr/include/ctype.h"[label="/usr/include/ctype.h",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"lex.c"[label="lex.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"lex.h"[label="lex.h",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster3 {
+label = "(SS-L1):new.h";
+color = black;
+style = bold;
+
+"new.h"[label="new.h",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"derives.c"[label="derives.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"types.h"[label="types.h",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"nullable.c"[label="nullable.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster4 {
+label = "(SS-L1):/usr/include/stdio.h";
+color = black;
+style = bold;
+
+"getopt.h"[label="getopt.h",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"getopt.c"[label="getopt.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"getopt1.c"[label="getopt1.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"/usr/include/strings.h"[label="/usr/include/strings.h",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"/usr/include/stdio.h"[label="/usr/include/stdio.h",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"/usr/include/sys/va_list.h"[label="/usr/include/sys/va_list.h",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"files.h"[label="files.h",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster5 {
+label = "(SS-L1):files.c";
+color = black;
+style = bold;
+
+"alloca.c"[label="alloca.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"libc.a"[label="libc.a",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"allocate.c"[label="allocate.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"files.c"[label="files.c",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+"main.c" -> "LR0.c" [color=blue,font=6];
+"main.c" -> "/usr/include/stdio.h" [color=blue,font=6];
+"main.c" -> "derives.c" [color=blue,font=6];
+"main.c" -> "files.c" [color=blue,font=6];
+"main.c" -> "reader.c" [color=blue,font=6];
+"main.c" -> "reduce.c" [color=blue,font=6];
+"main.c" -> "conflicts.c" [color=blue,font=6];
+"main.c" -> "print.c" [color=blue,font=6];
+"main.c" -> "libc.a" [color=blue,font=6];
+"main.c" -> "nullable.c" [color=blue,font=6];
+"main.c" -> "output.c" [color=blue,font=6];
+"main.c" -> "lalr.c" [color=blue,font=6];
+"main.c" -> "getargs.c" [color=blue,font=6];
+"main.c" -> "machine.h" [color=blue,font=6];
+"print.c" -> "LR0.c" [color=blue,font=6];
+"print.c" -> "/usr/include/stdio.h" [color=blue,font=6];
+"print.c" -> "/usr/include/string.h" [color=blue,font=6];
+"print.c" -> "files.c" [color=blue,font=6];
+"print.c" -> "reader.c" [color=blue,font=6];
+"print.c" -> "gram.h" [color=blue,font=6];
+"print.c" -> "conflicts.c" [color=blue,font=6];
+"print.c" -> "gram.c" [color=blue,font=6];
+"print.c" -> "state.h" [color=blue,font=6];
+"print.c" -> "lalr.c" [color=blue,font=6];
+"reader.c" -> "allocate.c" [color=blue,font=6];
+"reader.c" -> "gram.h" [color=blue,font=6];
+"reader.c" -> "files.c" [color=blue,font=6];
+"reader.c" -> "version.c" [color=blue,font=6];
+"reader.c" -> "new.h" [color=blue,font=6];
+"reader.c" -> "gram.c" [color=blue,font=6];
+"reader.c" -> "conflicts.c" [color=blue,font=6];
+"reader.c" -> "main.c" [color=blue,font=6];
+"reader.c" -> "output.c" [color=blue,font=6];
+"reader.c" -> "lex.h" [color=blue,font=6];
+"reader.c" -> "lex.c" [color=blue,font=6];
+"reader.c" -> "machine.h" [color=blue,font=6];
+"reader.c" -> "getargs.c" [color=blue,font=6];
+"reader.c" -> "symtab.h" [color=blue,font=6];
+"reader.c" -> "/usr/include/stdio.h" [color=blue,font=6];
+"reader.c" -> "symtab.c" [color=blue,font=6];
+"reader.c" -> "/usr/include/ctype.h" [color=blue,font=6];
+"reader.c" -> "libc.a" [color=blue,font=6];
+"reader.c" -> "/usr/include/string.h" [color=blue,font=6];
+"warshall.c" -> "machine.h" [color=blue,font=6];
+"symtab.c" -> "new.h" [color=blue,font=6];
+"symtab.c" -> "gram.c" [color=blue,font=6];
+"symtab.c" -> "libc.a" [color=blue,font=6];
+"symtab.c" -> "allocate.c" [color=blue,font=6];
+"symtab.c" -> "symtab.h" [color=blue,font=6];
+"symtab.c" -> "/usr/include/string.h" [color=blue,font=6];
+"symtab.c" -> "/usr/include/stdio.h" [color=blue,font=6];
+"/usr/include/stdio.h" -> "/usr/include/sys/va_list.h" [color=blue,font=6];
+"nullable.c" -> "new.h" [color=blue,font=6];
+"nullable.c" -> "gram.c" [color=blue,font=6];
+"nullable.c" -> "allocate.c" [color=blue,font=6];
+"nullable.c" -> "libc.a" [color=blue,font=6];
+"nullable.c" -> "types.h" [color=blue,font=6];
+"nullable.c" -> "gram.h" [color=blue,font=6];
+"LR0.c" -> "/usr/include/stdio.h" [color=blue,font=6];
+"LR0.c" -> "main.c" [color=blue,font=6];
+"LR0.c" -> "new.h" [color=blue,font=6];
+"LR0.c" -> "closure.c" [color=blue,font=6];
+"LR0.c" -> "libc.a" [color=blue,font=6];
+"LR0.c" -> "gram.c" [color=blue,font=6];
+"LR0.c" -> "state.h" [color=blue,font=6];
+"LR0.c" -> "allocate.c" [color=blue,font=6];
+"LR0.c" -> "machine.h" [color=blue,font=6];
+"lalr.c" -> "LR0.c" [color=blue,font=6];
+"lalr.c" -> "main.c" [color=blue,font=6];
+"lalr.c" -> "derives.c" [color=blue,font=6];
+"lalr.c" -> "types.h" [color=blue,font=6];
+"lalr.c" -> "new.h" [color=blue,font=6];
+"lalr.c" -> "gram.h" [color=blue,font=6];
+"lalr.c" -> "libc.a" [color=blue,font=6];
+"lalr.c" -> "gram.c" [color=blue,font=6];
+"lalr.c" -> "nullable.c" [color=blue,font=6];
+"lalr.c" -> "state.h" [color=blue,font=6];
+"lalr.c" -> "allocate.c" [color=blue,font=6];
+"lalr.c" -> "machine.h" [color=blue,font=6];
+"closure.c" -> "new.h" [color=blue,font=6];
+"closure.c" -> "gram.c" [color=blue,font=6];
+"closure.c" -> "allocate.c" [color=blue,font=6];
+"closure.c" -> "libc.a" [color=blue,font=6];
+"closure.c" -> "machine.h" [color=blue,font=6];
+"closure.c" -> "derives.c" [color=blue,font=6];
+"closure.c" -> "warshall.c" [color=blue,font=6];
+"closure.c" -> "gram.h" [color=blue,font=6];
+"getopt.c" -> "libc.a" [color=blue,font=6];
+"getopt.c" -> "files.c" [color=blue,font=6];
+"getopt.c" -> "getopt.h" [color=blue,font=6];
+"getopt.c" -> "/usr/include/string.h" [color=blue,font=6];
+"getopt.c" -> "/usr/include/stdio.h" [color=blue,font=6];
+"allocate.c" -> "files.c" [color=blue,font=6];
+"allocate.c" -> "main.c" [color=blue,font=6];
+"allocate.c" -> "/usr/include/stdio.h" [color=blue,font=6];
+"/usr/include/string.h" -> "/usr/include/stdio.h" [color=blue,font=6];
+"alloca.c" -> "libc.a" [color=blue,font=6];
+"alloca.c" -> "allocate.c" [color=blue,font=6];
+"getopt1.c" -> "getopt.c" [color=blue,font=6];
+"getopt1.c" -> "getopt.h" [color=blue,font=6];
+"getopt1.c" -> "/usr/include/stdio.h" [color=blue,font=6];
+"reduce.c" -> "/usr/include/stdio.h" [color=blue,font=6];
+"reduce.c" -> "main.c" [color=blue,font=6];
+"reduce.c" -> "new.h" [color=blue,font=6];
+"reduce.c" -> "files.c" [color=blue,font=6];
+"reduce.c" -> "reader.c" [color=blue,font=6];
+"reduce.c" -> "gram.h" [color=blue,font=6];
+"reduce.c" -> "libc.a" [color=blue,font=6];
+"reduce.c" -> "gram.c" [color=blue,font=6];
+"reduce.c" -> "allocate.c" [color=blue,font=6];
+"reduce.c" -> "getargs.c" [color=blue,font=6];
+"reduce.c" -> "machine.h" [color=blue,font=6];
+"output.c" -> "LR0.c" [color=blue,font=6];
+"output.c" -> "/usr/include/stdio.h" [color=blue,font=6];
+"output.c" -> "main.c" [color=blue,font=6];
+"output.c" -> "/usr/include/string.h" [color=blue,font=6];
+"output.c" -> "new.h" [color=blue,font=6];
+"output.c" -> "reader.c" [color=blue,font=6];
+"output.c" -> "files.c" [color=blue,font=6];
+"output.c" -> "gram.h" [color=blue,font=6];
+"output.c" -> "conflicts.c" [color=blue,font=6];
+"output.c" -> "libc.a" [color=blue,font=6];
+"output.c" -> "gram.c" [color=blue,font=6];
+"output.c" -> "allocate.c" [color=blue,font=6];
+"output.c" -> "state.h" [color=blue,font=6];
+"output.c" -> "getargs.c" [color=blue,font=6];
+"output.c" -> "lalr.c" [color=blue,font=6];
+"output.c" -> "machine.h" [color=blue,font=6];
+"conflicts.c" -> "LR0.c" [color=blue,font=6];
+"conflicts.c" -> "/usr/include/stdio.h" [color=blue,font=6];
+"conflicts.c" -> "/usr/include/strings.h" [color=blue,font=6];
+"conflicts.c" -> "new.h" [color=blue,font=6];
+"conflicts.c" -> "reader.c" [color=blue,font=6];
+"conflicts.c" -> "files.c" [color=blue,font=6];
+"conflicts.c" -> "gram.h" [color=blue,font=6];
+"conflicts.c" -> "libc.a" [color=blue,font=6];
+"conflicts.c" -> "gram.c" [color=blue,font=6];
+"conflicts.c" -> "allocate.c" [color=blue,font=6];
+"conflicts.c" -> "state.h" [color=blue,font=6];
+"conflicts.c" -> "lalr.c" [color=blue,font=6];
+"conflicts.c" -> "getargs.c" [color=blue,font=6];
+"conflicts.c" -> "machine.h" [color=blue,font=6];
+"derives.c" -> "new.h" [color=blue,font=6];
+"derives.c" -> "gram.c" [color=blue,font=6];
+"derives.c" -> "allocate.c" [color=blue,font=6];
+"derives.c" -> "libc.a" [color=blue,font=6];
+"derives.c" -> "types.h" [color=blue,font=6];
+"getargs.c" -> "getopt.c" [color=blue,font=6];
+"getargs.c" -> "libc.a" [color=blue,font=6];
+"getargs.c" -> "version.c" [color=blue,font=6];
+"getargs.c" -> "files.c" [color=blue,font=6];
+"getargs.c" -> "getopt.h" [color=blue,font=6];
+"getargs.c" -> "main.c" [color=blue,font=6];
+"getargs.c" -> "getopt1.c" [color=blue,font=6];
+"getargs.c" -> "/usr/include/stdio.h" [color=blue,font=6];
+"/usr/include/strings.h" -> "/usr/include/stdio.h" [color=blue,font=6];
+"files.h" -> "/usr/include/stdio.h" [color=blue,font=6];
+"lex.c" -> "/usr/include/stdio.h" [color=blue,font=6];
+"lex.c" -> "main.c" [color=blue,font=6];
+"lex.c" -> "/usr/include/string.h" [color=blue,font=6];
+"lex.c" -> "new.h" [color=blue,font=6];
+"lex.c" -> "reader.c" [color=blue,font=6];
+"lex.c" -> "files.c" [color=blue,font=6];
+"lex.c" -> "/usr/include/ctype.h" [color=blue,font=6];
+"lex.c" -> "symtab.h" [color=blue,font=6];
+"lex.c" -> "gram.c" [color=blue,font=6];
+"lex.c" -> "allocate.c" [color=blue,font=6];
+"lex.c" -> "getopt.c" [color=blue,font=6];
+"lex.c" -> "lex.h" [color=blue,font=6];
+"lex.c" -> "symtab.c" [color=blue,font=6];
+"lex.c" -> "getargs.c" [color=blue,font=6];
+"files.c" -> "new.h" [color=blue,font=6];
+"files.c" -> "files.h" [color=blue,font=6];
+"files.c" -> "allocate.c" [color=blue,font=6];
+"files.c" -> "libc.a" [color=blue,font=6];
+"files.c" -> "main.c" [color=blue,font=6];
+"files.c" -> "getargs.c" [color=blue,font=6];
+"files.c" -> "/usr/include/string.h" [color=blue,font=6];
+"files.c" -> "/usr/include/stdio.h" [color=blue,font=6];
+}

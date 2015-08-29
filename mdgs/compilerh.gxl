@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- GXL FILE GENERATED FROM MDG FILE FOLLOWS
+     MDG Source File = d:\mdgs\compilerh
+     Generation TimeStamp = Tue Aug 06 10:37:03 EDT 2002
+ -->
+
+
+<!-- GXL DTD FILE IS INCLUDED INLINE
+     Check for updates to the DTD at: http://www.gupro.de/GXL/
+ -->
+<!DOCTYPE gxl [
+<!-- Attribute values -->
+<!ENTITY % val "
+           locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup
+           ">
+<!-- gxl -->
+<!ELEMENT gxl (graph*) >
+<!ATTLIST gxl
+	xmlns:xlink CDATA #FIXED "http://www.w3.org/1999/xlink"
+>
+<!-- type -->
+<!ELEMENT type EMPTY>
+<!ATTLIST type
+	xlink:type (simple) #FIXED "simple"
+	xlink:href CDATA #REQUIRED
+>
+<!-- graph -->
+<!ELEMENT graph (type? , attr* , ( node | edge | rel )* ) >
+<!ATTLIST graph
+	id ID #REQUIRED
+	role NMTOKEN #IMPLIED
+	edgeids (true | false) "false"
+	hypergraph (true | false) "false"
+	edgemode (directed | undirected | defaultdirected | defaultundirected) "directed"
+>
+<!-- node -->
+<!ELEMENT node (type? , attr*, graph* ) >
+<!ATTLIST node
+	id ID #REQUIRED
+>
+<!-- edge -->
+<!ELEMENT edge (type?, attr*, graph* ) >
+<!ATTLIST edge
+	id ID #IMPLIED
+	from IDREF #REQUIRED
+	to IDREF #REQUIRED
+	fromorder CDATA #IMPLIED
+	toorder CDATA #IMPLIED
+	isdirected (true | false) #IMPLIED
+>
+<!-- rel -->
+<!ELEMENT rel (type? , attr*, graph*, relend* ) >
+<!ATTLIST rel
+	id ID #IMPLIED
+	isdirected (true | false) #IMPLIED
+>
+<!-- relend -->
+<!ELEMENT relend (attr*) >
+<!ATTLIST relend
+	target IDREF #REQUIRED
+	role NMTOKEN #IMPLIED
+	direction (in | out | none) #IMPLIED
+	startorder CDATA #IMPLIED
+	endorder CDATA #IMPLIED
+>
+<!-- attr -->
+<!ELEMENT attr (type?, attr*,
+          (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup))>
+<!ATTLIST attr
+	id ID #IMPLIED
+	name NMTOKEN #REQUIRED
+	kind NMTOKEN #IMPLIED
+>
+<!-- locator -->
+<!ELEMENT locator EMPTY>
+<!ATTLIST locator
+	xlink:type (simple) #FIXED "simple"
+	xlink:href CDATA #REQUIRED
+>
+<!-- atomic values -->
+<!ELEMENT bool (#PCDATA)>
+<!ELEMENT int (#PCDATA)>
+<!ELEMENT float (#PCDATA)>
+<!ELEMENT string (#PCDATA)>
+<!-- enumeration value -->
+<!ELEMENT enum (#PCDATA)>
+<!-- composite values -->
+<!ELEMENT seq (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)* >
+<!ELEMENT set (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)*>
+<!ELEMENT bag (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)*>
+<!ELEMENT tup (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)*>
+]>
+
+<!-- END OF INCLUDED INLINE DTD FOR GXL
+     Check for updates to the DTD at: http://www.gupro.de/GXL/
+
+     NOW THE XML FILE BEGINS...
+ -->
+
+
+<gxl xmlns:xlink="http://www.w3.org/1999/xlink">
+   <graph id="generatedGXL">
+      <node id="parser"/>
+      <node id="codeGenerator"/>
+      <node id="dictStack"/>
+      <node id="dictIdxStack"/>
+      <node id="scanner"/>
+      <node id="main"/>
+      <node id="typeChecker"/>
+      <node id="scopeController"/>
+      <node id="typeStack"/>
+      <node id="addrStack"/>
+      <node id="dictionary"/>
+      <node id="argCntStack"/>
+      <node id="declarations"/>
+      <edge id="idparserscopeController" from="parser" to="scopeController">
+         <attr name="edgeWeight">
+            <int>6</int>
+         </attr>
+      </edge>
+      <edge id="idparserscanner" from="parser" to="scanner">
+         <attr name="edgeWeight">
+            <int>5</int>
+         </attr>
+      </edge>
+      <edge id="idparsercodeGenerator" from="parser" to="codeGenerator">
+         <attr name="edgeWeight">
+            <int>8</int>
+         </attr>
+      </edge>
+      <edge id="idparsertypeChecker" from="parser" to="typeChecker">
+         <attr name="edgeWeight">
+            <int>7</int>
+         </attr>
+      </edge>
+      <edge id="idparserdeclarations" from="parser" to="declarations">
+         <attr name="edgeWeight">
+            <int>4</int>
+         </attr>
+      </edge>
+      <edge id="idcodeGeneratorscopeController" from="codeGenerator" to="scopeController">
+         <attr name="edgeWeight">
+            <int>12</int>
+         </attr>
+      </edge>
+      <edge id="idcodeGeneratordictIdxStack" from="codeGenerator" to="dictIdxStack">
+         <attr name="edgeWeight">
+            <int>11</int>
+         </attr>
+      </edge>
+      <edge id="idcodeGeneratoraddrStack" from="codeGenerator" to="addrStack">
+         <attr name="edgeWeight">
+            <int>13</int>
+         </attr>
+      </edge>
+      <edge id="idcodeGeneratordeclarations" from="codeGenerator" to="declarations">
+         <attr name="edgeWeight">
+            <int>9</int>
+         </attr>
+      </edge>
+      <edge id="idcodeGeneratordictionary" from="codeGenerator" to="dictionary">
+         <attr name="edgeWeight">
+            <int>10</int>
+         </attr>
+      </edge>
+      <edge id="iddictStackdeclarations" from="dictStack" to="declarations">
+         <attr name="edgeWeight">
+            <int>30</int>
+         </attr>
+      </edge>
+      <edge id="iddictIdxStackdeclarations" from="dictIdxStack" to="declarations">
+         <attr name="edgeWeight">
+            <int>27</int>
+         </attr>
+      </edge>
+      <edge id="iddictIdxStackdictStack" from="dictIdxStack" to="dictStack">
+         <attr name="edgeWeight">
+            <int>28</int>
+         </attr>
+      </edge>
+      <edge id="idscannerdeclarations" from="scanner" to="declarations">
+         <attr name="edgeWeight">
+            <int>14</int>
+         </attr>
+      </edge>
+      <edge id="idmaincodeGenerator" from="main" to="codeGenerator">
+         <attr name="edgeWeight">
+            <int>3</int>
+         </attr>
+      </edge>
+      <edge id="idmaindeclarations" from="main" to="declarations">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmainparser" from="main" to="parser">
+         <attr name="edgeWeight">
+            <int>2</int>
+         </attr>
+      </edge>
+      <edge id="idtypeCheckertypeStack" from="typeChecker" to="typeStack">
+         <attr name="edgeWeight">
+            <int>23</int>
+         </attr>
+      </edge>
+      <edge id="idtypeCheckerdictIdxStack" from="typeChecker" to="dictIdxStack">
+         <attr name="edgeWeight">
+            <int>22</int>
+         </attr>
+      </edge>
+      <edge id="idtypeCheckerargCntStack" from="typeChecker" to="argCntStack">
+         <attr name="edgeWeight">
+            <int>24</int>
+         </attr>
+      </edge>
+      <edge id="idtypeCheckerdeclarations" from="typeChecker" to="declarations">
+         <attr name="edgeWeight">
+            <int>19</int>
+         </attr>
+      </edge>
+      <edge id="idtypeCheckerdictStack" from="typeChecker" to="dictStack">
+         <attr name="edgeWeight">
+            <int>20</int>
+         </attr>
+      </edge>
+      <edge id="idtypeCheckerdictionary" from="typeChecker" to="dictionary">
+         <attr name="edgeWeight">
+            <int>21</int>
+         </attr>
+      </edge>
+      <edge id="idscopeControllerdictIdxStack" from="scopeController" to="dictIdxStack">
+         <attr name="edgeWeight">
+            <int>17</int>
+         </attr>
+      </edge>
+      <edge id="idscopeControllerdeclarations" from="scopeController" to="declarations">
+         <attr name="edgeWeight">
+            <int>15</int>
+         </attr>
+      </edge>
+      <edge id="idscopeControllerdictStack" from="scopeController" to="dictStack">
+         <attr name="edgeWeight">
+            <int>18</int>
+         </attr>
+      </edge>
+      <edge id="idscopeControllerdictionary" from="scopeController" to="dictionary">
+         <attr name="edgeWeight">
+            <int>16</int>
+         </attr>
+      </edge>
+      <edge id="idtypeStackdeclarations" from="typeStack" to="declarations">
+         <attr name="edgeWeight">
+            <int>31</int>
+         </attr>
+      </edge>
+      <edge id="idaddrStackdeclarations" from="addrStack" to="declarations">
+         <attr name="edgeWeight">
+            <int>29</int>
+         </attr>
+      </edge>
+      <edge id="iddictionarydeclarations" from="dictionary" to="declarations">
+         <attr name="edgeWeight">
+            <int>25</int>
+         </attr>
+      </edge>
+      <edge id="iddictionarydictStack" from="dictionary" to="dictStack">
+         <attr name="edgeWeight">
+            <int>26</int>
+         </attr>
+      </edge>
+      <edge id="idargCntStackdeclarations" from="argCntStack" to="declarations">
+         <attr name="edgeWeight">
+            <int>32</int>
+         </attr>
+      </edge>
+   </graph>
+</gxl>

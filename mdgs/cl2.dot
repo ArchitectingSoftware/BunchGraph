@@ -1,0 +1,97 @@
+/* ------------------------------------------------------------ */
+/* created with bunch v3 */
+/* Objective Function value = 1.0*/
+/* ------------------------------------------------------------ */
+
+digraph G {
+size="6,6";
+
+subgraph cluster99 {
+label = "(SS-L2):system";
+color = black;
+style = bold;
+
+subgraph cluster11 {
+label = "(SS-L1):main";
+color = black;
+style = bold;
+
+subgraph cluster0 {
+label = "(SS-L0):parser";
+color = black;
+style = bold;
+
+"scanner"[label="scanner",shape=ellipse];
+"parser"[label="parser",shape=ellipse];
+}
+subgraph cluster1 {
+label = "(SS-L0):codeGenerator";
+color = black;
+style = bold;
+
+"addrStack"[label="addrStack",shape=ellipse];
+"main"[label="main",shape=ellipse];
+"declarations"[label="declarations",shape=ellipse];
+"codeGenerator"[label="codeGenerator",shape=ellipse];
+}
+}
+
+subgraph cluster21 {
+label = "(SS-L1):dictionary";
+color = black;
+style = bold;
+
+subgraph cluster2 {
+label = "(SS-L0):scopeController";
+color = black;
+style = bold;
+
+"dictionary"[label="dictionary",shape=ellipse];
+"scopeController"[label="scopeController",shape=ellipse];
+"dictIdxStack"[label="dictIdxStack",shape=ellipse];
+"dictStack"[label="dictStack",shape=ellipse];
+}
+subgraph cluster3 {
+label = "(SS-L0):typeChecker";
+color = black;
+style = bold;
+
+"typeStack"[label="typeStack",shape=ellipse];
+"typeChecker"[label="typeChecker",shape=ellipse];
+"argCntStack"[label="argCntStack",shape=ellipse];
+}
+}
+}
+"parser" -> "scopeController" [color=blue,font=6];
+"parser" -> "scanner" [color=blue,font=6];
+"parser" -> "codeGenerator" [color=blue,font=6];
+"parser" -> "typeChecker" [color=blue,font=6];
+"parser" -> "declarations" [color=blue,font=6];
+"codeGenerator" -> "scopeController" [color=blue,font=6];
+"codeGenerator" -> "dictIdxStack" [color=blue,font=6];
+"codeGenerator" -> "addrStack" [color=blue,font=6];
+"codeGenerator" -> "declarations" [color=blue,font=6];
+"codeGenerator" -> "dictionary" [color=blue,font=6];
+"dictStack" -> "declarations" [color=blue,font=6];
+"dictIdxStack" -> "declarations" [color=blue,font=6];
+"dictIdxStack" -> "dictStack" [color=blue,font=6];
+"scanner" -> "declarations" [color=blue,font=6];
+"main" -> "codeGenerator" [color=blue,font=6];
+"main" -> "declarations" [color=blue,font=6];
+"main" -> "parser" [color=blue,font=6];
+"typeChecker" -> "typeStack" [color=blue,font=6];
+"typeChecker" -> "dictIdxStack" [color=blue,font=6];
+"typeChecker" -> "argCntStack" [color=blue,font=6];
+"typeChecker" -> "declarations" [color=blue,font=6];
+"typeChecker" -> "dictStack" [color=blue,font=6];
+"typeChecker" -> "dictionary" [color=blue,font=6];
+"scopeController" -> "dictIdxStack" [color=blue,font=6];
+"scopeController" -> "declarations" [color=blue,font=6];
+"scopeController" -> "dictStack" [color=blue,font=6];
+"scopeController" -> "dictionary" [color=blue,font=6];
+"typeStack" -> "declarations" [color=blue,font=6];
+"addrStack" -> "declarations" [color=blue,font=6];
+"dictionary" -> "declarations" [color=blue,font=6];
+"dictionary" -> "dictStack" [color=blue,font=6];
+"argCntStack" -> "declarations" [color=blue,font=6];
+}

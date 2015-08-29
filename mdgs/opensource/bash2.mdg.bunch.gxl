@@ -1,0 +1,5159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- GXL CLUSTER FILE GENERATED FROM BUNCH
+     Generation TimeStamp = Fri Jan 17 18:16:08 EST 2003
+ -->
+
+
+<!-- GXL DTD FILE IS INCLUDED INLINE
+     Check for updates to the DTD at: http://www.gupro.de/GXL/
+ -->
+<!DOCTYPE gxl [
+<!-- Attribute values -->
+<!ENTITY % val "
+           locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup
+           ">
+<!-- gxl -->
+<!ELEMENT gxl (graph*) >
+<!ATTLIST gxl
+	xmlns:xlink CDATA #FIXED "http://www.w3.org/1999/xlink"
+>
+<!-- type -->
+<!ELEMENT type EMPTY>
+<!ATTLIST type
+	xlink:type (simple) #FIXED "simple"
+	xlink:href CDATA #REQUIRED
+>
+<!-- graph -->
+<!ELEMENT graph (type? , attr* , ( node | edge | rel )* ) >
+<!ATTLIST graph
+	id ID #REQUIRED
+	role NMTOKEN #IMPLIED
+	edgeids (true | false) "false"
+	hypergraph (true | false) "false"
+	edgemode (directed | undirected | defaultdirected | defaultundirected) "directed"
+>
+<!-- node -->
+<!ELEMENT node (type? , attr*, graph* ) >
+<!ATTLIST node
+	id ID #REQUIRED
+>
+<!-- edge -->
+<!ELEMENT edge (type?, attr*, graph* ) >
+<!ATTLIST edge
+	id ID #IMPLIED
+	from IDREF #REQUIRED
+	to IDREF #REQUIRED
+	fromorder CDATA #IMPLIED
+	toorder CDATA #IMPLIED
+	isdirected (true | false) #IMPLIED
+>
+<!-- rel -->
+<!ELEMENT rel (type? , attr*, graph*, relend* ) >
+<!ATTLIST rel
+	id ID #IMPLIED
+	isdirected (true | false) #IMPLIED
+>
+<!-- relend -->
+<!ELEMENT relend (attr*) >
+<!ATTLIST relend
+	target IDREF #REQUIRED
+	role NMTOKEN #IMPLIED
+	direction (in | out | none) #IMPLIED
+	startorder CDATA #IMPLIED
+	endorder CDATA #IMPLIED
+>
+<!-- attr -->
+<!ELEMENT attr (type?, attr*,
+          (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup))>
+<!ATTLIST attr
+	id ID #IMPLIED
+	name NMTOKEN #REQUIRED
+	kind NMTOKEN #IMPLIED
+>
+<!-- locator -->
+<!ELEMENT locator EMPTY>
+<!ATTLIST locator
+	xlink:type (simple) #FIXED "simple"
+	xlink:href CDATA #REQUIRED
+>
+<!-- atomic values -->
+<!ELEMENT bool (#PCDATA)>
+<!ELEMENT int (#PCDATA)>
+<!ELEMENT float (#PCDATA)>
+<!ELEMENT string (#PCDATA)>
+<!-- enumeration value -->
+<!ELEMENT enum (#PCDATA)>
+<!-- composite values -->
+<!ELEMENT seq (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)* >
+<!ELEMENT set (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)*>
+<!ELEMENT bag (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)*>
+<!ELEMENT tup (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)*>
+]>
+
+<!-- END OF INCLUDED INLINE DTD FOR GXL
+     Check for updates to the DTD at: http://www.gupro.de/GXL/
+
+     NOW THE XML FILE BEGINS...
+ -->
+
+
+<gxl xmlns:xlink="http://www.w3.org/1999/xlink">
+   <graph id="generatedGXL">
+      <node id="N-SS-L2-subst">
+         <attr name="cluster">
+            <string>BunchCluster</string>
+         </attr>
+         <graph id="SS-SS-L2-subst">
+            <node id="signames">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="newversion">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="endian">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="braces">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="stdlib">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="type">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="alias">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="bashline">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="eval">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="externs">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="subst">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="fnmatch">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="hashcom">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="hash">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="flags">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="set">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="keymaps">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="bind">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="readline">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="bracecomp">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+         </graph>
+      </node>
+      <node id="N-SS-L2-shell">
+         <attr name="cluster">
+            <string>BunchCluster</string>
+         </attr>
+         <graph id="SS-SS-L2-shell">
+            <node id="umask">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="test">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="stat">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="dirent">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="getcwd">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="pwd">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="shell">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="socket">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="fc">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="quit">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="bashhist">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="history">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="exit">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="parse">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="let">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="expr">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="setjmp">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="return">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="break">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="builtin">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="getopt">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="getopts">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+         </graph>
+      </node>
+      <node id="N-SS-L2-unwind_prot">
+         <attr name="cluster">
+            <string>BunchCluster</string>
+         </attr>
+         <graph id="SS-SS-L2-unwind_prot">
+            <node id="errno">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="source">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="kill">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="trap">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="unistd">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="psize">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="fcntl">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="nojobs">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="print_cmd">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="declare">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="read">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="wait">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="unwind_prot">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+         </graph>
+      </node>
+      <node id="N-SS-L2-jobs">
+         <attr name="cluster">
+            <string>BunchCluster</string>
+         </attr>
+         <graph id="SS-SS-L2-jobs">
+            <node id="make_cmd">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="exec">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="tilde">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="cd">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="dispose_cmd">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="shift">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="bashgetopt">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="setattr">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="jobs">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="fg_bg">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="termios">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="suspend">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="bison">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="command">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="copy_cmd">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+         </graph>
+      </node>
+      <node id="N-SS-L2-common">
+         <attr name="cluster">
+            <string>BunchCluster</string>
+         </attr>
+         <graph id="SS-SS-L2-common">
+            <node id="enable">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="builtins">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="help">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="libio">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="siglist">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="signal">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="echo">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="stdio">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="times">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="resource">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="ulimit">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="general">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="error">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="mkbuiltins">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="ctype">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="mailcheck">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="time">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="string">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="common">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="input">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="variables">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="execute_cmd">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+         </graph>
+      </node>
+      <edge id="idendianstring" from="endian" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idendiansignames" from="endian" to="signames">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idendianstdio" from="endian" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstatsource" from="stat" to="source">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstatmkbuiltins" from="stat" to="mkbuiltins">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstatbashline" from="stat" to="bashline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstatgetcwd" from="stat" to="getcwd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstatexecute_cmd" from="stat" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstatshell" from="stat" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstathistory" from="stat" to="history">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstattest" from="stat" to="test">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstatinput" from="stat" to="input">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstatmailcheck" from="stat" to="mailcheck">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstatnewversion" from="stat" to="newversion">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idstatbashhist" from="stat" to="bashhist">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnojobsfcntl" from="nojobs" to="fcntl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnojobsprint_cmd" from="nojobs" to="print_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnojobsgeneral" from="nojobs" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnojobsunistd" from="nojobs" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnojobsjobs" from="nojobs" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnojobswait" from="nojobs" to="wait">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnojobsexecute_cmd" from="nojobs" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnojobsstring" from="nojobs" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnojobskill" from="nojobs" to="kill">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnojobssignal" from="nojobs" to="signal">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnojobssubst" from="nojobs" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddeclaregeneral" from="declare" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddeclarestring" from="declare" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddeclareprint_cmd" from="declare" to="print_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddeclarecommon" from="declare" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddeclaresubst" from="declare" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddeclarestdlib" from="declare" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddeclarestdio" from="declare" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddeclarevariables" from="declare" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreturnsetjmp" from="return" to="setjmp">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreturncommon" from="return" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbreakexecute_cmd" from="break" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbreakcommon" from="break" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbreakbuiltin" from="break" to="builtin">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubsteval" from="subst" to="eval">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstbashline" from="subst" to="bashline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstreadline" from="subst" to="readline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstdeclare" from="subst" to="declare">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstbind" from="subst" to="bind">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubststdio" from="subst" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstshell" from="subst" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstdispose_cmd" from="subst" to="dispose_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstunistd" from="subst" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubsttilde" from="subst" to="tilde">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstgetopts" from="subst" to="getopts">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstfnmatch" from="subst" to="fnmatch">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstexecute_cmd" from="subst" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubststring" from="subst" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubsthistory" from="subst" to="history">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstcommand" from="subst" to="command">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstmake_cmd" from="subst" to="make_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstsetjmp" from="subst" to="setjmp">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstvariables" from="subst" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstsignal" from="subst" to="signal">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstflags" from="subst" to="flags">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstparse" from="subst" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstkill" from="subst" to="kill">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstread" from="subst" to="read">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstcommon" from="subst" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstjobs" from="subst" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstmailcheck" from="subst" to="mailcheck">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstset" from="subst" to="set">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstbreak" from="subst" to="break">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstgetopt" from="subst" to="getopt">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubsterror" from="subst" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstbraces" from="subst" to="braces">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubsttrap" from="subst" to="trap">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstexterns" from="subst" to="externs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstbashhist" from="subst" to="bashhist">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstcopy_cmd" from="subst" to="copy_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstgeneral" from="subst" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstalias" from="subst" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstexpr" from="subst" to="expr">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubsthash" from="subst" to="hash">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubststdlib" from="subst" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubsterrno" from="subst" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsubstsetattr" from="subst" to="setattr">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfg_bgjobs" from="fg_bg" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfg_bgcommon" from="fg_bg" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfg_bgsignal" from="fg_bg" to="signal">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbracecompreadline" from="bracecomp" to="readline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbracecompgeneral" from="bracecomp" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbracecompstring" from="bracecomp" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbracecompstdlib" from="bracecomp" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idechostring" from="echo" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idechostdio" from="echo" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbisonstdio" from="bison" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbisongeneral" from="bison" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbisoncommand" from="bison" to="command">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbisonparse" from="bison" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbisonalias" from="bison" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbisonshell" from="bison" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbisonkill" from="bison" to="kill">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbisoncopy_cmd" from="bison" to="copy_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbisonmake_cmd" from="bison" to="make_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbisonstdlib" from="bison" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsignalgeneral" from="signal" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsignalsiglist" from="signal" to="siglist">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexprstdio" from="expr" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexprgeneral" from="expr" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexprbreak" from="expr" to="break">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexprlet" from="expr" to="let">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexprsetjmp" from="expr" to="setjmp">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexprstring" from="expr" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexprshell" from="expr" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexprerror" from="expr" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexprsubst" from="expr" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexprstdlib" from="expr" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexprvariables" from="expr" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetcwdstring" from="getcwd" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetcwderrno" from="getcwd" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetcwdstat" from="getcwd" to="stat">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetcwdstdlib" from="getcwd" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetcwddirent" from="getcwd" to="dirent">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtrapread" from="trap" to="read">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtrapstdio" from="trap" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtrapgeneral" from="trap" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtrapquit" from="trap" to="quit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtrapsetjmp" from="trap" to="setjmp">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtrapalias" from="trap" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtrapstring" from="trap" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtrapshell" from="trap" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtrapcommon" from="trap" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtrapkill" from="trap" to="kill">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtrapsignames" from="trap" to="signames">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtraperror" from="trap" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtrapsignal" from="trap" to="signal">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtrapstdlib" from="trap" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashgetoptjobs" from="bashgetopt" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashgetoptstring" from="bashgetopt" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashgetoptcommon" from="bashgetopt" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashgetoptsetattr" from="bashgetopt" to="setattr">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashgetoptcommand" from="bashgetopt" to="command">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashgetoptbind" from="bashgetopt" to="bind">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashgetoptset" from="bashgetopt" to="set">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbracesgeneral" from="braces" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbracesstring" from="braces" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbracessubst" from="braces" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbracesstdlib" from="braces" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexitstdio" from="exit" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexitbreak" from="exit" to="break">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexitparse" from="exit" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexitjobs" from="exit" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexitalias" from="exit" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexitexecute_cmd" from="exit" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexitsetjmp" from="exit" to="setjmp">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexitshell" from="exit" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexitcommon" from="exit" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idflagsjobs" from="flags" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idflagsunistd" from="flags" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idflagsgeneral" from="flags" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idflagsexecute_cmd" from="flags" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idflagsshell" from="flags" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idflagssubst" from="flags" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idflagsvariables" from="flags" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idflagsset" from="flags" to="set">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcopy_cmdgeneral" from="copy_cmd" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcopy_cmdexec" from="copy_cmd" to="exec">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcopy_cmdcommand" from="copy_cmd" to="command">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcopy_cmdjobs" from="copy_cmd" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcopy_cmdexecute_cmd" from="copy_cmd" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcopy_cmdstring" from="copy_cmd" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcopy_cmdcommon" from="copy_cmd" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcopy_cmdbison" from="copy_cmd" to="bison">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcopy_cmdsubst" from="copy_cmd" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcopy_cmdvariables" from="copy_cmd" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdeval" from="execute_cmd" to="eval">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdbashline" from="execute_cmd" to="bashline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdinput" from="execute_cmd" to="input">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdunwind_prot" from="execute_cmd" to="unwind_prot">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdexit" from="execute_cmd" to="exit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdstdio" from="execute_cmd" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdshell" from="execute_cmd" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmddispose_cmd" from="execute_cmd" to="dispose_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdtilde" from="execute_cmd" to="tilde">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdunistd" from="execute_cmd" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdtest" from="execute_cmd" to="test">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdfnmatch" from="execute_cmd" to="fnmatch">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdstring" from="execute_cmd" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdcommand" from="execute_cmd" to="command">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdmake_cmd" from="execute_cmd" to="make_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdsetjmp" from="execute_cmd" to="setjmp">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdvariables" from="execute_cmd" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdquit" from="execute_cmd" to="quit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdsignal" from="execute_cmd" to="signal">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdflags" from="execute_cmd" to="flags">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdkill" from="execute_cmd" to="kill">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdread" from="execute_cmd" to="read">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdsource" from="execute_cmd" to="source">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdcommon" from="execute_cmd" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdsubst" from="execute_cmd" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdjobs" from="execute_cmd" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdmailcheck" from="execute_cmd" to="mailcheck">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdbreak" from="execute_cmd" to="break">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmderror" from="execute_cmd" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdexec" from="execute_cmd" to="exec">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdtrap" from="execute_cmd" to="trap">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdresource" from="execute_cmd" to="resource">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdcopy_cmd" from="execute_cmd" to="copy_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdgeneral" from="execute_cmd" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdlibio" from="execute_cmd" to="libio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdalias" from="execute_cmd" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdulimit" from="execute_cmd" to="ulimit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdhash" from="execute_cmd" to="hash">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdstdlib" from="execute_cmd" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdprint_cmd" from="execute_cmd" to="print_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdnojobs" from="execute_cmd" to="nojobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmderrno" from="execute_cmd" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdstat" from="execute_cmd" to="stat">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdreturn" from="execute_cmd" to="return">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdctype" from="execute_cmd" to="ctype">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdfcntl" from="execute_cmd" to="fcntl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecute_cmdtype" from="execute_cmd" to="type">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idpsizeunistd" from="psize" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idpsizestdlib" from="psize" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idpsizestdio" from="psize" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmake_cmdgeneral" from="make_cmd" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmake_cmdcd" from="make_cmd" to="cd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmake_cmdexec" from="make_cmd" to="exec">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmake_cmdparse" from="make_cmd" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmake_cmdexecute_cmd" from="make_cmd" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmake_cmdstring" from="make_cmd" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmake_cmdshell" from="make_cmd" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmake_cmderror" from="make_cmd" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmake_cmdcopy_cmd" from="make_cmd" to="copy_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmake_cmdbison" from="make_cmd" to="bison">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmake_cmdsubst" from="make_cmd" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmake_cmdstdlib" from="make_cmd" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmake_cmdvariables" from="make_cmd" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsignamesendian" from="signames" to="endian">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsignamesstdlib" from="signames" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsignamesstdio" from="signames" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsignamesnewversion" from="signames" to="newversion">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommoneval" from="common" to="eval">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonbashline" from="common" to="bashline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommoninput" from="common" to="input">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonunwind_prot" from="common" to="unwind_prot">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonexit" from="common" to="exit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonwait" from="common" to="wait">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonstdio" from="common" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonshell" from="common" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommondispose_cmd" from="common" to="dispose_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonenable" from="common" to="enable">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonexecute_cmd" from="common" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonstring" from="common" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonhistory" from="common" to="history">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommoncommand" from="common" to="command">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonfg_bg" from="common" to="fg_bg">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonsetjmp" from="common" to="setjmp">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonvariables" from="common" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonquit" from="common" to="quit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonflags" from="common" to="flags">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonparse" from="common" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonbuiltin" from="common" to="builtin">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonkill" from="common" to="kill">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonread" from="common" to="read">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonsource" from="common" to="source">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonsubst" from="common" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonbashgetopt" from="common" to="bashgetopt">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonjobs" from="common" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonset" from="common" to="set">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonbreak" from="common" to="break">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonerror" from="common" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonsuspend" from="common" to="suspend">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonshift" from="common" to="shift">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommontrap" from="common" to="trap">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonbashhist" from="common" to="bashhist">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommoncopy_cmd" from="common" to="copy_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommoncd" from="common" to="cd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonfc" from="common" to="fc">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonhashcom" from="common" to="hashcom">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommongeneral" from="common" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonalias" from="common" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonulimit" from="common" to="ulimit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonumask" from="common" to="umask">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonhash" from="common" to="hash">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonprint_cmd" from="common" to="print_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonstdlib" from="common" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonreturn" from="common" to="return">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonbuiltins" from="common" to="builtins">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommonsetattr" from="common" to="setattr">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommontype" from="common" to="type">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint_cmdunwind_prot" from="print_cmd" to="unwind_prot">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint_cmdstdio" from="print_cmd" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint_cmdgeneral" from="print_cmd" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint_cmddeclare" from="print_cmd" to="declare">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint_cmdexecute_cmd" from="print_cmd" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint_cmdstring" from="print_cmd" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint_cmdcommon" from="print_cmd" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint_cmdtype" from="print_cmd" to="type">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint_cmderror" from="print_cmd" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint_cmdstdlib" from="print_cmd" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint_cmdvariables" from="print_cmd" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsuspendjobs" from="suspend" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsuspendgeneral" from="suspend" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsuspendstring" from="suspend" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsuspendshell" from="suspend" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsuspendcommon" from="suspend" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsuspendsignal" from="suspend" to="signal">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetstdio" from="set" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetgeneral" from="set" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetflags" from="set" to="flags">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetreadline" from="set" to="readline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetparse" from="set" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetalias" from="set" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetstring" from="set" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetshell" from="set" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetcommon" from="set" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetbind" from="set" to="bind">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetkill" from="set" to="kill">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetsubst" from="set" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetstdlib" from="set" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetbashgetopt" from="set" to="bashgetopt">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetvariables" from="set" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnewversionstring" from="newversion" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnewversionstdlib" from="newversion" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnewversionstdio" from="newversion" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnewversionsignames" from="newversion" to="signames">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcdstdio" from="cd" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcderrno" from="cd" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcdgeneral" from="cd" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcdflags" from="cd" to="flags">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcdunistd" from="cd" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcdstring" from="cd" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcdcommon" from="cd" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcdmake_cmd" from="cd" to="make_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcderror" from="cd" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcdstdlib" from="cd" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcdtilde" from="cd" to="tilde">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcddispose_cmd" from="cd" to="dispose_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcdvariables" from="cd" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idkillstdio" from="kill" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idkillerrno" from="kill" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idkillgeneral" from="kill" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idkilljobs" from="kill" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idkillalias" from="kill" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idkillstring" from="kill" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idkillcommon" from="kill" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idkillsignal" from="kill" to="signal">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idkillsubst" from="kill" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idkillstdlib" from="kill" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idkillset" from="kill" to="set">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idkilltrap" from="kill" to="trap">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idkillvariables" from="kill" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddispose_cmdshift" from="dispose_cmd" to="shift">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddispose_cmdcd" from="dispose_cmd" to="cd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddispose_cmdexec" from="dispose_cmd" to="exec">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddispose_cmdparse" from="dispose_cmd" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddispose_cmdbashline" from="dispose_cmd" to="bashline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddispose_cmdjobs" from="dispose_cmd" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddispose_cmdexecute_cmd" from="dispose_cmd" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddispose_cmdshell" from="dispose_cmd" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddispose_cmdcommon" from="dispose_cmd" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddispose_cmderror" from="dispose_cmd" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddispose_cmdsubst" from="dispose_cmd" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddispose_cmdstdlib" from="dispose_cmd" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddispose_cmdmailcheck" from="dispose_cmd" to="mailcheck">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iddispose_cmdvariables" from="dispose_cmd" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idenablestring" from="enable" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idenablecommon" from="enable" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idenablestdio" from="enable" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idenablebuiltins" from="enable" to="builtins">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idwaitjobs" from="wait" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idwaitgeneral" from="wait" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idwaitunwind_prot" from="wait" to="unwind_prot">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idwaitcommon" from="wait" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idwaitstdlib" from="wait" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idwaitsignal" from="wait" to="signal">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idwaitread" from="wait" to="read">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhelpquit" from="help" to="quit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhelpstring" from="help" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhelpshell" from="help" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhelplibio" from="help" to="libio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhelpstdio" from="help" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhelpbuiltins" from="help" to="builtins">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralbashline" from="general" to="bashline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralinput" from="general" to="input">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneraldeclare" from="general" to="declare">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralbind" from="general" to="bind">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralstdio" from="general" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralwait" from="general" to="wait">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralshell" from="general" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralunistd" from="general" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneraltilde" from="general" to="tilde">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneraltest" from="general" to="test">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralmkbuiltins" from="general" to="mkbuiltins">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralexecute_cmd" from="general" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralstring" from="general" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralmake_cmd" from="general" to="make_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralvariables" from="general" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralsignal" from="general" to="signal">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralparse" from="general" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralkill" from="general" to="kill">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralread" from="general" to="read">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralbracecomp" from="general" to="bracecomp">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralcommon" from="general" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralsubst" from="general" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneraljobs" from="general" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralmailcheck" from="general" to="mailcheck">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralset" from="general" to="set">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralerror" from="general" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralsuspend" from="general" to="suspend">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralshift" from="general" to="shift">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralbraces" from="general" to="braces">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralexec" from="general" to="exec">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralbison" from="general" to="bison">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneraltrap" from="general" to="trap">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralbashhist" from="general" to="bashhist">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralcopy_cmd" from="general" to="copy_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralcd" from="general" to="cd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralfc" from="general" to="fc">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralalias" from="general" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralexpr" from="general" to="expr">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralulimit" from="general" to="ulimit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralhash" from="general" to="hash">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralstdlib" from="general" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralprint_cmd" from="general" to="print_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralnojobs" from="general" to="nojobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralerrno" from="general" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralctype" from="general" to="ctype">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralreturn" from="general" to="return">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralsetattr" from="general" to="setattr">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneralfcntl" from="general" to="fcntl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgeneraltype" from="general" to="type">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtimesstdio" from="times" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhashstdio" from="hash" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhashgeneral" from="hash" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhashflags" from="hash" to="flags">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhashhashcom" from="hash" to="hashcom">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhashalias" from="hash" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhashexecute_cmd" from="hash" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhashstring" from="hash" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhashcommon" from="hash" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhashsubst" from="hash" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhashstdlib" from="hash" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhashvariables" from="hash" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbuiltinbreak" from="builtin" to="break">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbuiltincommon" from="builtin" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommandunwind_prot" from="command" to="unwind_prot">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommandgeneral" from="command" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommandunistd" from="command" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommandstring" from="command" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommandcommon" from="command" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommandcopy_cmd" from="command" to="copy_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommandmake_cmd" from="command" to="make_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommandbison" from="command" to="bison">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommandbashgetopt" from="command" to="bashgetopt">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommandstdlib" from="command" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommanddispose_cmd" from="command" to="dispose_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idcommandvariables" from="command" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetoptsgeneral" from="getopts" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetoptsshell" from="getopts" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetoptssubst" from="getopts" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetoptscommon" from="getopts" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetoptsbreak" from="getopts" to="break">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetoptsstdlib" from="getopts" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetoptsgetopt" from="getopts" to="getopt">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetoptsvariables" from="getopts" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtypestdio" from="type" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtypeprint_cmd" from="type" to="print_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtypegeneral" from="type" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtypeparse" from="type" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtypealias" from="type" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtypeexecute_cmd" from="type" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtypestring" from="type" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtypecommon" from="type" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtypestdlib" from="type" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtypevariables" from="type" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idumaskstring" from="umask" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idumaskstat" from="umask" to="stat">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idumaskcommon" from="umask" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idumaskstdio" from="umask" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreadunwind_prot" from="read" to="unwind_prot">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreadstdio" from="read" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreadgeneral" from="read" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreadlibio" from="read" to="libio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreadunistd" from="read" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreadstring" from="read" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreadcommon" from="read" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreadsubst" from="read" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreadstdlib" from="read" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreadvariables" from="read" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhistorystdio" from="history" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhistoryfcntl" from="history" to="fcntl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhistoryunistd" from="history" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhistoryquit" from="history" to="quit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhistorystat" from="history" to="stat">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhistorystring" from="history" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhistoryshell" from="history" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhistorycommon" from="history" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhistorysubst" from="history" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhistoryvariables" from="history" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhistorybashhist" from="history" to="bashhist">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesstring" from="variables" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablescopy_cmd" from="variables" to="copy_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariableshash" from="variables" to="hash">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesexpr" from="variables" to="expr">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablescommand" from="variables" to="command">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablestype" from="variables" to="type">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesmailcheck" from="variables" to="mailcheck">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesbashhist" from="variables" to="bashhist">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesgetopt" from="variables" to="getopt">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablessubst" from="variables" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesflags" from="variables" to="flags">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablestime" from="variables" to="time">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesgeneral" from="variables" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesbashline" from="variables" to="bashline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariableskill" from="variables" to="kill">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesset" from="variables" to="set">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablescommon" from="variables" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablescd" from="variables" to="cd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesparse" from="variables" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesdispose_cmd" from="variables" to="dispose_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesexit" from="variables" to="exit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablessetattr" from="variables" to="setattr">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariableserror" from="variables" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesread" from="variables" to="read">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesshift" from="variables" to="shift">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesshell" from="variables" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesgetopts" from="variables" to="getopts">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablestilde" from="variables" to="tilde">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesunistd" from="variables" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesdeclare" from="variables" to="declare">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesstdio" from="variables" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesprint_cmd" from="variables" to="print_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesstdlib" from="variables" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idvariablesexecute_cmd" from="variables" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idulimitgeneral" from="ulimit" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idulimitstring" from="ulimit" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idulimitexecute_cmd" from="ulimit" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idulimitshell" from="ulimit" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idulimiterrno" from="ulimit" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idulimitcommon" from="ulimit" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idulimitresource" from="ulimit" to="resource">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idulimitstdio" from="ulimit" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshiftgeneral" from="shift" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshiftdispose_cmd" from="shift" to="dispose_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshiftstring" from="shift" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshiftshell" from="shift" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshiftcommon" from="shift" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshiftsubst" from="shift" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshiftstdlib" from="shift" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshiftvariables" from="shift" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idteststdio" from="test" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtestgeneral" from="test" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtesterrno" from="test" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtestunistd" from="test" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtestbreak" from="test" to="break">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idteststat" from="test" to="stat">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtestexecute_cmd" from="test" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtestsetjmp" from="test" to="setjmp">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idteststring" from="test" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtestshell" from="test" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtestcommon" from="test" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idletcommon" from="let" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idletexpr" from="let" to="expr">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idevalcommon" from="eval" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idevalsubst" from="eval" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreadlinebashline" from="readline" to="bashline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreadlinebracecomp" from="readline" to="bracecomp">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreadlinestdio" from="readline" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreadlinevariables" from="readline" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreadlinebind" from="readline" to="bind">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsestring" from="parse" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsecopy_cmd" from="parse" to="copy_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsejobs" from="parse" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsebison" from="parse" to="bison">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsetype" from="parse" to="type">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsebashhist" from="parse" to="bashhist">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsemailcheck" from="parse" to="mailcheck">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsesubst" from="parse" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparseflags" from="parse" to="flags">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsetime" from="parse" to="time">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsevariables" from="parse" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsereadline" from="parse" to="readline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsegeneral" from="parse" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsemake_cmd" from="parse" to="make_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsekill" from="parse" to="kill">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparseinput" from="parse" to="input">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsecommon" from="parse" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsealias" from="parse" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsedispose_cmd" from="parse" to="dispose_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparseexit" from="parse" to="exit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparseerror" from="parse" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparseread" from="parse" to="read">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparseshell" from="parse" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsequit" from="parse" to="quit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparseunistd" from="parse" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsestdio" from="parse" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsetrap" from="parse" to="trap">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsestdlib" from="parse" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idparsebind" from="parse" to="bind">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idtildegeneral" from="tilde" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsiglistgeneral" from="siglist" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsiglistsignal" from="siglist" to="signal">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsigliststdio" from="siglist" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iderrormkbuiltins" from="error" to="mkbuiltins">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iderrorstdio" from="error" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iderrorerrno" from="error" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iderrorgeneral" from="error" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iderrorflags" from="error" to="flags">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iderrorunistd" from="error" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iderrorparse" from="error" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iderrorstring" from="error" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iderrorshell" from="error" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iderrorcommon" from="error" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iderrorstdlib" from="error" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iderrorvariables" from="error" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="iderrorbashhist" from="error" to="bashhist">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmailcheckstdio" from="mailcheck" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmailcheckgeneral" from="mailcheck" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmailchecktime" from="mailcheck" to="time">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmailcheckstat" from="mailcheck" to="stat">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmailcheckexecute_cmd" from="mailcheck" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmailcheckstring" from="mailcheck" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmailcheckshell" from="mailcheck" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmailchecksubst" from="mailcheck" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmailcheckstdlib" from="mailcheck" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmailcheckdispose_cmd" from="mailcheck" to="dispose_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmailcheckvariables" from="mailcheck" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsstring" from="jobs" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsbreak" from="jobs" to="break">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobscopy_cmd" from="jobs" to="copy_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsnojobs" from="jobs" to="nojobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobscommand" from="jobs" to="command">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobssubst" from="jobs" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsflags" from="jobs" to="flags">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsvariables" from="jobs" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsunwind_prot" from="jobs" to="unwind_prot">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsgeneral" from="jobs" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobserrno" from="jobs" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsmake_cmd" from="jobs" to="make_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsinput" from="jobs" to="input">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobskill" from="jobs" to="kill">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobscommon" from="jobs" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsalias" from="jobs" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsdispose_cmd" from="jobs" to="dispose_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobswait" from="jobs" to="wait">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsbashgetopt" from="jobs" to="bashgetopt">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsexit" from="jobs" to="exit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsfcntl" from="jobs" to="fcntl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobserror" from="jobs" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsread" from="jobs" to="read">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobssuspend" from="jobs" to="suspend">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsshell" from="jobs" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobssignal" from="jobs" to="signal">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsquit" from="jobs" to="quit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobstermios" from="jobs" to="termios">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsunistd" from="jobs" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsstdio" from="jobs" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobstrap" from="jobs" to="trap">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsstdlib" from="jobs" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsexecute_cmd" from="jobs" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idjobsfg_bg" from="jobs" to="fg_bg">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellsocket" from="shell" to="socket">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellinput" from="shell" to="input">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellunwind_prot" from="shell" to="unwind_prot">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellnewversion" from="shell" to="newversion">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellendian" from="shell" to="endian">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellbind" from="shell" to="bind">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellstdio" from="shell" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshelldispose_cmd" from="shell" to="dispose_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellpwd" from="shell" to="pwd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellunistd" from="shell" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshelltilde" from="shell" to="tilde">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellmkbuiltins" from="shell" to="mkbuiltins">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellexecute_cmd" from="shell" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellstring" from="shell" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellcommand" from="shell" to="command">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellmake_cmd" from="shell" to="make_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellsetjmp" from="shell" to="setjmp">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellvariables" from="shell" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellquit" from="shell" to="quit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellsignames" from="shell" to="signames">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellflags" from="shell" to="flags">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellsignal" from="shell" to="signal">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellparse" from="shell" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellkill" from="shell" to="kill">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellread" from="shell" to="read">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellcommon" from="shell" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellsubst" from="shell" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshelljobs" from="shell" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellmailcheck" from="shell" to="mailcheck">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellbreak" from="shell" to="break">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellset" from="shell" to="set">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellpsize" from="shell" to="psize">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellerror" from="shell" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshelltrap" from="shell" to="trap">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellbashhist" from="shell" to="bashhist">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellcopy_cmd" from="shell" to="copy_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellfc" from="shell" to="fc">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellgeneral" from="shell" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellalias" from="shell" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshelltime" from="shell" to="time">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellhash" from="shell" to="hash">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellstdlib" from="shell" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellnojobs" from="shell" to="nojobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellerrno" from="shell" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellstat" from="shell" to="stat">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellreturn" from="shell" to="return">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idshellfcntl" from="shell" to="fcntl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetoptgetopts" from="getopt" to="getopts">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetoptstring" from="getopt" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetoptsubst" from="getopt" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetoptstdio" from="getopt" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetoptvariables" from="getopt" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinestring" from="bashline" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinebracecomp" from="bashline" to="bracecomp">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinetype" from="bashline" to="type">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinebashhist" from="bashline" to="bashhist">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinebuiltins" from="bashline" to="builtins">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinesubst" from="bashline" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlineflags" from="bashline" to="flags">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinevariables" from="bashline" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinereadline" from="bashline" to="readline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinegeneral" from="bashline" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinekill" from="bashline" to="kill">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinehistory" from="bashline" to="history">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinecommon" from="bashline" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinealias" from="bashline" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlineparse" from="bashline" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinedispose_cmd" from="bashline" to="dispose_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinekeymaps" from="bashline" to="keymaps">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlineshell" from="bashline" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinetilde" from="bashline" to="tilde">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinestat" from="bashline" to="stat">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinelibio" from="bashline" to="libio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinestdio" from="bashline" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinestdlib" from="bashline" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlinebind" from="bashline" to="bind">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashlineexecute_cmd" from="bashline" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhiststdio" from="bashhist" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhistfcntl" from="bashhist" to="fcntl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhistgeneral" from="bashhist" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhistunistd" from="bashhist" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhistfc" from="bashhist" to="fc">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhistflags" from="bashhist" to="flags">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhistbashline" from="bashhist" to="bashline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhistreadline" from="bashhist" to="readline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhistparse" from="bashhist" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhiststat" from="bashhist" to="stat">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhiststring" from="bashhist" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhistshell" from="bashhist" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhisthistory" from="bashhist" to="history">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhisterror" from="bashhist" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhistsubst" from="bashhist" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhiststdlib" from="bashhist" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbashhistvariables" from="bashhist" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetattrstdio" from="setattr" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetattrgeneral" from="setattr" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetattrbreak" from="setattr" to="break">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetattrdeclare" from="setattr" to="declare">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetattrstring" from="setattr" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetattrcommon" from="setattr" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetattrsubst" from="setattr" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetattrbashgetopt" from="setattr" to="bashgetopt">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetattrstdlib" from="setattr" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsetattrvariables" from="setattr" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbindstdio" from="bind" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbinderrno" from="bind" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbindkeymaps" from="bind" to="keymaps">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbindgeneral" from="bind" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbindreadline" from="bind" to="readline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbindstring" from="bind" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbindshell" from="bind" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbindcommon" from="bind" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idbindbashgetopt" from="bind" to="bashgetopt">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idaliasstdio" from="alias" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idaliasgeneral" from="alias" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idaliasbashline" from="alias" to="bashline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idaliashash" from="alias" to="hash">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idaliasexecute_cmd" from="alias" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idaliasstring" from="alias" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idaliasshell" from="alias" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idaliascommon" from="alias" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idaliastype" from="alias" to="type">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idaliasstdlib" from="alias" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idhashcomhash" from="hashcom" to="hash">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourceunwind_prot" from="source" to="unwind_prot">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourcefcntl" from="source" to="fcntl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourceerrno" from="source" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourcegeneral" from="source" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourceunistd" from="source" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourcestat" from="source" to="stat">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourcealias" from="source" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourceexecute_cmd" from="source" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourcesetjmp" from="source" to="setjmp">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourcestring" from="source" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourceshell" from="source" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourcecommon" from="source" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourcekill" from="source" to="kill">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourceerror" from="source" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourcestdlib" from="source" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsourcereturn" from="source" to="return">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfcunwind_prot" from="fc" to="unwind_prot">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfcstdio" from="fc" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfclibio" from="fc" to="libio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfcgeneral" from="fc" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfcunistd" from="fc" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfcflags" from="fc" to="flags">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfcquit" from="fc" to="quit">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfcstring" from="fc" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfcshell" from="fc" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfchistory" from="fc" to="history">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfccommon" from="fc" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfcstdlib" from="fc" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfcbashhist" from="fc" to="bashhist">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsbashline" from="mkbuiltins" to="bashline">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsinput" from="mkbuiltins" to="input">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsunwind_prot" from="mkbuiltins" to="unwind_prot">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsdeclare" from="mkbuiltins" to="declare">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsstdio" from="mkbuiltins" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsshell" from="mkbuiltins" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsunistd" from="mkbuiltins" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsgetopts" from="mkbuiltins" to="getopts">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinstest" from="mkbuiltins" to="test">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsexecute_cmd" from="mkbuiltins" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsstring" from="mkbuiltins" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinscommand" from="mkbuiltins" to="command">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsmake_cmd" from="mkbuiltins" to="make_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsvariables" from="mkbuiltins" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsparse" from="mkbuiltins" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsread" from="mkbuiltins" to="read">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsbracecomp" from="mkbuiltins" to="bracecomp">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinssource" from="mkbuiltins" to="source">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinscommon" from="mkbuiltins" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinssubst" from="mkbuiltins" to="subst">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsjobs" from="mkbuiltins" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsmailcheck" from="mkbuiltins" to="mailcheck">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsbreak" from="mkbuiltins" to="break">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinserror" from="mkbuiltins" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsshift" from="mkbuiltins" to="shift">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsexec" from="mkbuiltins" to="exec">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsbraces" from="mkbuiltins" to="braces">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinstrap" from="mkbuiltins" to="trap">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsbashhist" from="mkbuiltins" to="bashhist">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinscopy_cmd" from="mkbuiltins" to="copy_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinscd" from="mkbuiltins" to="cd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsfc" from="mkbuiltins" to="fc">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsgeneral" from="mkbuiltins" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsalias" from="mkbuiltins" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsexpr" from="mkbuiltins" to="expr">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinshash" from="mkbuiltins" to="hash">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsstdlib" from="mkbuiltins" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsprint_cmd" from="mkbuiltins" to="print_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsnojobs" from="mkbuiltins" to="nojobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsstat" from="mkbuiltins" to="stat">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsbuiltins" from="mkbuiltins" to="builtins">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmkbuiltinsfcntl" from="mkbuiltins" to="fcntl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecerrno" from="exec" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecgeneral" from="exec" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexeccommand" from="exec" to="command">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecjobs" from="exec" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecalias" from="exec" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecexecute_cmd" from="exec" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecstring" from="exec" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexeccommon" from="exec" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecerror" from="exec" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecmake_cmd" from="exec" to="make_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecstdlib" from="exec" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecdispose_cmd" from="exec" to="dispose_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecvariables" from="exec" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idexecbashhist" from="exec" to="bashhist">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idinputstdio" from="input" to="stdio">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idinputfcntl" from="input" to="fcntl">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idinputerrno" from="input" to="errno">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idinputgeneral" from="input" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idinputunistd" from="input" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idinputparse" from="input" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idinputstat" from="input" to="stat">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idinputexecute_cmd" from="input" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idinputstring" from="input" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idinputshell" from="input" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idinputcommon" from="input" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idinputerror" from="input" to="error">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idinputstdlib" from="input" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idinputvariables" from="input" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protstring" from="unwind_prot" to="string">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protjobs" from="unwind_prot" to="jobs">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protcommand" from="unwind_prot" to="command">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protbashhist" from="unwind_prot" to="bashhist">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protvariables" from="unwind_prot" to="variables">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protgeneral" from="unwind_prot" to="general">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protcommon" from="unwind_prot" to="common">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protalias" from="unwind_prot" to="alias">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protparse" from="unwind_prot" to="parse">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protfc" from="unwind_prot" to="fc">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protdispose_cmd" from="unwind_prot" to="dispose_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protsource" from="unwind_prot" to="source">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protread" from="unwind_prot" to="read">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protshell" from="unwind_prot" to="shell">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protunistd" from="unwind_prot" to="unistd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protprint_cmd" from="unwind_prot" to="print_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_prottrap" from="unwind_prot" to="trap">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protstdlib" from="unwind_prot" to="stdlib">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idunwind_protexecute_cmd" from="unwind_prot" to="execute_cmd">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+   </graph>
+</gxl>

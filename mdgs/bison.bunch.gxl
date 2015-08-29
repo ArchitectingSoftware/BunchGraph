@@ -1,0 +1,1260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- GXL CLUSTER FILE GENERATED FROM BUNCH
+     Generation TimeStamp = Tue Aug 20 11:29:08 EDT 2002
+ -->
+
+
+<!-- GXL DTD FILE IS INCLUDED INLINE
+     Check for updates to the DTD at: http://www.gupro.de/GXL/
+ -->
+<!DOCTYPE gxl [
+<!-- Attribute values -->
+<!ENTITY % val "
+           locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup
+           ">
+<!-- gxl -->
+<!ELEMENT gxl (graph*) >
+<!ATTLIST gxl
+	xmlns:xlink CDATA #FIXED "http://www.w3.org/1999/xlink"
+>
+<!-- type -->
+<!ELEMENT type EMPTY>
+<!ATTLIST type
+	xlink:type (simple) #FIXED "simple"
+	xlink:href CDATA #REQUIRED
+>
+<!-- graph -->
+<!ELEMENT graph (type? , attr* , ( node | edge | rel )* ) >
+<!ATTLIST graph
+	id ID #REQUIRED
+	role NMTOKEN #IMPLIED
+	edgeids (true | false) "false"
+	hypergraph (true | false) "false"
+	edgemode (directed | undirected | defaultdirected | defaultundirected) "directed"
+>
+<!-- node -->
+<!ELEMENT node (type? , attr*, graph* ) >
+<!ATTLIST node
+	id ID #REQUIRED
+>
+<!-- edge -->
+<!ELEMENT edge (type?, attr*, graph* ) >
+<!ATTLIST edge
+	id ID #IMPLIED
+	from IDREF #REQUIRED
+	to IDREF #REQUIRED
+	fromorder CDATA #IMPLIED
+	toorder CDATA #IMPLIED
+	isdirected (true | false) #IMPLIED
+>
+<!-- rel -->
+<!ELEMENT rel (type? , attr*, graph*, relend* ) >
+<!ATTLIST rel
+	id ID #IMPLIED
+	isdirected (true | false) #IMPLIED
+>
+<!-- relend -->
+<!ELEMENT relend (attr*) >
+<!ATTLIST relend
+	target IDREF #REQUIRED
+	role NMTOKEN #IMPLIED
+	direction (in | out | none) #IMPLIED
+	startorder CDATA #IMPLIED
+	endorder CDATA #IMPLIED
+>
+<!-- attr -->
+<!ELEMENT attr (type?, attr*,
+          (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup))>
+<!ATTLIST attr
+	id ID #IMPLIED
+	name NMTOKEN #REQUIRED
+	kind NMTOKEN #IMPLIED
+>
+<!-- locator -->
+<!ELEMENT locator EMPTY>
+<!ATTLIST locator
+	xlink:type (simple) #FIXED "simple"
+	xlink:href CDATA #REQUIRED
+>
+<!-- atomic values -->
+<!ELEMENT bool (#PCDATA)>
+<!ELEMENT int (#PCDATA)>
+<!ELEMENT float (#PCDATA)>
+<!ELEMENT string (#PCDATA)>
+<!-- enumeration value -->
+<!ELEMENT enum (#PCDATA)>
+<!-- composite values -->
+<!ELEMENT seq (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)* >
+<!ELEMENT set (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)*>
+<!ELEMENT bag (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)*>
+<!ELEMENT tup (locator |
+           bool    |
+           int     |
+           float   |
+           string  |
+           enum    |
+           seq     |
+           set     |
+           bag     |
+           tup)*>
+]>
+
+<!-- END OF INCLUDED INLINE DTD FOR GXL
+     Check for updates to the DTD at: http://www.gupro.de/GXL/
+
+     NOW THE XML FILE BEGINS...
+ -->
+
+
+<gxl xmlns:xlink="http://www.w3.org/1999/xlink">
+   <graph id="generatedGXL">
+      <node id="N-SS-L1-main.c">
+         <attr name="cluster">
+            <string>BunchCluster</string>
+         </attr>
+         <graph id="SS-SS-L1-main.c">
+            <node id="allocate.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="files.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="reduce.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="main.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="version.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="getargs.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="warshall.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="closure.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="machine.h">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="alloca.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="libc.a">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+         </graph>
+      </node>
+      <node id="N-SS-L1-reader.c">
+         <attr name="cluster">
+            <string>BunchCluster</string>
+         </attr>
+         <graph id="SS-SS-L1-reader.c">
+            <node id="/usr/include/string.h">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="gram.h">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="print.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="/usr/include/ctype.h">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="reader.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="lex.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="lex.h">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="symtab.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="symtab.h">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="getopt.h">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="getopt.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="getopt1.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="/usr/include/strings.h">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="/usr/include/stdio.h">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="/usr/include/sys/va_list.h">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="files.h">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+         </graph>
+      </node>
+      <node id="N-SS-L1-output.c">
+         <attr name="cluster">
+            <string>BunchCluster</string>
+         </attr>
+         <graph id="SS-SS-L1-output.c">
+            <node id="derives.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="gram.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="types.h">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="nullable.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="new.h">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="state.h">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="conflicts.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="output.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="lalr.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+            <node id="LR0.c">
+               <attr name="nodeType">
+                  <string>normal</string>
+               </attr>
+            </node>
+         </graph>
+      </node>
+      <edge id="idmain.cLR0.c" from="main.c" to="LR0.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmain.c/usr/include/stdio.h" from="main.c" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmain.cderives.c" from="main.c" to="derives.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmain.cfiles.c" from="main.c" to="files.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmain.creader.c" from="main.c" to="reader.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmain.creduce.c" from="main.c" to="reduce.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmain.cconflicts.c" from="main.c" to="conflicts.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmain.clibc.a" from="main.c" to="libc.a">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmain.cprint.c" from="main.c" to="print.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmain.cnullable.c" from="main.c" to="nullable.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmain.coutput.c" from="main.c" to="output.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmain.cmachine.h" from="main.c" to="machine.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmain.cgetargs.c" from="main.c" to="getargs.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idmain.clalr.c" from="main.c" to="lalr.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint.cLR0.c" from="print.c" to="LR0.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint.c/usr/include/stdio.h" from="print.c" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint.c/usr/include/string.h" from="print.c" to="/usr/include/string.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint.cfiles.c" from="print.c" to="files.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint.creader.c" from="print.c" to="reader.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint.cgram.h" from="print.c" to="gram.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint.cconflicts.c" from="print.c" to="conflicts.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint.cgram.c" from="print.c" to="gram.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint.cstate.h" from="print.c" to="state.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idprint.clalr.c" from="print.c" to="lalr.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.callocate.c" from="reader.c" to="allocate.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.cgram.h" from="reader.c" to="gram.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.cfiles.c" from="reader.c" to="files.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.cversion.c" from="reader.c" to="version.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.cnew.h" from="reader.c" to="new.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.cgram.c" from="reader.c" to="gram.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.cconflicts.c" from="reader.c" to="conflicts.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.cmain.c" from="reader.c" to="main.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.coutput.c" from="reader.c" to="output.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.clex.h" from="reader.c" to="lex.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.clex.c" from="reader.c" to="lex.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.cmachine.h" from="reader.c" to="machine.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.cgetargs.c" from="reader.c" to="getargs.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.csymtab.h" from="reader.c" to="symtab.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.c/usr/include/stdio.h" from="reader.c" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.csymtab.c" from="reader.c" to="symtab.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.c/usr/include/ctype.h" from="reader.c" to="/usr/include/ctype.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.c/usr/include/string.h" from="reader.c" to="/usr/include/string.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreader.clibc.a" from="reader.c" to="libc.a">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idwarshall.cmachine.h" from="warshall.c" to="machine.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsymtab.cnew.h" from="symtab.c" to="new.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsymtab.cgram.c" from="symtab.c" to="gram.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsymtab.csymtab.h" from="symtab.c" to="symtab.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsymtab.callocate.c" from="symtab.c" to="allocate.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsymtab.clibc.a" from="symtab.c" to="libc.a">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsymtab.c/usr/include/string.h" from="symtab.c" to="/usr/include/string.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idsymtab.c/usr/include/stdio.h" from="symtab.c" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="id/usr/include/stdio.h/usr/include/sys/va_list.h" from="/usr/include/stdio.h" to="/usr/include/sys/va_list.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnullable.cnew.h" from="nullable.c" to="new.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnullable.cgram.c" from="nullable.c" to="gram.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnullable.clibc.a" from="nullable.c" to="libc.a">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnullable.callocate.c" from="nullable.c" to="allocate.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnullable.ctypes.h" from="nullable.c" to="types.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idnullable.cgram.h" from="nullable.c" to="gram.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idLR0.c/usr/include/stdio.h" from="LR0.c" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idLR0.cmain.c" from="LR0.c" to="main.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idLR0.cnew.h" from="LR0.c" to="new.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idLR0.cclosure.c" from="LR0.c" to="closure.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idLR0.clibc.a" from="LR0.c" to="libc.a">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idLR0.cgram.c" from="LR0.c" to="gram.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idLR0.cstate.h" from="LR0.c" to="state.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idLR0.callocate.c" from="LR0.c" to="allocate.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idLR0.cmachine.h" from="LR0.c" to="machine.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlalr.cLR0.c" from="lalr.c" to="LR0.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlalr.cmain.c" from="lalr.c" to="main.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlalr.cderives.c" from="lalr.c" to="derives.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlalr.ctypes.h" from="lalr.c" to="types.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlalr.cnew.h" from="lalr.c" to="new.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlalr.cgram.h" from="lalr.c" to="gram.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlalr.clibc.a" from="lalr.c" to="libc.a">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlalr.cgram.c" from="lalr.c" to="gram.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlalr.callocate.c" from="lalr.c" to="allocate.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlalr.cstate.h" from="lalr.c" to="state.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlalr.cnullable.c" from="lalr.c" to="nullable.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlalr.cmachine.h" from="lalr.c" to="machine.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idclosure.cnew.h" from="closure.c" to="new.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idclosure.cgram.c" from="closure.c" to="gram.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idclosure.clibc.a" from="closure.c" to="libc.a">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idclosure.callocate.c" from="closure.c" to="allocate.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idclosure.cmachine.h" from="closure.c" to="machine.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idclosure.cwarshall.c" from="closure.c" to="warshall.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idclosure.cderives.c" from="closure.c" to="derives.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idclosure.cgram.h" from="closure.c" to="gram.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetopt.clibc.a" from="getopt.c" to="libc.a">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetopt.cgetopt.h" from="getopt.c" to="getopt.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetopt.cfiles.c" from="getopt.c" to="files.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetopt.c/usr/include/string.h" from="getopt.c" to="/usr/include/string.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetopt.c/usr/include/stdio.h" from="getopt.c" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idallocate.cfiles.c" from="allocate.c" to="files.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idallocate.cmain.c" from="allocate.c" to="main.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idallocate.c/usr/include/stdio.h" from="allocate.c" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="id/usr/include/string.h/usr/include/stdio.h" from="/usr/include/string.h" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idalloca.callocate.c" from="alloca.c" to="allocate.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idalloca.clibc.a" from="alloca.c" to="libc.a">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetopt1.cgetopt.c" from="getopt1.c" to="getopt.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetopt1.cgetopt.h" from="getopt1.c" to="getopt.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetopt1.c/usr/include/stdio.h" from="getopt1.c" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreduce.c/usr/include/stdio.h" from="reduce.c" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreduce.cmain.c" from="reduce.c" to="main.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreduce.cnew.h" from="reduce.c" to="new.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreduce.cfiles.c" from="reduce.c" to="files.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreduce.creader.c" from="reduce.c" to="reader.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreduce.cgram.h" from="reduce.c" to="gram.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreduce.clibc.a" from="reduce.c" to="libc.a">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreduce.cgram.c" from="reduce.c" to="gram.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreduce.callocate.c" from="reduce.c" to="allocate.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreduce.cmachine.h" from="reduce.c" to="machine.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idreduce.cgetargs.c" from="reduce.c" to="getargs.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.cLR0.c" from="output.c" to="LR0.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.c/usr/include/stdio.h" from="output.c" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.cmain.c" from="output.c" to="main.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.c/usr/include/string.h" from="output.c" to="/usr/include/string.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.cnew.h" from="output.c" to="new.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.cfiles.c" from="output.c" to="files.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.creader.c" from="output.c" to="reader.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.cgram.h" from="output.c" to="gram.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.cconflicts.c" from="output.c" to="conflicts.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.clibc.a" from="output.c" to="libc.a">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.cgram.c" from="output.c" to="gram.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.cstate.h" from="output.c" to="state.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.callocate.c" from="output.c" to="allocate.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.cmachine.h" from="output.c" to="machine.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.clalr.c" from="output.c" to="lalr.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idoutput.cgetargs.c" from="output.c" to="getargs.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idconflicts.cLR0.c" from="conflicts.c" to="LR0.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idconflicts.c/usr/include/stdio.h" from="conflicts.c" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idconflicts.c/usr/include/strings.h" from="conflicts.c" to="/usr/include/strings.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idconflicts.cnew.h" from="conflicts.c" to="new.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idconflicts.cfiles.c" from="conflicts.c" to="files.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idconflicts.creader.c" from="conflicts.c" to="reader.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idconflicts.cgram.h" from="conflicts.c" to="gram.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idconflicts.clibc.a" from="conflicts.c" to="libc.a">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idconflicts.cgram.c" from="conflicts.c" to="gram.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idconflicts.cstate.h" from="conflicts.c" to="state.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idconflicts.callocate.c" from="conflicts.c" to="allocate.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idconflicts.cmachine.h" from="conflicts.c" to="machine.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idconflicts.cgetargs.c" from="conflicts.c" to="getargs.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idconflicts.clalr.c" from="conflicts.c" to="lalr.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idderives.cnew.h" from="derives.c" to="new.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idderives.cgram.c" from="derives.c" to="gram.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idderives.clibc.a" from="derives.c" to="libc.a">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idderives.callocate.c" from="derives.c" to="allocate.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idderives.ctypes.h" from="derives.c" to="types.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetargs.cgetopt.c" from="getargs.c" to="getopt.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetargs.clibc.a" from="getargs.c" to="libc.a">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetargs.cversion.c" from="getargs.c" to="version.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetargs.cgetopt.h" from="getargs.c" to="getopt.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetargs.cfiles.c" from="getargs.c" to="files.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetargs.cmain.c" from="getargs.c" to="main.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetargs.c/usr/include/stdio.h" from="getargs.c" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idgetargs.cgetopt1.c" from="getargs.c" to="getopt1.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="id/usr/include/strings.h/usr/include/stdio.h" from="/usr/include/strings.h" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfiles.h/usr/include/stdio.h" from="files.h" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlex.c/usr/include/stdio.h" from="lex.c" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlex.cmain.c" from="lex.c" to="main.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlex.c/usr/include/string.h" from="lex.c" to="/usr/include/string.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlex.cnew.h" from="lex.c" to="new.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlex.cfiles.c" from="lex.c" to="files.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlex.creader.c" from="lex.c" to="reader.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlex.c/usr/include/ctype.h" from="lex.c" to="/usr/include/ctype.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlex.csymtab.h" from="lex.c" to="symtab.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlex.cgram.c" from="lex.c" to="gram.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlex.clex.h" from="lex.c" to="lex.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlex.cgetopt.c" from="lex.c" to="getopt.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlex.callocate.c" from="lex.c" to="allocate.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlex.csymtab.c" from="lex.c" to="symtab.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idlex.cgetargs.c" from="lex.c" to="getargs.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfiles.cnew.h" from="files.c" to="new.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfiles.cfiles.h" from="files.c" to="files.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfiles.clibc.a" from="files.c" to="libc.a">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfiles.callocate.c" from="files.c" to="allocate.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfiles.c/usr/include/string.h" from="files.c" to="/usr/include/string.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfiles.cgetargs.c" from="files.c" to="getargs.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfiles.cmain.c" from="files.c" to="main.c">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+      <edge id="idfiles.c/usr/include/stdio.h" from="files.c" to="/usr/include/stdio.h">
+         <attr name="edgeWeight">
+            <int>1</int>
+         </attr>
+      </edge>
+   </graph>
+</gxl>

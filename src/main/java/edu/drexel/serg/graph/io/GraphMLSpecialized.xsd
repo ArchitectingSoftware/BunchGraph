@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://xml.netbeans.org/schema/GraphMLSpecialized"
+            xmlns="http://xml.netbeans.org/schema/GraphMLSpecialized"
+            elementFormDefault="qualified">
+    <xsd:complexType name="NodeType">
+        <xsd:attribute name="id" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string"/>
+        <xsd:attribute name="desc" type="xsd:string"/>
+        <xsd:attribute name="nodeColor" type="xsd:string"/>
+        <xsd:attribute name="nodeSize" type="xsd:string"/>
+        <xsd:attribute name="nodeClass" type="xsd:string"/>
+        <xsd:attribute name="nodeIcon" type="xsd:string"/>
+        <xsd:attribute name="x" type="xsd:string"/>
+        <xsd:attribute name="y" type="xsd:string"/>
+        <xsd:attribute name="nodeStatistic" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="EdgeType">
+        <xsd:attribute name="fromID" type="xsd:string"/>
+        <xsd:attribute name="toID" type="xsd:string"/>
+        <xsd:attribute name="edgeLabel" type="xsd:string"/>
+        <xsd:attribute name="flow" type="xsd:unsignedInt"/>
+    </xsd:complexType>
+    <xsd:complexType name="GraphType">
+         <xsd:sequence>
+                <xsd:element name="Node" type="NodeType" maxOccurs="unbounded"></xsd:element>
+                <xsd:element name="Edge" type="EdgeType" maxOccurs="unbounded"></xsd:element>
+         </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="Graph">
+      <xsd:complexType>
+        <xsd:complexContent mixed="false">
+            <xsd:extension base="GraphType" />
+        </xsd:complexContent>
+    </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

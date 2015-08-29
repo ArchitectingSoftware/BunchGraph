@@ -1,0 +1,2 @@
+SS(codeGenerator.ss) = main, scanner, parser, addrStack, codeGenerator
+SS(declarations.ss) = scopeController, dictIdxStack, dictStack, typeStack, typeChecker, argCntStack, dictionary, declarations
