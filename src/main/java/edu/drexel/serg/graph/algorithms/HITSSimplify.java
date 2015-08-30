@@ -145,6 +145,8 @@ public class HITSSimplify implements ISimplifyAlgorithm, ISimplifyWithRoots {
                             UserData.SHARED);
                         nr.vertex.setUserDatum(KeyEnum.VERTEX_TYPE.toString(), VertexStateEnum.NO_ASSOCIATION,
                             UserData.SHARED);
+                        nr.vertex.setUserDatum(KeyEnum.IMPORTANCE_REL_RANK.toString(),new Integer(0),
+                                UserData.SHARED);
                     }
                     keep++;
                 }
@@ -159,6 +161,8 @@ public class HITSSimplify implements ISimplifyAlgorithm, ISimplifyWithRoots {
                         UserData.SHARED);
                     nr.vertex.setUserDatum(KeyEnum.VERTEX_TYPE.toString(), VertexStateEnum.NO_ASSOCIATION,
                         UserData.SHARED);
+                    nr.vertex.setUserDatum(KeyEnum.IMPORTANCE_REL_RANK.toString(),new Integer(0),
+                             UserData.SHARED);
                  }
             }
         }
